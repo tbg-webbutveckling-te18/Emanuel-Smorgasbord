@@ -1,0 +1,18 @@
+body {
+    border: 0px;
+    margin: 0px;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
