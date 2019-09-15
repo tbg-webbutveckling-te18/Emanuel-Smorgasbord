@@ -1,0 +1,26 @@
+.header {
+    font-size: 64px;
+    font-family: impact;
+}
+
+#body {
+    color: #202020;
+    background-color: #cccccc;
+    transition: color 1s, background-color 1s;
+}
+
+.darkmode_btn {
+    width: 256px;
+    height: 256px;
+    #sun {
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 1s;
+    }
+
+    #moon {
+        opacity: 100;
+        transition-property: opacity;
+        transition-duration: 1s;
+    }
+}
