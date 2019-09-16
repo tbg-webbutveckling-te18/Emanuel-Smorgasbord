@@ -7,44 +7,46 @@
             description=""/>
         <title>Darkmode Experiment</title>
         <link rel="stylesheet" href="assets/css/main.css"/>
-        <script src="assets/js/darkmode_btn.js" charset="utf-8"></script>
+		<script type="text/javascript" src="assets/js/toggleDark.js"></script>
     </head>
     <body id="body">
         <header class="header">
             Darkmode Button Experiment
         </header>
-        <div class="darkmode_slider">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-                <style type="text/css">
-                	.st0{fill:#FF2020;}
-                	.st1{fill:#202020;}
-                	.st2{fill:#CCCCCC;}
-                </style>
-                <g id="drk_slider">
-                	<path class="st0" d="M52,44H12C5.4,44,0,38.6,0,32v0c0-6.6,5.4-12,12-12h40c6.6,0,12,5.4,12,12v0C64,38.6,58.6,44,52,44z"/>
-                	<path class="st1" d="M52,43H12C5.9,43,1,38.1,1,32v0c0-6.1,4.9-11,11-11h40c6.1,0,11,4.9,11,11v0C63,38.1,58.1,43,52,43z"/>
-                </g>
-                <g id="drk_sun">
-                	<circle class="st2" cx="48" cy="32" r="3.9"/>
-                	<rect x="46.1" y="24.6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 23.0714 72.9286)" class="st2" width="3.9" height="0.6"/>
-                	<rect x="46.1" y="38.8" transform="matrix(6.123234e-17 -1 1 6.123234e-17 8.9286 87.0714)" class="st2" width="3.9" height="0.6"/>
-                	<rect x="53.1" y="31.7" class="st2" width="3.9" height="0.6"/>
-                	<rect x="39" y="31.7" class="st2" width="3.9" height="0.6"/>
-                	<rect x="51.1" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.5683 45.3849)" class="st2" width="3.9" height="0.6"/>
-                	<rect x="41.1" y="36.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.5688 41.2425)" class="st2" width="3.9" height="0.6"/>
-                	<rect x="51.1" y="36.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 41.6865 -26.6397)" class="st2" width="3.9" height="0.6"/>
-                	<rect x="41.1" y="26.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 31.686 -22.4974)" class="st2" width="3.9" height="0.6"/>
-                </g>
-                <g id="drk_moon">
-                	<path class="st2" d="M18.3,37.5c-4.3,0-7.7-3.5-7.7-7.7c0-2.8,1.5-5.3,3.8-6.7C10.2,23.9,7,27.6,7,32.1c0,5,4.1,9.1,9.1,9.1
-                		c4.5,0,8.2-3.2,8.9-7.5C23.7,36,21.2,37.5,18.3,37.5z"/>
-                </g>
-                <g id="drk_switch">
-                	<path class="st0" d="M22,42H12C6.5,42,2,37.5,2,32v0c0-5.5,4.5-10,10-10h10c5.5,0,10,4.5,10,10v0C32,37.5,27.5,42,22,42z"/>
-                	<path class="st1" d="M22,41H12c-5,0-9-4-9-9v0c0-5,4-9,9-9h10c5,0,9,4,9,9v0C31,37,27,41,22,41z"/>
-                </g>
-            </svg>
+        <div class="darkmode-slider">
+            <!--<?xml version="1.0" encoding="utf-8"?>-->
+			<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 64 24" style="enable-background:new 0 0 64 24;" xml:space="preserve">
+				<style type="text/css">
+					.st0{fill:#FF2020;}
+					.st1{fill:#101010;}
+					.st2{fill:#808080;}
+				</style>
+				<g id="sliderDrk">
+					<path class="st0" d="M52,24H12C5.4,24,0,18.6,0,12l0,0C0,5.4,5.4,0,12,0h40c6.6,0,12,5.4,12,12l0,0C64,18.6,58.6,24,52,24z"/>
+					<path class="st1" d="M52,23H12C5.9,23,1,18.1,1,12l0,0C1,5.9,5.9,1,12,1h40c6.1,0,11,4.9,11,11l0,0C63,18.1,58.1,23,52,23z"/>
+				</g>
+				<g id="sunDrk">
+					<circle class="st2" cx="48" cy="12" r="3.9"/>
+					<rect x="47.7" y="2.9" class="st2" width="0.6" height="3.9"/>
+					<rect x="47.7" y="17.1" class="st2" width="0.6" height="3.9"/>
+					<rect x="53.1" y="11.7" class="st2" width="3.9" height="0.6"/>
+					<rect x="39" y="11.7" class="st2" width="3.9" height="0.6"/>
+					<rect x="51.1" y="6.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 10.6087 39.5703)" class="st2" width="3.9" height="0.6"/>
+					<rect x="41.1" y="16.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 0.6091 35.428)" class="st2" width="3.9" height="0.6"/>
+					<rect x="52.7" y="15.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 3.4586 42.4911)" class="st2" width="0.6" height="3.9"/>
+					<rect x="42.7" y="5.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 7.6008 32.4909)" class="st2" width="0.6" height="3.9"/>
+				</g>
+				<g id="moonDrk">
+					<path class="st2" d="M18.3,17.5c-4.3,0-7.7-3.5-7.7-7.7c0-2.8,1.5-5.3,3.8-6.7C10.2,3.9,7,7.6,7,12.1c0,5,4.1,9.1,9.1,9.1
+						c4.5,0,8.2-3.2,8.9-7.5C23.7,16,21.2,17.5,18.3,17.5z"/>
+				</g>
+				<g id="switchDrk">
+					<path class="st0" d="M22,22H12C6.5,22,2,17.5,2,12l0,0C2,6.5,6.5,2,12,2h10c5.5,0,10,4.5,10,10l0,0C32,17.5,27.5,22,22,22z"/>
+					<path class="st1" d="M22,21H12c-5,0-9-4-9-9l0,0c0-5,4-9,9-9h10c5,0,9,4,9,9l0,0C31,17,27,21,22,21z"/>
+				</g>
+			</svg>
         </div>
-    </body>
+	</body>
 </html>
