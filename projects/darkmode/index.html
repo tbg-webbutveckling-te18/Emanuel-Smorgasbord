@@ -10,9 +10,9 @@
         <script src="assets/js/darkmode_btn.js" charset="utf-8"></script>
     </head>
     <body id="body">
-        <div class="header">
+        <header class="header">
             Darkmode Button Experiment
-        </div>
+        </header>
         <div class="darkmode_slider">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
@@ -21,54 +21,30 @@
                 	.st1{fill:#202020;}
                 	.st2{fill:#CCCCCC;}
                 </style>
-                <g id="Layer_1">
+                <g id="drk_slider">
                 	<path class="st0" d="M52,44H12C5.4,44,0,38.6,0,32v0c0-6.6,5.4-12,12-12h40c6.6,0,12,5.4,12,12v0C64,38.6,58.6,44,52,44z"/>
                 	<path class="st1" d="M52,43H12C5.9,43,1,38.1,1,32v0c0-6.1,4.9-11,11-11h40c6.1,0,11,4.9,11,11v0C63,38.1,58.1,43,52,43z"/>
                 </g>
-                <g id="Layer_2">
+                <g id="drk_sun">
                 	<circle class="st2" cx="48" cy="32" r="3.9"/>
-
-                		<rect x="46.1" y="24.6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 23.0714 72.9286)" class="st2" width="3.9" height="0.6"/>
-
-                		<rect x="46.1" y="38.8" transform="matrix(6.123234e-17 -1 1 6.123234e-17 8.9286 87.0714)" class="st2" width="3.9" height="0.6"/>
+                	<rect x="46.1" y="24.6" transform="matrix(6.123234e-17 -1 1 6.123234e-17 23.0714 72.9286)" class="st2" width="3.9" height="0.6"/>
+                	<rect x="46.1" y="38.8" transform="matrix(6.123234e-17 -1 1 6.123234e-17 8.9286 87.0714)" class="st2" width="3.9" height="0.6"/>
                 	<rect x="53.1" y="31.7" class="st2" width="3.9" height="0.6"/>
                 	<rect x="39" y="31.7" class="st2" width="3.9" height="0.6"/>
                 	<rect x="51.1" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.5683 45.3849)" class="st2" width="3.9" height="0.6"/>
-
-                		<rect x="41.1" y="36.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.5688 41.2425)" class="st2" width="3.9" height="0.6"/>
-
-                		<rect x="51.1" y="36.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 41.6865 -26.6397)" class="st2" width="3.9" height="0.6"/>
+                	<rect x="41.1" y="36.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.5688 41.2425)" class="st2" width="3.9" height="0.6"/>
+                	<rect x="51.1" y="36.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 41.6865 -26.6397)" class="st2" width="3.9" height="0.6"/>
                 	<rect x="41.1" y="26.7" transform="matrix(0.7071 0.7071 -0.7071 0.7071 31.686 -22.4974)" class="st2" width="3.9" height="0.6"/>
                 </g>
-                <g id="Layer_3">
+                <g id="drk_moon">
                 	<path class="st2" d="M18.3,37.5c-4.3,0-7.7-3.5-7.7-7.7c0-2.8,1.5-5.3,3.8-6.7C10.2,23.9,7,27.6,7,32.1c0,5,4.1,9.1,9.1,9.1
                 		c4.5,0,8.2-3.2,8.9-7.5C23.7,36,21.2,37.5,18.3,37.5z"/>
                 </g>
-                <g id="switch">
+                <g id="drk_switch">
                 	<path class="st0" d="M22,42H12C6.5,42,2,37.5,2,32v0c0-5.5,4.5-10,10-10h10c5.5,0,10,4.5,10,10v0C32,37.5,27.5,42,22,42z"/>
                 	<path class="st1" d="M22,41H12c-5,0-9-4-9-9v0c0-5,4-9,9-9h10c5,0,9,4,9,9v0C31,37,27,41,22,41z"/>
                 </g>
             </svg>
         </div>
-        <!-- <div class="darkmode_btn">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-                <g id="sun" onclick="darken()">
-                	<circle cx="32" cy="32" r="12"/>
-                	<rect x="26" y="9" transform="matrix(6.123234e-17 -1 1 6.123234e-17 22 42)" width="12" height="2"/>
-                	<rect x="26" y="53" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -22 86)" width="12" height="2"/>
-                	<rect x="48" y="31" width="12" height="2"/>
-                	<rect x="4" y="31" width="12" height="2"/>
-                	<rect x="41.6" y="15.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 2.3015 38.4436)" width="12" height="2"/>
-                	<rect x="10.4" y="46.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -28.8112 25.5563)" width="12" height="2"/>
-                	<rect x="41.6" y="46.6" transform="matrix(0.7071 0.7071 -0.7071 0.7071 47.5564 -19.6985)" width="12" height="2"/>
-                	<rect x="10.4" y="15.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 16.4437 -6.8112)" width="12" height="2"/>
-                </g>
-                <g id="moon" onclick="brighten()">
-                	<path d="M37,44c-9.4,0-17-7.6-17-17c0-6.3,3.4-11.7,8.4-14.7C19.1,14,12,22.2,12,32c0,11,9,20,20,20c9.8,0,18-7.1,19.7-16.4
-                		C48.7,40.6,43.3,44,37,44z"/>
-                </g>
-            </svg>
-        </div> -->
     </body>
 </html>

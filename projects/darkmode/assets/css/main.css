@@ -9,19 +9,7 @@
     transition: color 1s, background-color 1s;
 }
 
-.darkmode_btn {
+.darkmode_slider {
     width: 256px;
     height: 256px;
-}
-
-.darkmode_btn #sun {
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 1s;
-}
-
-.darkmode_btn #moon {
-    opacity: 100;
-    transition-property: opacity;
-    transition-duration: 1s;
 }
