@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ff6400;
+    text-align: center;
+}
+
+h1 {
+    font-family: impact;
+    transition: color 2s, font-size 2s;
+}
+
+h1:hover {
+    color: white;
+    font-size: 46px;
+    transition: color 2s, font-size 2s;
+}
+
+p {
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+ul {
+    background-color: grey;
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul li {
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+    /* x y blur color */
+}
+
+nav ul li a {
+    color: red;
+    text-decoration: none;
+}

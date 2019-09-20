@@ -1,0 +1,17 @@
+body {
+    border: 0px;
+    margin: 0px;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+li {
+    list-style-type: none;
+}
