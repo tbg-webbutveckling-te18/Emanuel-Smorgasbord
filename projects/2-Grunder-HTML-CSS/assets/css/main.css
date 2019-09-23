@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #ff6400;
-    text-align: center;
 }
 
 h1 {
@@ -21,16 +20,36 @@ p {
     letter-spacing: 2px;
 }
 
-ul {
+/*
+class = .
+id = #
+*/
+ul.subpages {
     background-color: grey;
     list-style-type: none;
     padding: 0px;
 }
 
-ul li {
+ul.subpages li {
     color: white;
     text-shadow: 2px 2px 2px #000;
     /* x y blur color */
+}
+
+ul.subpages li:first-child {
+    text-align: center;
+}
+
+ul.subpages li a {
+    color: red;
+    text-decoration: none;
+    transition: font-size 2s, color 1s;
+}
+
+ul.subpages li a:hover {
+    color: #ff9696;
+    font-size: 24px;
+    transition: font-size 2s, color 1s;
 }
 
 nav ul li a {

@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: rgba(255, 100, 0, 1);
-    text-align: center;
 }
 
 h1 {
@@ -21,7 +20,12 @@ p {
     letter-spacing: 2px;
 }
 
-ul {
+/*
+class = .
+id = #
+*/
+
+ul.subpages {
     background-color: grey;
     list-style-type: none;
     padding: 0px;
@@ -29,6 +33,22 @@ ul {
     & li {
         color: white;
         text-shadow: 2px 2px 2px #000; /* x y blur color */
+
+        &:first-child {
+            text-align: center;
+        }
+
+        a {
+            color: rgba(255, 0, 0, 1);
+            text-decoration: none;
+            transition: font-size 2s, color 1s;
+
+            &:hover {
+                color: rgba(255, 150, 150, 1);
+                font-size: 24px;
+                transition: font-size 2s, color 1s;
+            }
+        }
     }
 }
 

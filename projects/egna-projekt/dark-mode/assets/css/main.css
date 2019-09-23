@@ -24,11 +24,14 @@ body {
     width: 256px;
 }
 
+#Layer_1 {
+    cursor: pointer;
+}
+
 #switchDrk {
 	-webkit-transition: transform 1s;
     transition: transform 1s;
 	transition-timing-function: ease;
-	cursor: pointer;
 }
 
 .slider {
