@@ -1,3 +1,36 @@
+::selection {
+    background-color: yellow;
+}
+
 body {
-    background-color: aqua;
+    background-color: #ffeaa7;
+    margin: 0px;
+}
+
+section#wrapper {
+    display: block;
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    background-color: #ff7675;
+    border: 3px solid #2d3436;
+}
+
+section#wrapper p {
+    color: #2d3436;
+    border: 3px solid #2d3436;
+    margin-top: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+section.standardSection {
+    width: 200px;
+    height: 200px;
+    background-color: #6c5ce7;
+    margin: 16px 0px;
+}
+
+section.standardSection img {
+    display: inline;
 }
