@@ -10,6 +10,12 @@ body {
     text-align: center;
 }
 
+#header .homeButton {
+    margin: 0px;
+    padding: 0px;
+    width: 64px;
+}
+
 #header h1 {
     font-size: 82px;
     margin: 64px 0px 0px 0px;
