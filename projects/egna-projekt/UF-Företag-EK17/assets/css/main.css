@@ -1,32 +1,28 @@
+html {
+    min-height: 100%;
+}
+
 body {
     margin: 0px auto;
-    padding: 0px;
-    width: 1024px;
-    min-width: 1024px;
-    border: 3px solid red;
+    max-width: 1024px;
 }
 
-#header section {
-    margin: 0px;
-    padding: 0px;
-    height: 64px;
-    border: 1px solid blue;
+.drk0 {
+    fill: #FF2020;
 }
 
-#header h1 {
-    margin: 0px;
+.drk1 {
+    fill: #202020;
 }
 
-#header h2 {
-    margin: 0px;
+.drk2 {
+    fill: #CCCCCC;
 }
 
-#wrapper {
-    height: 256px;
-    border: 1px solid blue;
+.st0 {
+    fill: #FFFFFF;
 }
 
-#footer {
-    height: 64px;
-    border: 1px solid grey;
+.st2 {
+    display: inline;
 }
