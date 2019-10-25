@@ -18,16 +18,19 @@ Träningsinriktade människor som är intresserade av lite mer premium produkter
 
 ### Research och inhämtning av material
 
+Jag har tagit inspiration till några av ikonerna som används på sidan ifrån Google. Annars är min kreativitet bearbetad i mitt huvud.
+
 ## Beskrivning av webbplatsen
+
+Köp din träningströja ifrån oss med ett gummitryck på tröjans baksida för att få ett bra grepp på underlaget vid till exempel bänkpress.
 
 ### Innehåll på webbplatsen i stora drag -> känslan som den försöker förmedla.
 
-Beskriv och förklara med tydlighet.
-T.ex. “Hemsidan ska andas kvalitet och exklusivitet, för att [företaget] har en exklusiv produkt och kräsna kunder.” eller “Hemsidan ska kännas trygg och tydlig, eftersom [företaget] jobbar med säkerhetslösningar till privatpersoner.”
+Stilren design, enkel att använda, lätt direkt information
 
 ###Design/Form
 
-➢	Skapa en sitemap för webbplatsen
+➢ Sitemap ![Sitemap](sitemap.jpg)
 
 ➢	Skissa wireframes
 
