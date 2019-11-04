@@ -2,7 +2,7 @@
 
 ## Power Peak
 
-- 2019/19/18
+- 2019/9/18
 - Emanuel Carlhed
 - Power Peak
 - Adress
@@ -30,25 +30,19 @@ Stilren design, enkel att använda, lätt direkt information
 
 ###Design/Form
 
-➢ Sitemap ![Sitemap](sitemap.jpg)
+######Sitemap
+![Sitemap](sitemap.jpg)
 
-➢	Skissa wireframes
+######Wireframe
+![Wireframe](wireframe.jpg)
 
-○	Exempel: Startsida
+#####Beskriv idén med kompositionen på de olika sidorna
 
-➢	Beskriv idén med kompositionen på de olika sidorna
+#####Logotyper
+De flesta logotyperna som kommer används är scaleable vector graphics. Uppe i det vänstra hörnet finns ett hus som ska fungera som en hemknapp till indexen. Uppe i det högra hörnet finns en slider för att ändra sidan till darkmode. Samt ikonerna till dessa ankare i mitten.
 
-○	logotyper
-
-○	Färger
-
-■	Body bgcolor
-
-■	Header
-
-■	Font
-
-■	Osv…
+#####Färger
+[Färgpalett](https://flatuicolors.com/palette/us)
 
 ###Text
 
