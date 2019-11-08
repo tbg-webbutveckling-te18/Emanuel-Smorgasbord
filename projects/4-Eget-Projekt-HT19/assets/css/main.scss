@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header .btnBar {
+    display: flex;
+    justify-content: space-between;
+
+    .homeBtn {
+        display: block;
+        margin: 0px;
+        width: 64px;
+        height: 60px;
+
+        #homeBtn {
+            width: 64px;
+            height: 60px;
+        }
+    }
+
+    #drkMode {
+        width: 64px;
+    }
+}
