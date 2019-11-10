@@ -1,25 +1,83 @@
+$red: #FF2020;
+$black: #101010;
+$grey: #808080;
+
+$us-red: #d63031;
+$us-black: #2d3436;
+$us-grey: #b2bec3;
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     margin: 0px;
     padding: 0px;
 }
 
-#header .btnBar {
-    display: flex;
-    justify-content: space-between;
-
-    .homeBtn {
-        display: block;
-        margin: 0px;
-        width: 64px;
-        height: 60px;
+#header {
+    .btnBar {
+        display: flex;
+        justify-content: space-between;
 
         #homeBtn {
+            display: block;
+            margin: 0px;
+            padding: 0px;
             width: 64px;
             height: 60px;
+            transform: scale(.5);
+
+            .homeBtn {
+                width: 64px;
+                height: 60px;
+            }
+        }
+
+        #drkMode {
+            width: 64px;
+            transform: translateX(-18px);
         }
     }
-
-    #drkMode {
-        width: 64px;
+    
+    .headline {
+        text-align: center;
     }
 }
+
+#wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    section {
+        display: flex;
+        justify-content: center;
+        border: solid 3px black;
+        width: 256px;
+    }
+}
+
+.st0 {
+    fill: $us-red;
+}
+
+.st1 {
+    fill: $us-black;
+}
+
+.st2 {
+    fill: $us-grey;
+}
+
+// .st0 {
+//     fill: $red;
+// }
+//
+// .st1 {
+//     fill: $black;
+// }
+//
+// .st2 {
+//     fill: $grey;
+// }

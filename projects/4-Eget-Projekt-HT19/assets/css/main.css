@@ -1,3 +1,8 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -8,18 +13,49 @@ body {
     justify-content: space-between;
 }
 
-#header .btnBar .homeBtn {
+#header .btnBar #homeBtn {
     display: block;
     margin: 0px;
+    padding: 0px;
     width: 64px;
     height: 60px;
+    transform: scale(0.5);
 }
 
-#header .btnBar .homeBtn #homeBtn {
+#header .btnBar #homeBtn .homeBtn {
     width: 64px;
     height: 60px;
 }
 
 #header .btnBar #drkMode {
     width: 64px;
+    transform: translateX(-18px);
+}
+
+#header .headline {
+    text-align: center;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+#wrapper section {
+    display: flex;
+    justify-content: center;
+    border: solid 3px black;
+    width: 256px;
+}
+
+.st0 {
+    fill: #d63031;
+}
+
+.st1 {
+    fill: #2d3436;
+}
+
+.st2 {
+    fill: #b2bec3;
 }
