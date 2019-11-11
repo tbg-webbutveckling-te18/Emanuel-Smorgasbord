@@ -8,6 +8,16 @@ body {
     padding: 0px;
 }
 
+.darkMode {
+    background-color: #2d3436;
+    color: #b2bec3;
+}
+
+.moveSlider {
+    position: absolute;
+    transform: translateX(30px);
+}
+
 #header .btnBar {
     display: flex;
     justify-content: space-between;

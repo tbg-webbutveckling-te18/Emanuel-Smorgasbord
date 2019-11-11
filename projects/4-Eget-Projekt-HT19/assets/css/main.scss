@@ -16,6 +16,21 @@ body {
     padding: 0px;
 }
 
+// #body {
+//     background-color: white;
+//     color: $us-black;
+// }
+
+.darkMode {
+    background-color: $us-black;
+    color: $us-grey;
+}
+
+.moveSlider {
+    position: absolute;
+    transform: translateX(30px);
+}
+
 #header {
     .btnBar {
         display: flex;
@@ -40,7 +55,7 @@ body {
             transform: translateX(-18px);
         }
     }
-    
+
     .headline {
         text-align: center;
     }
