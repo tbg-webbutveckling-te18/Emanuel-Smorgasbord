@@ -1,5 +1,5 @@
 $red: #FF2020;
-$black: #101010;
+$black: #151518;
 $grey: #808080;
 
 $us-red: #d63031;
@@ -9,29 +9,27 @@ $us-grey: #b2bec3;
 html {
     margin: 0px;
     padding: 0px;
+
+    width: 100%;
+    height: 100%;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Exo 2', sans-serif;
 }
 
-// #body {
-//     background-color: white;
-//     color: $us-black;
-// }
-
-.darkMode {
-    background-color: $us-black;
-    color: $us-grey;
-}
-
-.moveSlider {
-    position: absolute;
-    transform: translateX(30px);
+#body {
+	-webkit-transition: color 1s, background-color 1s;
+	-moz-transition: color 1s, background-color 1s;
+	-o-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+	transition-timing-function: ease;
 }
 
 #header {
+
     .btnBar {
         display: flex;
         justify-content: space-between;
@@ -42,35 +40,87 @@ body {
             padding: 0px;
             width: 64px;
             height: 60px;
-            transform: scale(.5);
-
-            .homeBtn {
-                width: 64px;
-                height: 60px;
-            }
+            transform: scale(0.5);
         }
 
         #drkMode {
             width: 64px;
             transform: translateX(-18px);
+
+            #switchDrk {
+                cursor: pointer;
+
+                -webkit-transition: transform 1s;
+                -moz-transition: transform 1s;
+                -o-transition: transform 1s;
+                transition: transform 1s;
+                transition-timing-function: ease;
+            }
         }
     }
 
     .headline {
+        font-family: 'Bad Script', sans-serif;
         text-align: center;
+
+        h1 {
+            display: inline;
+            font-size: 82px;
+        }
     }
 }
 
 #wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
-    section {
+    #mainNav {
         display: flex;
-        justify-content: center;
-        border: solid 3px black;
-        width: 256px;
+        justify-content: space-around;
+        width: 80%;
+
+        section {
+            // border: solid 3px black;
+
+            -webkit-transition: transform 0.2s;
+            -moz-transition: transform 0.2s;
+            -o-transition: transform 0.2s;
+            transition: transform 0.2s;
+            transition-timing-function: ease;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+
+            p {
+                cursor: pointer;
+                font-size: 22px;
+                text-align: center;
+            }
+
+            svg {
+                cursor: pointer;
+                height: 256px;
+
+                -webkit-transition: fill 1s;
+                -moz-transition: fill 1s;
+                -o-transition: fill 1s;
+                transition: fill 1s;
+                transition-timing-function: ease;
+            }
+        }
     }
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    background-color: $us-black;
+    color: $us-grey;
 }
 
 .st0 {
@@ -85,6 +135,10 @@ body {
     fill: $us-grey;
 }
 
+.transparent {
+    fill: rgba(0, 0, 0, 0);
+}
+
 // .st0 {
 //     fill: $red;
 // }
@@ -96,3 +150,52 @@ body {
 // .st2 {
 //     fill: $grey;
 // }
+
+// JS Dark Mode Toggle Classes
+
+.darkMode {
+    background-color: $black;
+    color: $us-grey;
+}
+
+.svgDrkMode {
+    fill: $us-grey;
+}
+
+.moveSlider {
+    position: absolute;
+    transform: translateX(30px);
+}
+
+// Easter Egg
+
+.easterEgg {
+    animation: colorchange 0s; /* animation-name followed by duration in seconds*/
+        /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 20s linear infinite; /* Chrome and Safari */
+}
+
+@keyframes colorchange {
+        0%   {background: #ff68c5;}
+        12.5%  {background: #ff0012;}
+        25%  {background: #ff9e01;}
+        37.5%  {background: #ffe61d;}
+        50% {background: #188630;}
+        62.5%  {background: #01eacc;}
+        75%  {background: #450097;}
+        87.5% {background: #b100d4;}
+        100% {background: #ff68c5;}
+    }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+        0%   {background: #ff68c5;}
+        12.5%  {background: #ff0012;}
+        25%  {background: #ff9e01;}
+        37.5%  {background: #ffe61d;}
+        50% {background: #188630;}
+        62.5%  {background: #01eacc;}
+        75%  {background: #450097;}
+        87.5% {background: #b100d4;}
+        100% {background: #ff68c5;}
+    }

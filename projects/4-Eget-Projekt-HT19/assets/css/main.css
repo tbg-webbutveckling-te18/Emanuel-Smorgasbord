@@ -1,21 +1,22 @@
 html {
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Exo 2', sans-serif;
 }
 
-.darkMode {
-    background-color: #2d3436;
-    color: #b2bec3;
-}
-
-.moveSlider {
-    position: absolute;
-    transform: translateX(30px);
+#body {
+    -webkit-transition: color 1s, background-color 1s;
+    -moz-transition: color 1s, background-color 1s;
+    -o-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+    transition-timing-function: ease;
 }
 
 #header .btnBar {
@@ -32,30 +33,77 @@ body {
     transform: scale(0.5);
 }
 
-#header .btnBar #homeBtn .homeBtn {
-    width: 64px;
-    height: 60px;
-}
-
 #header .btnBar #drkMode {
     width: 64px;
     transform: translateX(-18px);
 }
 
+#header .btnBar #drkMode #switchDrk {
+    cursor: pointer;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition-timing-function: ease;
+}
+
 #header .headline {
+    font-family: 'Bad Script', sans-serif;
     text-align: center;
+}
+
+#header .headline h1 {
+    display: inline;
+    font-size: 82px;
 }
 
 #wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-#wrapper section {
+#wrapper #mainNav {
     display: flex;
-    justify-content: center;
-    border: solid 3px black;
-    width: 256px;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#wrapper #mainNav section {
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition-timing-function: ease;
+}
+
+#wrapper #mainNav section:hover {
+    transform: scale(1.4);
+}
+
+#wrapper #mainNav section p {
+    cursor: pointer;
+    font-size: 22px;
+    text-align: center;
+}
+
+#wrapper #mainNav section svg {
+    cursor: pointer;
+    height: 256px;
+    -webkit-transition: fill 1s;
+    -moz-transition: fill 1s;
+    -o-transition: fill 1s;
+    transition: fill 1s;
+    transition-timing-function: ease;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #2d3436;
+    color: #b2bec3;
 }
 
 .st0 {
@@ -68,4 +116,90 @@ body {
 
 .st2 {
     fill: #b2bec3;
+}
+
+.transparent {
+    fill: rgba(0, 0, 0, 0);
+}
+
+.darkMode {
+    background-color: #151518;
+    color: #b2bec3;
+}
+
+.svgDrkMode {
+    fill: #b2bec3;
+}
+
+.moveSlider {
+    position: absolute;
+    transform: translateX(30px);
+}
+
+.easterEgg {
+    animation: colorchange 0s;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 20s linear infinite;
+    /* Chrome and Safari */
+}
+
+@keyframes colorchange {
+    0% {
+        background: #ff68c5;
+    }
+    12.5% {
+        background: #ff0012;
+    }
+    25% {
+        background: #ff9e01;
+    }
+    37.5% {
+        background: #ffe61d;
+    }
+    50% {
+        background: #188630;
+    }
+    62.5% {
+        background: #01eacc;
+    }
+    75% {
+        background: #450097;
+    }
+    87.5% {
+        background: #b100d4;
+    }
+    100% {
+        background: #ff68c5;
+    }
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+    0% {
+        background: #ff68c5;
+    }
+    12.5% {
+        background: #ff0012;
+    }
+    25% {
+        background: #ff9e01;
+    }
+    37.5% {
+        background: #ffe61d;
+    }
+    50% {
+        background: #188630;
+    }
+    62.5% {
+        background: #01eacc;
+    }
+    75% {
+        background: #450097;
+    }
+    87.5% {
+        background: #b100d4;
+    }
+    100% {
+        background: #ff68c5;
+    }
 }
