@@ -64,8 +64,14 @@ body {
         text-align: center;
 
         h1 {
-            display: inline;
             font-size: 82px;
+            letter-spacing: 16px;
+            margin: 16px 0px;
+        }
+
+        h2 {
+            letter-spacing: 8px;
+            margin: 16px 0px;
         }
     }
 }
@@ -73,40 +79,49 @@ body {
 #wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 64px;
 
     #mainNav {
         display: flex;
         justify-content: space-around;
         width: 80%;
 
-        section {
-            // border: solid 3px black;
+        a {
+            cursor: default;
+            color: inherit;
+            text-decoration: none;
+            margin: 0px;
+            padding: 0px;
 
-            -webkit-transition: transform 0.2s;
-            -moz-transition: transform 0.2s;
-            -o-transition: transform 0.2s;
-            transition: transform 0.2s;
-            transition-timing-function: ease;
-
-            &:hover {
-                transform: scale(1.4);
-            }
-
-            p {
+            section {
                 cursor: pointer;
-                font-size: 22px;
-                text-align: center;
-            }
+                // border: solid 3px black;
 
-            svg {
-                cursor: pointer;
-                height: 256px;
-
-                -webkit-transition: fill 1s;
-                -moz-transition: fill 1s;
-                -o-transition: fill 1s;
-                transition: fill 1s;
+                -webkit-transition: transform 0.2s;
+                -moz-transition: transform 0.2s;
+                -o-transition: transform 0.2s;
+                transition: transform 0.2s;
                 transition-timing-function: ease;
+
+                &:hover {
+                    transform: scale(1.4);
+                }
+
+                p {
+                    font-size: 22px;
+                    text-align: center;
+                    letter-spacing: 2px;
+                }
+
+                svg {
+                    height: 256px;
+
+                    -webkit-transition: fill 1s;
+                    -moz-transition: fill 1s;
+                    -o-transition: fill 1s;
+                    transition: fill 1s;
+                    transition-timing-function: ease;
+                }
             }
         }
     }
