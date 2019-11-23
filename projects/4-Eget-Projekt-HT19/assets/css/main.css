@@ -1,10 +1,3 @@
-html {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-}
-
 body {
     margin: 0px;
     padding: 0px;
@@ -19,12 +12,16 @@ body {
     transition-timing-function: ease;
 }
 
-#header .btnBar {
+#btnBar {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0px;
 }
 
-#header .btnBar #homeBtn {
+#btnBar #homeBtn {
     display: block;
     margin: 0px;
     padding: 0px;
@@ -33,12 +30,12 @@ body {
     transform: scale(0.5);
 }
 
-#header .btnBar #drkMode {
+#btnBar #drkMode {
     width: 64px;
     transform: translateX(-18px);
 }
 
-#header .btnBar #drkMode #switchDrk {
+#btnBar #drkMode #switchDrk {
     cursor: pointer;
     -webkit-transition: transform 1s;
     -moz-transition: transform 1s;
@@ -47,35 +44,49 @@ body {
     transition-timing-function: ease;
 }
 
-#header .headline {
+#content {
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+#content .page {
+    width: 100%;
+    height: 100%;
+}
+
+#content .subpages {
+    width: 100%;
+    height: 100%;
+}
+
+#content #mainPage .headline {
     font-family: 'Bad Script', sans-serif;
     text-align: center;
+    transform: translateY(64px);
 }
 
-#header .headline h1 {
+#content #mainPage .headline h1 {
     font-size: 82px;
     letter-spacing: 16px;
-    margin: 16px 0px;
+    margin: 0px;
 }
 
-#header .headline h2 {
+#content #mainPage .headline h2 {
     letter-spacing: 8px;
-    margin: 16px 0px;
+    margin: 0px;
 }
 
-#wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 64px;
-}
-
-#wrapper #mainNav {
+#content #mainPage #mainNav {
     display: flex;
     justify-content: space-around;
     width: 80%;
+    margin: 0px auto;
+    transform: translateY(128px);
 }
 
-#wrapper #mainNav a {
+#content #mainPage #mainNav a {
     cursor: default;
     color: inherit;
     text-decoration: none;
@@ -83,7 +94,7 @@ body {
     padding: 0px;
 }
 
-#wrapper #mainNav a section {
+#content #mainPage #mainNav a section {
     cursor: pointer;
     -webkit-transition: transform 0.2s;
     -moz-transition: transform 0.2s;
@@ -92,23 +103,31 @@ body {
     transition-timing-function: ease;
 }
 
-#wrapper #mainNav a section:hover {
+#content #mainPage #mainNav a section:hover {
     transform: scale(1.4);
 }
 
-#wrapper #mainNav a section p {
+#content #mainPage #mainNav a section p {
     font-size: 22px;
     text-align: center;
     letter-spacing: 2px;
 }
 
-#wrapper #mainNav a section svg {
+#content #mainPage #mainNav a section svg {
     height: 256px;
     -webkit-transition: fill 1s;
     -moz-transition: fill 1s;
     -o-transition: fill 1s;
     transition: fill 1s;
     transition-timing-function: ease;
+}
+
+#content #about {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#content #contact {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #footer {
@@ -147,7 +166,6 @@ body {
 }
 
 .moveSlider {
-    position: absolute;
     transform: translateX(30px);
 }
 

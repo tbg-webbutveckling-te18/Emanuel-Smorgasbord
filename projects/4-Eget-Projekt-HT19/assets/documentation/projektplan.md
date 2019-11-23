@@ -18,7 +18,9 @@ Träningsinriktade människor som är intresserade av lite mer premium produkter
 
 ### Research och inhämtning av material
 
-Jag har tagit inspiration till några av ikonerna som används på sidan ifrån Google. Annars är min kreativitet bearbetad i mitt huvud.
+Jag har tagit inspiration till några av ikonerna som används på sidan ifrån Google Bilder.
+
+[Pure CSS3 Smooth Scrolling To A DIV OnClick - No Javascript - Pure Html5 and CSS3 Tutorial](https://www.youtube.com/watch?v=KbMJPNXYYnw)
 
 ## Beskrivning av webbplatsen
 
