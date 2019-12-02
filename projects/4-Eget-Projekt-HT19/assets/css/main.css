@@ -61,7 +61,11 @@ body {
 }
 
 #content .subpages h1 {
-    margin: 0px;
+    font-size: 64px;
+    letter-spacing: 8px;
+    margin: 0px auto;
+    width: 90%;
+    transform: translateY(128px);
 }
 
 #content #mainPage .headline {
@@ -126,15 +130,19 @@ body {
 }
 
 #content #about {
-    background: linear-gradient(to top left, rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.2) 76%);
+    background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
 }
 
 #content #shop {
-    background: linear-gradient(to top right, rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.2) 76%);
+    background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+}
+
+#content #shop h1 {
+    text-align: right;
 }
 
 #content #contact {
-    background: linear-gradient(to top left, rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0.8) 75%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.2) 76%);
+    background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
 }
 
 #footer {
