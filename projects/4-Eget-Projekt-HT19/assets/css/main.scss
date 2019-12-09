@@ -6,6 +6,9 @@ $us-red: #d63031;
 $us-black: #2d3436;
 $us-grey: #b2bec3;
 
+$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+
 body {
     margin: 0px;
     padding: 0px;
@@ -147,11 +150,15 @@ body {
     }
 
     #about {
-        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: $bg-alpha-grey;
+
+        .paragraph {
+            float: right;
+        }
     }
 
     #shop {
-        background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: $bg-alpha-grey-odd;
 
         h1 {
             text-align: right;
@@ -159,7 +166,22 @@ body {
     }
 
     #contact {
-        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: $bg-alpha-grey;
+
+        .paragraph {
+            float: right;
+        }
+    }
+
+    .subpages .subBox {
+        width: 80%;
+        margin: auto;
+
+        .paragraph {
+            width: 40%;
+            font-size: 32px;
+            transform: translateY(256px);
+        }
     }
 }
 

@@ -133,6 +133,10 @@ body {
     background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
 }
 
+#content #about .paragraph {
+    float: right;
+}
+
 #content #shop {
     background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
 }
@@ -143,6 +147,21 @@ body {
 
 #content #contact {
     background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+}
+
+#content #contact .paragraph {
+    float: right;
+}
+
+#content .subpages .subBox {
+    width: 80%;
+    margin: auto;
+}
+
+#content .subpages .subBox .paragraph {
+    width: 40%;
+    font-size: 32px;
+    transform: translateY(256px);
 }
 
 #footer {
