@@ -32,6 +32,7 @@ body {
     top: 0px;
     margin: 0px 5%;
     padding: 16px;
+    z-index: 1;
 
 
     #homeBtn {
@@ -176,11 +177,26 @@ body {
     .subpages .subBox {
         width: 80%;
         margin: auto;
+        transform: translateY(256px);
 
         .paragraph {
             width: 40%;
             font-size: 32px;
-            transform: translateY(256px);
+        }
+
+        svg {
+            width: 64px;
+
+            -webkit-transition: fill .4s;
+            -moz-transition: fill .4s;
+            -o-transition: fill .4s;
+            transition: fill .4s;
+            transition-timing-function: ease;
+
+            &:hover {
+                fill: linear-gradient(45deg, rgb(255,220,128) 25%, rgb(252,175,69) 50%, rgb(247,119,55) 75%);
+                // fill: red;
+            }
         }
     }
 }

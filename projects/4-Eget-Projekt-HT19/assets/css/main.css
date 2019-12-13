@@ -20,6 +20,7 @@ body {
     top: 0px;
     margin: 0px 5%;
     padding: 16px;
+    z-index: 1;
 }
 
 #btnBar #homeBtn {
@@ -156,12 +157,25 @@ body {
 #content .subpages .subBox {
     width: 80%;
     margin: auto;
+    transform: translateY(256px);
 }
 
 #content .subpages .subBox .paragraph {
     width: 40%;
     font-size: 32px;
-    transform: translateY(256px);
+}
+
+#content .subpages .subBox svg {
+    width: 64px;
+    -webkit-transition: fill .4s;
+    -moz-transition: fill .4s;
+    -o-transition: fill .4s;
+    transition: fill .4s;
+    transition-timing-function: ease;
+}
+
+#content .subpages .subBox svg:hover {
+    fill: linear-gradient(45deg, #ffdc80 25%, #fcaf45 50%, #f77737 75%);
 }
 
 #footer {
