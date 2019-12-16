@@ -1,0 +1,9 @@
+@media screen and (max-width: 813px) {
+    .sideNav {
+        background-color: #2d3436;
+        display: block;
+        height: 4px;
+        width: 32px;
+        margin: 4px;
+    }
+}

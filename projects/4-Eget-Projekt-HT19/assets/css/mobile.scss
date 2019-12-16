@@ -1,0 +1,28 @@
+$red: #FF2020;
+$black: #151518;
+$grey: #808080;
+
+$us-red: #d63031;
+$us-black: #2d3436;
+$us-grey: #b2bec3;
+
+$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+
+@media screen and (max-width: 813px) {
+
+    .sideNav {
+        background-color: $us-black;
+        display: block;
+        height: 4px;
+        width: 32px;
+        margin: 4px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 813px) and (orientation: landscape) {
+
+}

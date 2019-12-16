@@ -12,170 +12,294 @@ body {
     transition-timing-function: ease;
 }
 
-#btnBar {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 90%;
-    top: 0px;
-    margin: 0px 5%;
-    padding: 16px;
-    z-index: 1;
+@media screen and (min-width: 813px) {
+    .sideNav {
+        display: none;
+    }
+    #btnBar {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 90%;
+        top: 0px;
+        margin: 0px 5%;
+        padding: 16px;
+        z-index: 1;
+    }
+    #btnBar #homeBtn {
+        display: block;
+        width: 32px;
+        height: 30px;
+    }
+    #btnBar #drkMode {
+        display: block;
+        width: 64px;
+    }
+    #btnBar #drkMode #switchDrk {
+        cursor: pointer;
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+        transition-timing-function: ease;
+    }
+    #content {
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+    #content .mainPage {
+        width: 100%;
+        height: 100%;
+    }
+    #content .subpages {
+        width: 100%;
+        height: 100%;
+        margin-top: 128px;
+    }
+    #content .subpages h1 {
+        font-size: 64px;
+        letter-spacing: 8px;
+        margin: 0px auto;
+        width: 90%;
+        transform: translateY(128px);
+    }
+    #content #mainPage .headline {
+        font-family: 'Bad Script', sans-serif;
+        text-align: center;
+        transform: translateY(64px);
+    }
+    #content #mainPage .headline h1 {
+        font-size: 82px;
+        letter-spacing: 16px;
+        margin: 0px;
+    }
+    #content #mainPage .headline h2 {
+        letter-spacing: 8px;
+        margin: 0px;
+    }
+    #content #mainPage #mainNav {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0px auto;
+        transform: translateY(128px);
+    }
+    #content #mainPage #mainNav a {
+        cursor: default;
+        color: inherit;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    #content #mainPage #mainNav a section {
+        cursor: pointer;
+        -webkit-transition: transform 0.2s;
+        -moz-transition: transform 0.2s;
+        -o-transition: transform 0.2s;
+        transition: transform 0.2s;
+        transition-timing-function: ease;
+    }
+    #content #mainPage #mainNav a section:hover {
+        transform: scale(1.4);
+    }
+    #content #mainPage #mainNav a section p {
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    #content #mainPage #mainNav a section svg {
+        height: 256px;
+        -webkit-transition: fill 1s;
+        -moz-transition: fill 1s;
+        -o-transition: fill 1s;
+        transition: fill 1s;
+        transition-timing-function: ease;
+    }
+    #content #about {
+        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #about .paragraph {
+        float: right;
+    }
+    #content #shop {
+        background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #shop h1 {
+        text-align: right;
+    }
+    #content #contact {
+        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #contact .paragraph {
+        float: right;
+    }
+    #content .subpages .subBox {
+        width: 80%;
+        margin: auto;
+        transform: translateY(256px);
+    }
+    #content .subpages .subBox .paragraph {
+        width: 40%;
+        font-size: 32px;
+    }
+    #content .subpages .subBox svg {
+        width: 64px;
+        -webkit-transition: fill .4s;
+        -moz-transition: fill .4s;
+        -o-transition: fill .4s;
+        transition: fill .4s;
+        transition-timing-function: ease;
+    }
+    #content .subpages .subBox svg:hover {
+        fill: linear-gradient(45deg, #ffdc80 25%, #fcaf45 50%, #f77737 75%);
+    }
 }
 
-#btnBar #homeBtn {
-    display: block;
-    width: 32px;
-    height: 30px;
-}
-
-#btnBar #drkMode {
-    display: block;
-    width: 64px;
-}
-
-#btnBar #drkMode #switchDrk {
-    cursor: pointer;
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -o-transition: transform 1s;
-    transition: transform 1s;
-    transition-timing-function: ease;
-}
-
-#content {
-    width: 100%;
-    height: 100vh;
-    scroll-behavior: smooth;
-    overflow-y: scroll;
-}
-
-#content .mainPage {
-    width: 100%;
-    height: 100%;
-}
-
-#content .subpages {
-    width: 100%;
-    height: 100%;
-    margin-top: 128px;
-}
-
-#content .subpages h1 {
-    font-size: 64px;
-    letter-spacing: 8px;
-    margin: 0px auto;
-    width: 90%;
-    transform: translateY(128px);
-}
-
-#content #mainPage .headline {
-    font-family: 'Bad Script', sans-serif;
-    text-align: center;
-    transform: translateY(64px);
-}
-
-#content #mainPage .headline h1 {
-    font-size: 82px;
-    letter-spacing: 16px;
-    margin: 0px;
-}
-
-#content #mainPage .headline h2 {
-    letter-spacing: 8px;
-    margin: 0px;
-}
-
-#content #mainPage #mainNav {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: 0px auto;
-    transform: translateY(128px);
-}
-
-#content #mainPage #mainNav a {
-    cursor: default;
-    color: inherit;
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-#content #mainPage #mainNav a section {
-    cursor: pointer;
-    -webkit-transition: transform 0.2s;
-    -moz-transition: transform 0.2s;
-    -o-transition: transform 0.2s;
-    transition: transform 0.2s;
-    transition-timing-function: ease;
-}
-
-#content #mainPage #mainNav a section:hover {
-    transform: scale(1.4);
-}
-
-#content #mainPage #mainNav a section p {
-    font-size: 22px;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-#content #mainPage #mainNav a section svg {
-    height: 256px;
-    -webkit-transition: fill 1s;
-    -moz-transition: fill 1s;
-    -o-transition: fill 1s;
-    transition: fill 1s;
-    transition-timing-function: ease;
-}
-
-#content #about {
-    background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
-}
-
-#content #about .paragraph {
-    float: right;
-}
-
-#content #shop {
-    background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
-}
-
-#content #shop h1 {
-    text-align: right;
-}
-
-#content #contact {
-    background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
-}
-
-#content #contact .paragraph {
-    float: right;
-}
-
-#content .subpages .subBox {
-    width: 80%;
-    margin: auto;
-    transform: translateY(256px);
-}
-
-#content .subpages .subBox .paragraph {
-    width: 40%;
-    font-size: 32px;
-}
-
-#content .subpages .subBox svg {
-    width: 64px;
-    -webkit-transition: fill .4s;
-    -moz-transition: fill .4s;
-    -o-transition: fill .4s;
-    transition: fill .4s;
-    transition-timing-function: ease;
-}
-
-#content .subpages .subBox svg:hover {
-    fill: linear-gradient(45deg, #ffdc80 25%, #fcaf45 50%, #f77737 75%);
+@media screen and (min-width: 813px) and (orientation: landscape) {
+    .sideNav {
+        display: none;
+    }
+    #btnBar {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 90%;
+        top: 0px;
+        margin: 0px 5%;
+        padding: 16px;
+        z-index: 1;
+    }
+    #btnBar #homeBtn {
+        display: block;
+        width: 32px;
+        height: 30px;
+    }
+    #btnBar #drkMode {
+        display: block;
+        width: 64px;
+    }
+    #btnBar #drkMode #switchDrk {
+        cursor: pointer;
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+        transition-timing-function: ease;
+    }
+    #content {
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+    #content .mainPage {
+        width: 100%;
+        height: 100%;
+    }
+    #content .subpages {
+        width: 100%;
+        height: 100%;
+        margin-top: 128px;
+    }
+    #content .subpages h1 {
+        font-size: 64px;
+        letter-spacing: 8px;
+        margin: 0px auto;
+        width: 90%;
+        transform: translateY(128px);
+    }
+    #content #mainPage .headline {
+        font-family: 'Bad Script', sans-serif;
+        text-align: center;
+        transform: translateY(64px);
+    }
+    #content #mainPage .headline h1 {
+        font-size: 82px;
+        letter-spacing: 16px;
+        margin: 0px;
+    }
+    #content #mainPage .headline h2 {
+        letter-spacing: 8px;
+        margin: 0px;
+    }
+    #content #mainPage #mainNav {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0px auto;
+        transform: translateY(128px);
+    }
+    #content #mainPage #mainNav a {
+        cursor: default;
+        color: inherit;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    #content #mainPage #mainNav a section {
+        cursor: pointer;
+        -webkit-transition: transform 0.2s;
+        -moz-transition: transform 0.2s;
+        -o-transition: transform 0.2s;
+        transition: transform 0.2s;
+        transition-timing-function: ease;
+    }
+    #content #mainPage #mainNav a section:hover {
+        transform: scale(1.4);
+    }
+    #content #mainPage #mainNav a section p {
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    #content #mainPage #mainNav a section svg {
+        height: 256px;
+        -webkit-transition: fill 1s;
+        -moz-transition: fill 1s;
+        -o-transition: fill 1s;
+        transition: fill 1s;
+        transition-timing-function: ease;
+    }
+    #content #about {
+        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #about .paragraph {
+        float: right;
+    }
+    #content #shop {
+        background: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #shop h1 {
+        text-align: right;
+    }
+    #content #contact {
+        background: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+    }
+    #content #contact .paragraph {
+        float: right;
+    }
+    #content .subpages .subBox {
+        width: 80%;
+        margin: auto;
+        transform: translateY(256px);
+    }
+    #content .subpages .subBox .paragraph {
+        width: 40%;
+        font-size: 32px;
+    }
+    #content .subpages .subBox svg {
+        width: 64px;
+        -webkit-transition: fill .4s;
+        -moz-transition: fill .4s;
+        -o-transition: fill .4s;
+        transition: fill .4s;
+        transition-timing-function: ease;
+    }
+    #content .subpages .subBox svg:hover {
+        fill: linear-gradient(45deg, #ffdc80 25%, #fcaf45 50%, #f77737 75%);
+    }
 }
 
 #footer {
