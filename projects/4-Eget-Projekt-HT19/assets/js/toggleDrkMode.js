@@ -1,21 +1,18 @@
 window.addEventListener('load',function(){
-	var swtch = document.getElementById("switchDrk");
-    swtch.addEventListener("click", darkMode);
+	var slider = document.getElementById("switchDrk");
+    slider.addEventListener("click", darkMode);
 });
 
 function darkMode() {
 	var body = document.getElementById("body");
-	body.classList.toggle("darkMode");
+	body.classList.toggle("darkModeBody");
 
-	var swtch = document.getElementById("switchDrk");
-	swtch.classList.toggle("moveSlider");
+	var slider = document.getElementById("switchDrk");
+	slider.classList.toggle("moveSlider");
 
-	var about = document.getElementById("about");
-	about.classList.toggle("svgDrkMode");
+	var grey = document.getElementsByClassName("st2");
+	grey.classList.toggle("darkModeBlack");
 
-	var store = document.getElementById("store");
-	store.classList.toggle("svgDrkMode");
-
-	var contact = document.getElementById("contact");
-	contact.classList.toggle("svgDrkMode");
+	var black = document.getElementsByClassName("st1");
+	black.classList.toggle("darkModeGrey");
 }
