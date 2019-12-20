@@ -34,6 +34,8 @@ body {
     }
 
     #sideNav {
+        position: fixed;
+        z-index: 1;
 
         -webkit-transition: transform 0.4s;
         -moz-transition: transform 0.4s;
@@ -41,41 +43,43 @@ body {
         transition: transform 0.4s;
         transition-timing-function: ease;
 
-        #sideButtons {
-            position: absolute;
-            display: flex;
+            // #sideClose {
+            //     width: 32px;
+            //     height: 32px;
+            //     margin: 8px;
+            //
+            //     span {
+            //         background-color: $dark;
+            //         display: block;
+            //         height: 4px;
+            //         width: 24px;
+            //
+            //         // &:first-child {
+            //         //     transform: rotate(45deg);
+            //         // }
+            //     }
+            // }
 
-            #sideClose {
+        #sideButton {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            margin: 8px;
+
+            // transform: translateX(256px);
+
+            span {
+                background-color: $dark;
+                display: block;
+                height: 4px;
                 width: 32px;
-                height: 32px;
-                margin: 8px;
+                margin: 5px 0px;
 
-                span {
-                    background-color: $dark;
-                    display: block;
-                    height: 4px;
-                    width: 24px;
-
-                    // &:first-child {
-                    //     transform: rotate(45deg);
-                    // }
-                }
-            }
-
-            #sideOpen {
-                width: 32px;
-                height: 32px;
-                margin: 8px;
-
-                transform: translateX(256px);
-
-                span {
-                    background-color: $dark;
-                    display: block;
-                    height: 4px;
-                    width: 32px;
-                    margin: 5px 0px;
-                }
+                -webkit-transition: transform 0.4s;
+                -moz-transition: transform 0.4s;
+                -o-transition: transform 0.4s;
+                transition: transform 0.4s;
+                transition-timing-function: ease;
             }
         }
 
@@ -84,16 +88,22 @@ body {
             background-color: rgba(0, 0, 0, 0.8);
             width: 256px;
             height: 100vh;
+            left: -256px;
 
             ul {
+                text-align: center;
                 list-style-type: none;
+                margin: 0px;
+                padding: 0px;
 
                 li a {
+                    display: block;
+                    font-size: 22px;
                     color: $light;
                     text-decoration: none;
+                    padding: 16px 0px;
                 }
             }
-
         }
     }
 
@@ -162,3 +172,23 @@ body {
 // @media screen and (max-width: 800px) and (orientation: landscape) {
 //
 // }
+
+// JS toggle classList
+
+.slideNav {
+    transform: translateX(256px);
+}
+
+.burgerTop {
+    transform: translateY(9px) rotate(-135deg);
+    // transform: translateY(9px);
+}
+
+.burgerMid {
+    transform: rotate(-45deg);
+}
+
+.burgerBot {
+    transform: translateY(-9px) rotate(135deg);
+    // transform: translateY(-9px);
+}

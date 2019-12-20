@@ -21,52 +21,51 @@ body {
         display: none;
     }
     #sideNav {
+        position: fixed;
+        z-index: 1;
         -webkit-transition: transform 0.4s;
         -moz-transition: transform 0.4s;
         -o-transition: transform 0.4s;
         transition: transform 0.4s;
         transition-timing-function: ease;
     }
-    #sideNav #sideButtons {
-        position: absolute;
-        display: flex;
-    }
-    #sideNav #sideButtons #sideClose {
+    #sideNav #sideButton {
+        position: fixed;
         width: 32px;
         height: 32px;
         margin: 8px;
     }
-    #sideNav #sideButtons #sideClose span {
-        background-color: #252527;
-        display: block;
-        height: 4px;
-        width: 24px;
-    }
-    #sideNav #sideButtons #sideOpen {
-        width: 32px;
-        height: 32px;
-        margin: 8px;
-        transform: translateX(256px);
-    }
-    #sideNav #sideButtons #sideOpen span {
+    #sideNav #sideButton span {
         background-color: #252527;
         display: block;
         height: 4px;
         width: 32px;
         margin: 5px 0px;
+        -webkit-transition: transform 0.4s;
+        -moz-transition: transform 0.4s;
+        -o-transition: transform 0.4s;
+        transition: transform 0.4s;
+        transition-timing-function: ease;
     }
     #sideNav .sideNav {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.8);
         width: 256px;
         height: 100vh;
+        left: -256px;
     }
     #sideNav .sideNav ul {
+        text-align: center;
         list-style-type: none;
+        margin: 0px;
+        padding: 0px;
     }
     #sideNav .sideNav ul li a {
+        display: block;
+        font-size: 22px;
         color: #a0a0a2;
         text-decoration: none;
+        padding: 16px 0px;
     }
     #content {
         width: 100%;
@@ -118,4 +117,20 @@ body {
     #content #mainPage #mainNav a section svg {
         height: 128px;
     }
+}
+
+.slideNav {
+    transform: translateX(256px);
+}
+
+.burgerTop {
+    transform: translateY(9px) rotate(-135deg);
+}
+
+.burgerMid {
+    transform: rotate(-45deg);
+}
+
+.burgerBot {
+    transform: translateY(-9px) rotate(135deg);
 }
