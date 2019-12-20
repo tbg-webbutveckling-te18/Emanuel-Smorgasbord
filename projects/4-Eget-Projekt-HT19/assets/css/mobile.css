@@ -1,9 +1,121 @@
-@media screen and (max-width: 813px) {
-    .sideNav {
-        background-color: #2d3436;
+html {
+    color: #252527;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#body {
+    -webkit-transition: color 1s, background-color 1s;
+    -moz-transition: color 1s, background-color 1s;
+    -o-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+    transition-timing-function: ease;
+}
+
+@media screen and (max-width: 800px) {
+    #btnBar {
+        display: none;
+    }
+    #sideNav {
+        -webkit-transition: transform 0.4s;
+        -moz-transition: transform 0.4s;
+        -o-transition: transform 0.4s;
+        transition: transform 0.4s;
+        transition-timing-function: ease;
+    }
+    #sideNav #sideButtons {
+        position: absolute;
+        display: flex;
+    }
+    #sideNav #sideButtons #sideClose {
+        width: 32px;
+        height: 32px;
+        margin: 8px;
+    }
+    #sideNav #sideButtons #sideClose span {
+        background-color: #252527;
+        display: block;
+        height: 4px;
+        width: 24px;
+    }
+    #sideNav #sideButtons #sideOpen {
+        width: 32px;
+        height: 32px;
+        margin: 8px;
+        transform: translateX(256px);
+    }
+    #sideNav #sideButtons #sideOpen span {
+        background-color: #252527;
         display: block;
         height: 4px;
         width: 32px;
-        margin: 4px;
+        margin: 5px 0px;
+    }
+    #sideNav .sideNav {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 256px;
+        height: 100vh;
+    }
+    #sideNav .sideNav ul {
+        list-style-type: none;
+    }
+    #sideNav .sideNav ul li a {
+        color: #a0a0a2;
+        text-decoration: none;
+    }
+    #content {
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+    }
+    #content #mainPage {
+        width: 100%;
+        height: 100%;
+    }
+    #content #mainPage .headline {
+        font-family: 'Bad Script', sans-serif;
+        text-align: center;
+        transform: translateY(16px);
+    }
+    #content #mainPage .headline h1 {
+        font-size: 42px;
+        margin: 0px;
+    }
+    #content #mainPage .headline h2 {
+        font-size: 16px;
+        margin: 0px;
+    }
+    #content #mainPage #mainNav {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        height: 512px;
+        margin: 0px auto;
+    }
+    #content #mainPage #mainNav a {
+        cursor: default;
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        margin: auto;
+        padding: 0px;
+    }
+    #content #mainPage #mainNav a section {
+        display: flex;
+    }
+    #content #mainPage #mainNav a section p {
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: 2px;
+        margin: auto;
+    }
+    #content #mainPage #mainNav a section svg {
+        height: 128px;
     }
 }

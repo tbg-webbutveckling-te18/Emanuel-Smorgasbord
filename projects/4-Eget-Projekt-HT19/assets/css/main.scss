@@ -1,13 +1,17 @@
 $red: #FF2020;
-$black: #252527;
-$grey: #a0a0a2;
+$dark: #252527;
+$light: #a0a0a2;
 
 $us-red: #d63031;
 $us-black: #2d3436;
 $us-grey: #b2bec3;
 
-$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
-$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
+$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
+
+html {
+    color: $dark;
+}
 
 body {
     margin: 0px;
@@ -23,9 +27,9 @@ body {
 	transition-timing-function: ease;
 }
 
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 800px) {
 
-    .sideNav {
+    #sideNav {
         display: none;
     }
 
@@ -68,11 +72,6 @@ body {
         scroll-behavior: smooth;
         overflow-y: scroll;
 
-        .mainPage {
-            width: 100%;
-            height: 100%;
-        }
-
         .subpages {
             width: 100%;
             height: 100%;
@@ -83,12 +82,14 @@ body {
                 font-size: 64px;
                 letter-spacing: 8px;
                 margin: 0px auto;
-                width: 90%;
+                width: 80%;
                 transform: translateY(128px);
             }
         }
 
         #mainPage {
+            width: 100%;
+            height: 100%;
 
             .headline {
                 font-family: 'Bad Script', sans-serif;
@@ -144,11 +145,19 @@ body {
                         svg {
                             height: 256px;
 
-                            -webkit-transition: fill 1s;
-                            -moz-transition: fill 1s;
-                            -o-transition: fill 1s;
-                            transition: fill 1s;
-                            transition-timing-function: ease;
+                            // -webkit-transition: 1s;
+                            // -moz-transition: 1s;
+                            // -o-transition: 1s;
+                            // transition: 1s;
+                            // transition-timing-function: ease;
+                            //
+                            // g {
+                            //     -webkit-transition: fill 1s;
+                            //     -moz-transition: fill 1s;
+                            //     -o-transition: fill 1s;
+                            //     transition: fill 1s;
+                            //     transition-timing-function: ease;
+                            // }
                         }
                     }
                 }
@@ -192,16 +201,7 @@ body {
             .instagram svg {
                 width: 64px;
 
-                stop {
-                    -webkit-transition: .2s;
-                    -moz-transition: .2s;
-                    -o-transition: .2s;
-                    transition: .2s;
-                    transition-timing-function: ease;
-                }
-
-
-                &:hover #igGradient {
+                #igGradient {
                     --stop-0: #FFDC80;
                     --stop-1: #FCAF45;
                     --stop-2: #F77737;
@@ -214,17 +214,32 @@ body {
                     --stop-9: #405DE6;
                 }
 
-                .igGradient {
+                #igNonHover {
+                    fill: $dark;
+                }
+
+                #igOnHover {
                     fill: url(#igGradient);
+                    opacity: 0.0;
+
+                    -webkit-transition: opacity .2s;
+                    -moz-transition: opacity .2s;
+                    -o-transition: opacity .2s;
+                    transition: opacity .2s;
+                    transition-timing-function: ease;
+
+                    &:hover {
+                        opacity: 1.0;
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 813px) and (orientation: landscape) {
-
-}
+// @media screen and (min-width: 800px) and (orientation: landscape) {
+//
+// }
 
 #footer {
     display: flex;
@@ -258,26 +273,26 @@ body {
 }
 
 .st1 {
-    fill: $black;
+    fill: $dark;
 }
 
 .st2 {
-    fill: $grey;
+    fill: $light;
 }
 
 // JS Dark Mode Toggle Classes
 
 .darkModeBody {
-    background-color: $black;
-    color: $grey;
+    background-color: $dark;
+    color: $light;
 }
 
 .darkModeGrey {
-    fill: $grey;
+    fill: $light;
 }
 
 .darkModeBlack {
-    fill: $black;
+    fill: $dark;
 }
 
 .moveSlider {

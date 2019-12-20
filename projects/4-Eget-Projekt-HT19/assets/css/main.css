@@ -1,3 +1,7 @@
+html {
+    color: #252527;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -12,8 +16,8 @@ body {
     transition-timing-function: ease;
 }
 
-@media screen and (min-width: 813px) {
-    .sideNav {
+@media screen and (min-width: 800px) {
+    #sideNav {
         display: none;
     }
     #btnBar {
@@ -49,10 +53,6 @@ body {
         scroll-behavior: smooth;
         overflow-y: scroll;
     }
-    #content .mainPage {
-        width: 100%;
-        height: 100%;
-    }
     #content .subpages {
         width: 100%;
         height: 100%;
@@ -62,8 +62,12 @@ body {
         font-size: 64px;
         letter-spacing: 8px;
         margin: 0px auto;
-        width: 90%;
+        width: 80%;
         transform: translateY(128px);
+    }
+    #content #mainPage {
+        width: 100%;
+        height: 100%;
     }
     #content #mainPage .headline {
         font-family: 'Bad Script', sans-serif;
@@ -111,26 +115,21 @@ body {
     }
     #content #mainPage #mainNav a section svg {
         height: 256px;
-        -webkit-transition: fill 1s;
-        -moz-transition: fill 1s;
-        -o-transition: fill 1s;
-        transition: fill 1s;
-        transition-timing-function: ease;
     }
     #content #about {
-        background: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
     }
     #content #about .paragraph {
         float: right;
     }
     #content #shop {
-        background: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
     }
     #content #shop h1 {
         text-align: right;
     }
     #content #contact {
-        background: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.6) 75%, rgba(0, 0, 0, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+        background: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
     }
     #content #contact .paragraph {
         float: right;
@@ -147,14 +146,7 @@ body {
     #content .subpages .subBox .instagram svg {
         width: 64px;
     }
-    #content .subpages .subBox .instagram svg stop {
-        -webkit-transition: .2s;
-        -moz-transition: .2s;
-        -o-transition: .2s;
-        transition: .2s;
-        transition-timing-function: ease;
-    }
-    #content .subpages .subBox .instagram svg:hover #igGradient {
+    #content .subpages .subBox .instagram svg #igGradient {
         --stop-0: #FFDC80;
         --stop-1: #FCAF45;
         --stop-2: #F77737;
@@ -166,8 +158,20 @@ body {
         --stop-8: #5851DB;
         --stop-9: #405DE6;
     }
-    #content .subpages .subBox .instagram svg .igGradient {
+    #content .subpages .subBox .instagram svg #igNonHover {
+        fill: #252527;
+    }
+    #content .subpages .subBox .instagram svg #igOnHover {
         fill: url(#igGradient);
+        opacity: 0.0;
+        -webkit-transition: opacity .2s;
+        -moz-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s;
+        transition-timing-function: ease;
+    }
+    #content .subpages .subBox .instagram svg #igOnHover:hover {
+        opacity: 1.0;
     }
 }
 

@@ -10,9 +10,6 @@ function darkMode() {
 	var slider = document.getElementById("switchDrk");
 	slider.classList.toggle("moveSlider");
 
-	var grey = document.getElementsByClassName("st2");
-	grey.classList.toggle("darkModeBlack");
-
-	var black = document.getElementsByClassName("st1");
-	black.classList.toggle("darkModeGrey");
+	var fills = document.getElementById("fill");
+	fills.classList.toggle("darkModeGrey");
 }

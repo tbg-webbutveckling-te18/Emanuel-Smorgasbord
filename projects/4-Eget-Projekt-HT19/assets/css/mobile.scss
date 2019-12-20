@@ -1,28 +1,164 @@
 $red: #FF2020;
-$black: #151518;
-$grey: #808080;
+$dark: #252527;
+$light: #a0a0a2;
 
 $us-red: #d63031;
 $us-black: #2d3436;
 $us-grey: #b2bec3;
 
-$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
-$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 3, 0.2) 75%, rgba(0, 0, 3, 0.6) 75%, rgba(0, 0, 3, 0.6) 76%, rgba(0, 0, 0, 0) 76%);
+$bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
+$bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
 
-@media screen and (max-width: 813px) {
+html {
+    color: $dark;
+}
 
-    .sideNav {
-        background-color: $us-black;
-        display: block;
-        height: 4px;
-        width: 32px;
-        margin: 4px;
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#body {
+	-webkit-transition: color 1s, background-color 1s;
+	-moz-transition: color 1s, background-color 1s;
+	-o-transition: color 1s, background-color 1s;
+    transition: color 1s, background-color 1s;
+	transition-timing-function: ease;
+}
+
+@media screen and (max-width: 800px) {
+
+    #btnBar {
+        display: none;
     }
 
-    
+    #sideNav {
 
+        -webkit-transition: transform 0.4s;
+        -moz-transition: transform 0.4s;
+        -o-transition: transform 0.4s;
+        transition: transform 0.4s;
+        transition-timing-function: ease;
+
+        #sideButtons {
+            position: absolute;
+            display: flex;
+
+            #sideClose {
+                width: 32px;
+                height: 32px;
+                margin: 8px;
+
+                span {
+                    background-color: $dark;
+                    display: block;
+                    height: 4px;
+                    width: 24px;
+
+                    // &:first-child {
+                    //     transform: rotate(45deg);
+                    // }
+                }
+            }
+
+            #sideOpen {
+                width: 32px;
+                height: 32px;
+                margin: 8px;
+
+                transform: translateX(256px);
+
+                span {
+                    background-color: $dark;
+                    display: block;
+                    height: 4px;
+                    width: 32px;
+                    margin: 5px 0px;
+                }
+            }
+        }
+
+        .sideNav {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 256px;
+            height: 100vh;
+
+            ul {
+                list-style-type: none;
+
+                li a {
+                    color: $light;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+
+
+    #content {
+        width: 100%;
+        height: 100vh;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+
+        #mainPage {
+            width: 100%;
+            height: 100%;
+
+            .headline {
+                font-family: 'Bad Script', sans-serif;
+                text-align: center;
+                transform: translateY(16px);
+
+                h1 {
+                    font-size: 42px;
+                    margin: 0px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    margin: 0px;
+                }
+            }
+
+            #mainNav {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                height: 512px;
+                margin: 0px auto;
+
+                a {
+                    cursor: default;
+                    display: block;
+                    color: inherit;
+                    text-decoration: none;
+                    margin: auto;
+                    padding: 0px;
+
+                    section {
+                        display: flex;
+
+                        p {
+                            font-size: 22px;
+                            text-align: center;
+                            letter-spacing: 2px;
+                            margin: auto;
+                        }
+
+                        svg {
+                            height: 128px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 813px) and (orientation: landscape) {
-
-}
+// @media screen and (max-width: 800px) and (orientation: landscape) {
+//
+// }
