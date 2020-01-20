@@ -1,0 +1,57 @@
+body {
+    background-color: #74b9ff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.gridContainer {
+    background-color: #FFBA74;
+    width: 80vw;
+    height: 100vh;
+    margin: 0px auto;
+    box-shadow: 3px 0px 10px #636e72, -3px 0px 10px #636e72;
+    display: grid;
+    grid-template-areas: "header header header" "left mid right" "footer footer botRight";
+    grid-template-rows: 200px minmax(350px, auto) 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gridContainer .gridItem:nth-child(1) {
+    grid-area: header;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContainer .gridItem:nth-child(1) h1 {
+    font-family: impact;
+    letter-spacing: 25px;
+    font-size: 64px;
+    color: white;
+}
+
+.gridContainer .gridItem:nth-child(2) {
+    grid-area: left;
+    background-color: orange;
+}
+
+.gridContainer .gridItem:nth-child(3) {
+    grid-area: mid;
+    background-color: yellow;
+}
+
+.gridContainer .gridItem:nth-child(4) {
+    grid-area: right;
+    background-color: green;
+}
+
+.gridContainer .gridItem:nth-child(5) {
+    grid-area: footer;
+    background-color: blue;
+}
+
+.gridContainer .gridItem:nth-child(6) {
+    grid-area: botRight;
+    background-color: indigo;
+}

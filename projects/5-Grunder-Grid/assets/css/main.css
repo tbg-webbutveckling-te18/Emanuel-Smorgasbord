@@ -6,7 +6,8 @@ body {
 
 .gridContainer {
     display: grid;
-    grid-template-rows: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 512px 1fr;
     background-color: #FFBA74;
     width: 80vw;
     height: 100vh;
@@ -14,22 +15,10 @@ body {
     box-shadow: 3px 0px 10px #636e72, -3px 0px 10px #636e72;
 }
 
-.gridContainer .gridItem:nth-child(1) {
+.gridContainer .gridItem:nth-child(even) {
     background-color: #55efc4;
 }
 
-.gridContainer .gridItem:nth-child(2) {
-    background-color: #ffeaa7;
-}
-
-.gridContainer .gridItem:nth-child(3) {
-    background-color: #fab1a0;
-}
-
-.gridContainer .gridItem:nth-child(4) {
-    background-color: #fd79a8;
-}
-
-.gridContainer .gridItem:nth-child(5) {
+.gridContainer .gridItem:nth-child(odd) {
     background-color: #a29bfe;
 }
