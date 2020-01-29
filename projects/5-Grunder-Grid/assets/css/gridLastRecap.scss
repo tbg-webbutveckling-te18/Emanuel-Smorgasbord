@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body {
+    background-color: #ffeaa7;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+
+    width: 80vw;
+    height: 90vh;
+
+    border: 1px solid black;
+    margin: auto;
+
+    .gridItem:nth-child(odd) {
+        background-color: #6c5ce7;
+    }
+
+    .gridItem:nth-child(even) {
+        background-color: #00cec9;
+    }
+}
