@@ -22,6 +22,8 @@ Jag har tagit inspiration till några av ikonerna som används på sidan ifrån 
 
 [Pure CSS3 Smooth Scrolling To A DIV OnClick - No Javascript - Pure Html5 and CSS3 Tutorial](https://www.youtube.com/watch?v=KbMJPNXYYnw)
 
+Gammal kunskap och ideer ifrån tidigare egna projekt.
+
 ## Beskrivning av webbplatsen
 
 Köp din träningströja ifrån oss med ett gummitryck på tröjans baksida för att få ett bra grepp på underlaget vid till exempel bänkpress.
@@ -30,61 +32,95 @@ Köp din träningströja ifrån oss med ett gummitryck på tröjans baksida för
 
 Stilren design, enkel att använda, lätt direkt information
 
-###Design/Form
+### Design/Form
 
-######Sitemap
+###### Sitemap
 ![Sitemap](sitemap.jpg)
 
-######Wireframe
+###### Wireframe
 ![Wireframe](wireframe.jpg)
 
-#####Beskriv idén med kompositionen på de olika sidorna
+##### Beskriv idén med kompositionen på de olika sidorna
 
-#####Logotyper
-De flesta logotyperna som kommer används är scaleable vector graphics. Uppe i det vänstra hörnet finns ett hus som ska fungera som en hemknapp till indexen. Uppe i det högra hörnet finns en slider för att ändra sidan till darkmode. Samt ikonerna till dessa ankare i mitten.
+##### Logotyper
 
-#####Färger
-[Färgpalett](https://flatuicolors.com/palette/us)
+De flesta logotyperna som kommer används är scaleable vector graphics. Syftet med dessa är att man ska kunna "zooma" in och ut på webbplatsen utan att offra kvalitet.
 
-###Text
+##### Färger
 
-Finns det text? Vilken font? Vad har texten för syfte? Vad har texten för färg och form? Är texten läsbar? Är texten informativ? Vad är karaktären på texten, tex skämtsam eller allvarlig
+- #FF2020
+- #252527
+- #a0a0a2
+- #d63031
+- #2d3436
+- #b2bec3
+- black
+- grey
+- white
+- #FFDC80
+- #FCAF45
+- #F77737
+- #F56040
+- #FD1D1D
+- #E1306C
+- #C13584
+- #833AB4
+- #5851DB
+- #405DE6
+- #ff68c5
+- #ff0012
+- #ff9e01
+- #ffe61d
+- #188630
+- #01eacc
+- #450097
+- #b100d4
+- #ff68c5
 
-###Bild
+### Text
 
-Vad har bilderna för syfte? Karaktär på bilderna?
+Texten lilla delen text som finns med är hyfsat kort. Rubriken/hemsidans namn har en äldre font stil med sving men är ändå lätt att läsa. Brödtexten har en mycket lättläst font i lite modernare drag.
 
-###Rörliga bilder
+### Bild
 
-Finns det med rörliga bilder? Vad är det för sorts rörliga bilder (video, animeringar)? Vad har man för syfte med de rörliga bilderna? Är de rörliga bilderna stora eller små? Kan man styra de rörliga bilderna?
+Bilderna har i syfte att både fånga uppmärksamhet samt att beskriva betydelsen i dem med lite känsla.
 
-###Ljud
+### Rörliga bilder
 
-Finns det med ljud? Vad är det för slags ljud? Går ljudet att styra? Vad har man för syfte med ljudet?
+Det finns inte direkt några rörliga bilder. Det som finns är ett par små animationer, små knappfunktioner som kan ändra sidans utseende.
 
-###Interaktivitet
+### Ljud
 
-Finns det knappar, hotspots, menyval eller andra former av inmatningar från användaren? Kan man som användare vända och gå tillbaka? Kan man styra ljud och rörliga bilder? Går det att avbryta mitt i? Finns det formulär?
+Det finns inte med någon typ av ljud.
 
-###Funktioner
+### Interaktivitet
 
-Vad ska det finnas för funktioner? Viktiga? Mindre viktiga? Beskriv och förklara så utförligt du kan och skriv dem i en prioriteringslista: Viktigast först!
-+++ <!-- Sätt igång och koda din webbplats stenhårt! --> +++
+Det finns knappar som startar funktioner i form utav förändrad bakgrundsfärg, eller på mindre enheter en sidnavigation som flyter ut samtidigt som knappen (burgaren) förvandlas till ett kryss. Allt gjort med "transform" i css så det går inte att avbryta mitt i.
 
-##Stilguide & Tester
+### Funktioner
 
-###Stilguide
+Det ska finnas en funktion som byter färgtema på hemsidan. En så kallad "dark mode" eller "night mode" som är snäll mot ögonen i mörka omgivningar.
+
+Jag gjorde även ett easter egg som får bakgrunden att skifta i alla regnbågens färger.
+
+## Stilguide & Tester
+
+### Stilguide
 
 Beskriv sidans layout, mått, typografi och färg som en mall för andra designers, om de skulle ta över efter dig. Går bra att göra med skärmdumpar och kommentarer till.
 
-###Testning
+Layouten är ganska unik och enkel. Den har först en hel sida till navigation och sedan undersidor där själva informationen är placerad.
 
-Beskriv hur du testat din design, med vilka verktyg och vad du kommit fram till. Även om du ändrat något i designen pga testresultaten.
+![PC Layout 1](screenshot1.jpg)
 
-##Slutsats och sammanfattning
+![PC Layout 2](screenshot2.jpg)
 
-➔	Berätta hur arbetet har gått: Vilka problem ni stött på och hur ni löst dem.
+![Mobile Layout 1](screenshot3.jpg)
 
-➔	Berätta vilka anpassningar ni gjort av er ursprungliga planering och design, påverkat av era tester eller annat som hänt under arbetets gång.
+![Mobile Layout 2](screenshot4.jpg)
 
-➔	Beskriv hur ni tycker att ni kan förbättra arbetet.
+### Testning
+
+Jag har testat min design i Chrome på dator och i mobiltelelfonen.
+
+Jag ville ha en sida med någon sorts transition, så jag bytte ifrån att ha en sida med subpages till en sida med click och scroll funktion.

@@ -10,7 +10,7 @@ $bg-alpha-grey: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.
 $bg-alpha-grey-odd: linear-gradient(25deg, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.6) 71%, rgba(0, 0, 0, 0) 71%);
 
 html {
-    color: $dark;
+    color: $us-black;
 }
 
 body {
@@ -273,33 +273,33 @@ body {
 }
 
 .st1 {
-    fill: $dark;
+    fill: #444;
 }
 
 .st2 {
-    fill: $light;
+    fill: grey;
 }
 
-// JS Dark Mode Toggle Classes
+// --------------- JS Dark Mode Toggle Classes ----------------------
 
 .darkModeBody {
     background-color: $dark;
     color: $light;
 }
 
-.darkModeGrey {
-    fill: $light;
-}
-
-.darkModeBlack {
-    fill: $dark;
-}
+// .darkModeGrey {
+//     fill: $light;
+// }
+//
+// .darkModeBlack {
+//     fill: $dark;
+// }
 
 .moveSlider {
     transform: translateX(30px);
 }
 
-// Easter Egg
+// -------- Easter Egg ----------
 
 .easterEgg {
     animation: colorchange 0s; /* animation-name followed by duration in seconds*/

@@ -1,6 +1,6 @@
 // Open and Close SideNav on Button
 window.addEventListener('load',function(){
-	var slider = document.getElementById("sideButton");
+	var slider = document.getElementById("burger");
     slider.addEventListener("click", sideNav);
 });
 

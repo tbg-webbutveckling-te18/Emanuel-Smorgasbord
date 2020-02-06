@@ -29,14 +29,14 @@ body {
         transition: transform 0.4s;
         transition-timing-function: ease;
     }
-    #sideNav #sideButton {
+    #sideNav #burger {
         position: fixed;
         width: 32px;
         height: 32px;
         margin: 8px;
     }
-    #sideNav #sideButton span {
-        background-color: #252527;
+    #sideNav #burger span {
+        background-color: grey;
         display: block;
         height: 4px;
         width: 32px;
@@ -59,6 +59,7 @@ body {
         list-style-type: none;
         margin: 0px;
         padding: 0px;
+        height: 85%;
     }
     #sideNav .sideNav ul li a {
         display: block;
@@ -66,6 +67,25 @@ body {
         color: #a0a0a2;
         text-decoration: none;
         padding: 16px 0px;
+    }
+    #sideNav .sideNav .botButtons {
+        display: flex;
+        justify-content: space-around;
+    }
+    #sideNav .sideNav .botButtons #mHomeBtn {
+        display: block;
+        width: 32px;
+    }
+    #sideNav .sideNav .botButtons #mDrkMode {
+        display: block;
+        width: 64px;
+    }
+    #sideNav .sideNav .botButtons #mDrkMode #mSwitchDrk {
+        -webkit-transition: transform 1s;
+        -moz-transition: transform 1s;
+        -o-transition: transform 1s;
+        transition: transform 1s;
+        transition-timing-function: ease;
     }
     #content {
         width: 100%;
@@ -116,6 +136,42 @@ body {
     }
     #content #mainPage #mainNav a section svg {
         height: 128px;
+    }
+    #content .subpages {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #content .subpages h1 {
+        font-size: 38px;
+        margin: 0px;
+    }
+    #content .subpages section {
+        width: 80%;
+    }
+    #content .subpages section p {
+        font-size: 18px;
+    }
+    #content .subpages section .instagram svg {
+        width: 50px;
+    }
+    #content .subpages section .instagram svg #igGradient {
+        --stop-0: #FFDC80;
+        --stop-1: #FCAF45;
+        --stop-2: #F77737;
+        --stop-3: #F56040;
+        --stop-4: #FD1D1D;
+        --stop-5: #E1306C;
+        --stop-6: #C13584;
+        --stop-7: #833AB4;
+        --stop-8: #5851DB;
+        --stop-9: #405DE6;
+    }
+    #content .subpages section .instagram svg #igOnHover {
+        fill: url(#igGradient);
+        opacity: 1.0;
     }
 }
 

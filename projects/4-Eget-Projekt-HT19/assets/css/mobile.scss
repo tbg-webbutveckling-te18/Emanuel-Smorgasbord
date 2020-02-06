@@ -60,7 +60,7 @@ body {
             //     }
             // }
 
-        #sideButton {
+        #burger {
             position: fixed;
             width: 32px;
             height: 32px;
@@ -69,7 +69,7 @@ body {
             // transform: translateX(256px);
 
             span {
-                background-color: $dark;
+                background-color: grey;
                 display: block;
                 height: 4px;
                 width: 32px;
@@ -95,6 +95,7 @@ body {
                 list-style-type: none;
                 margin: 0px;
                 padding: 0px;
+                height: 85%;
 
                 li a {
                     display: block;
@@ -104,7 +105,32 @@ body {
                     padding: 16px 0px;
                 }
             }
+
+            .botButtons {
+                display: flex;
+                justify-content: space-around;
+
+                #mHomeBtn {
+                    display: block;
+                    width: 32px;
+                }
+
+                #mDrkMode {
+                    display: block;
+                    width: 64px;
+
+                    #mSwitchDrk {
+                        -webkit-transition: transform 1s;
+                        -moz-transition: transform 1s;
+                        -o-transition: transform 1s;
+                        transition: transform 1s;
+                        transition-timing-function: ease;
+                    }
+                }
+
+            }
         }
+
     }
 
 
@@ -166,6 +192,49 @@ body {
                 }
             }
         }
+
+        .subpages {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            h1 {
+                font-size: 38px;
+                margin: 0px;
+            }
+
+            section {
+                width: 80%;
+
+                p {
+                    font-size: 18px;
+                }
+
+                .instagram svg {
+                    width: 50px;
+
+                    #igGradient {
+                        --stop-0: #FFDC80;
+                        --stop-1: #FCAF45;
+                        --stop-2: #F77737;
+                        --stop-3: #F56040;
+                        --stop-4: #FD1D1D;
+                        --stop-5: #E1306C;
+                        --stop-6: #C13584;
+                        --stop-7: #833AB4;
+                        --stop-8: #5851DB;
+                        --stop-9: #405DE6;
+                    }
+
+                    #igOnHover {
+                        fill: url(#igGradient);
+                        opacity: 1.0;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -181,7 +250,6 @@ body {
 
 .burgerTop {
     transform: translateY(9px) rotate(-135deg);
-    // transform: translateY(9px);
 }
 
 .burgerMid {
@@ -190,5 +258,4 @@ body {
 
 .burgerBot {
     transform: translateY(-9px) rotate(135deg);
-    // transform: translateY(-9px);
 }

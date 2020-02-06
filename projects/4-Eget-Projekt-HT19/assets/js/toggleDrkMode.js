@@ -3,6 +3,12 @@ window.addEventListener('load',function(){
     slider.addEventListener("click", darkMode);
 });
 
+window.addEventListener('load',function(){
+	var slider = document.getElementById("mSwitchDrk");
+    slider.addEventListener("click", darkMode);
+});
+
+
 function darkMode() {
 	var body = document.getElementById("body");
 	body.classList.toggle("darkModeBody");
@@ -10,6 +16,6 @@ function darkMode() {
 	var slider = document.getElementById("switchDrk");
 	slider.classList.toggle("moveSlider");
 
-	var fills = document.getElementById("fill");
-	fills.classList.toggle("darkModeGrey");
+	var slider = document.getElementById("mSwitchDrk");
+	slider.classList.toggle("moveSlider");
 }

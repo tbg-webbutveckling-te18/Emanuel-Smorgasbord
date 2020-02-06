@@ -1,5 +1,5 @@
 html {
-    color: #252527;
+    color: #2d3436;
 }
 
 body {
@@ -194,24 +194,16 @@ body {
 }
 
 .st1 {
-    fill: #252527;
+    fill: #444;
 }
 
 .st2 {
-    fill: #a0a0a2;
+    fill: grey;
 }
 
 .darkModeBody {
     background-color: #252527;
     color: #a0a0a2;
-}
-
-.darkModeGrey {
-    fill: #a0a0a2;
-}
-
-.darkModeBlack {
-    fill: #252527;
 }
 
 .moveSlider {
