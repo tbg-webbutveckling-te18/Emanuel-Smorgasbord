@@ -1,0 +1,42 @@
+@charset 'utf8';
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+
+    h1 {
+        margin: auto;
+
+        font-size: 64px;
+        font-weight: normal;
+    }
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        .gridItem {
+            display: flex;
+            flex-flow: column;
+
+            justify-content: center;
+            align-items: center;
+
+            iframe {
+                width: 512px;
+            }
+        }
+    }
+}
