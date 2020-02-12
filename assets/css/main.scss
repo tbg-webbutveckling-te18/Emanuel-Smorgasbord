@@ -5,38 +5,79 @@ body {
     padding: 0px;
 
     font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
 }
 
 header {
     display: flex;
+    justify-content: center;
 
     h1 {
-        margin: auto;
-
         font-size: 64px;
-        font-weight: normal;
+        font-weight: 100    ;
     }
 }
 
 .gridContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 512px);
     grid-gap: 16px;
+    justify-content: center;
 
-    a {
-        text-decoration: none;
-        color: inherit;
+    width: auto;
+    height: auto;
+    margin: 64px;
 
-        .gridItem {
+    .gridItem {
+        display: flex;
+        flex-flow: column;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 512px;
+        height: 256px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            width: 100%;
+            height: 100%;
+        }
+
+        h2 {
             display: flex;
-            flex-flow: column;
-
             justify-content: center;
             align-items: center;
 
-            iframe {
-                width: 512px;
-            }
+            width: 100%;
+            height: 20%;
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 24px;
+            font-weight: normal;
+
+            background-color: #ddd;
+        }
+
+        p {
+            width: 100%;
+            height: 80%;
+            margin: 0px;
+            padding: 0px;
+
+            background-color: #fff;
+        }
+
+        iframe {
+            overflow: hidden;
+
+            width: 100%;
+            height: 80%;
+
+            background-color: #fff;
         }
     }
 }
