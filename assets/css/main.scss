@@ -5,79 +5,160 @@ body {
     padding: 0px;
 
     font-family: 'Roboto', sans-serif;
-    background-color: #ccc;
+    background-color: #fab1a0;
 }
 
 header {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 
     h1 {
-        font-size: 64px;
-        font-weight: 100    ;
+        font-size: 4vw;
+        font-weight: 100;
+
+        margin: 0px;
+        margin-top: 42px;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-weight: 100;
+        font-size: 1.5vw;
+
+        margin: 8px 0px;
     }
 }
 
 .gridContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 512px);
-    grid-gap: 16px;
+    grid-template-columns: repeat(3, 25vw);
+    grid-gap: 32px;
     justify-content: center;
 
     width: auto;
     height: auto;
-    margin: 64px;
+    margin: 64px 0px;
 
     .gridItem {
-        display: flex;
-        flex-flow: column;
+        width: 100%;
+        height: auto;
 
-        justify-content: center;
-        align-items: center;
+        color: #222;
 
-        width: 512px;
-        height: 256px;
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        -webkit-transition: transform .2s, color .2s;
+        -moz-transition: transform .2s, color .2s;
+        -o-transition: transform .2s, color .2s;
+        transition: transform .2s, color .2s;
+        transition-timing-function: ease;
 
-            width: 100%;
-            height: 100%;
+        &:hover {
+            transform: scale(1.2);
+            color: #888;
         }
 
-        h2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
+        .gridItemTitle {
             width: 100%;
-            height: 20%;
+            height: 5vh;
             margin: 0px;
             padding: 0px;
 
-            font-size: 24px;
+            font-size: 1.5vw;
             font-weight: normal;
 
             background-color: #ddd;
-        }
 
-        p {
-            width: 100%;
-            height: 80%;
-            margin: 0px;
-            padding: 0px;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            background-color: #fff;
+                text-decoration: none;
+                color: inherit;
+
+                width: 100%;
+                height: 100%;
+            }
+
+
         }
 
         iframe {
             overflow: hidden;
 
             width: 100%;
-            height: 80%;
+            height: 25vh;
 
             background-color: #fff;
+        }
+
+        section {
+            width: 100%;
+            height: 25vh;
+
+            background-color: #fff;
+        }
+    }
+
+    .gridItemOdd {
+        width: 100%;
+        height: auto;
+
+        color: #222;
+
+        .gridItemTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 5vh;
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 1.5vw;
+            font-weight: normal;
+
+            background-color: #ddd;
+        }
+
+        .projects {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 25vh;
+
+            background-color: #fff;
+
+            p {
+                margin: 8px 0px;
+                padding: 0px;
+
+                a {
+                    font-size: 1.5vw;
+                    text-decoration: none;
+                    color: inherit;
+
+                    width: 100%;
+                    height: 100%;
+
+
+                    -webkit-transition: color .2s;
+                    -moz-transition: color .2s;
+                    -o-transition: color .2s;
+                    transition: color .2s;
+                    transition-timing-function: ease;
+
+                    &:hover {
+                        color: #888;
+                    }
+                }
+            }
         }
     }
 }
