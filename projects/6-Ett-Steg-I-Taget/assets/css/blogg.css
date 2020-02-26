@@ -16,9 +16,10 @@ body {
 .bloggContainer .bloggItem {
     border-bottom: 1px solid #777;
     margin: 1vw;
+    font-size: 1.4vw;
 }
 
-.bloggContainer .bloggItem .date {
+.bloggContainer .bloggItem time {
     color: blue;
 }
 
