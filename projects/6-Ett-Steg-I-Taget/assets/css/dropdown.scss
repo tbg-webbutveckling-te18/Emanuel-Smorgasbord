@@ -1,0 +1,28 @@
+@charset 'utf-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#nav {
+    width: 100vw;
+    height: auto;
+
+    color: #b2bec3;
+    background-color: #2d3436;
+
+    font-size: 4vh;
+
+    .mainNav {
+        display: flex;
+
+        li {
+            text-align: center;
+        }
+    }
+}
