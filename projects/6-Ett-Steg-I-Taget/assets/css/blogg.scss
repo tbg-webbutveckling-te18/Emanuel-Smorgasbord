@@ -18,7 +18,7 @@ body {
 }
 
 .bloggContainer {
-    border: 1vw solid #aaa;
+    border: 0.4vw solid #aaa;
 
     .bloggItem {
         margin: 1vw;
@@ -38,6 +38,8 @@ body {
         p:nth-child(4) {
             border-left: 0.2vw solid #777;
             padding-left: 0.5vw;
+
+            font-weight: bold;
         }
 
         hr {
