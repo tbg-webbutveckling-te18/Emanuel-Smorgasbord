@@ -1,0 +1,42 @@
+@charset 'utf-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 1vw;
+}
+
+.formContainer {
+    width: 50%;
+    height: 40vh;
+
+    padding: 1vw;
+
+    border: 1px solid black;
+
+    .testForm {
+        height: 100%;
+
+        fieldset {
+            height: 100%;
+
+            legend {
+                padding: 1vw;
+            }
+
+            textarea {
+                height: 10vh;
+                width: 20vw;
+
+                resize: none;
+            }
+        }
+    }
+}
+
+.required {
+    color: red;
+}
