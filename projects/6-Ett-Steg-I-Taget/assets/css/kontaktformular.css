@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -10,8 +11,6 @@ body {
 .formContainer {
     width: 50%;
     height: 40vh;
-    padding: 1vw;
-    border: 1px solid black;
 }
 
 .formContainer .testForm {
@@ -19,7 +18,10 @@ body {
 }
 
 .formContainer .testForm fieldset {
+    display: flex;
+    flex-flow: column;
     height: 100%;
+    border: none;
 }
 
 .formContainer .testForm fieldset legend {
@@ -30,6 +32,15 @@ body {
     height: 10vh;
     width: 20vw;
     resize: none;
+}
+
+.formContainer .testForm fieldset label {
+    position: absolute;
+}
+
+.formContainer .testForm fieldset * {
+    margin: 1vh;
+    padding: 0.5vh;
 }
 
 .required {

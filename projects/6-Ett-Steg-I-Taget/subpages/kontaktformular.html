@@ -8,35 +8,18 @@
             description=""/>
         <title>kontaktformulär</title>
         <link rel="stylesheet" href="../assets/css/kontaktformular.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <section class="formContainer">
             <form class="testForm" action="mailto:sweswoosh@gmail.com">
                 <fieldset>
-                    <legend>Kontaktformulär</legend
-                    <p>
-                        <label for="username">Användarnamn <span class="required">*</span></label>
-                        <input id="username" type="text" required>
-                    </p>
-
-                    <p>
-                        <label for="">E-Post  <span class="required">*</span></label>
-                        <input type="email" required>
-                    </p>
-
-                    <p>
-                        <label for="">Ditt meddelande: -</label>
-                        <textarea maxlength="50"></textarea>
-                    </p>
-
-                    <p>
-                        <label for="">Lösenord  <span class="required">*</span></label>
-                        <input type="password" required>
-                    </p>
-
-                    <p>
-                        <button type="submit" name="button">Skicka</button>
-                    </p>
+                    <legend>Kontaktformulär</legend>
+                    <input id="username" type="text" placeholder="Användarnamn" required>
+                    <input type="email" placeholder="E-Mail" required>
+                    <textarea maxlength="250" placeholder="Egen Text"></textarea>
+                    <input type="password" placeholder="Lösenord" required>
+                    <button type="submit" name="button">Skicka</button>
                 </fieldset>
             </form>
         </section>

@@ -3,6 +3,8 @@
 * {
     margin: 0px;
     padding: 0px;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -13,15 +15,18 @@ body {
     width: 50%;
     height: 40vh;
 
-    padding: 1vw;
-
-    border: 1px solid black;
+    // padding: 2vw;
+    //
+    // border: 1px solid black;
 
     .testForm {
         height: 100%;
 
         fieldset {
+            display: flex;
+            flex-flow: column;
             height: 100%;
+            border: none;
 
             legend {
                 padding: 1vw;
@@ -32,6 +37,15 @@ body {
                 width: 20vw;
 
                 resize: none;
+            }
+
+            label {
+                position: absolute;
+            }
+
+            * {
+                margin: 1vh;
+                padding: 0.5vh;
             }
         }
     }
