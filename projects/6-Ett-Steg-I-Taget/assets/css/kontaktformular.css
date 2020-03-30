@@ -28,10 +28,17 @@ body {
     padding: 1vw;
 }
 
+.formContainer .testForm fieldset input {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .formContainer .testForm fieldset textarea {
     height: 10vh;
     width: 20vw;
     resize: none;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .formContainer .testForm fieldset label {

@@ -32,11 +32,19 @@ body {
                 padding: 1vw;
             }
 
+            input {
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
             textarea {
                 height: 10vh;
                 width: 20vw;
 
                 resize: none;
+                
+                border: 1px solid black;
+                border-radius: 5px;
             }
 
             label {
