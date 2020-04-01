@@ -15,11 +15,24 @@
             <form class="testForm" action="mailto:sweswoosh@gmail.com">
                 <fieldset>
                     <legend>Kontaktformulär</legend>
-                    <input id="username" type="text" placeholder="Användarnamn" required>
-                    <input type="email" placeholder="E-Mail" required>
-                    <textarea maxlength="250" placeholder="Egen Text"></textarea>
-                    <input type="password" placeholder="Lösenord" required>
-                    <button type="submit" name="button">Skicka</button>
+                    <p>
+                        <input id="username" type="text" placeholder="Användarnamn" required>
+                        <span class="required">*</span>
+                    </p>
+                    <p>
+                        <input type="email" placeholder="E-Mail" required>
+                        <span class="required">*</span>
+                    </p>
+                    <p>
+                        <textarea maxlength="250" placeholder="Egen Text"></textarea>
+                    </p>
+                    <p>
+                        <input type="password" placeholder="Lösenord" required>
+                        <span class="required">*</span>
+                    </p>
+                    <p>
+                        <button type="submit" name="button">Skicka</button>
+                    </p>
                 </fieldset>
             </form>
         </section>

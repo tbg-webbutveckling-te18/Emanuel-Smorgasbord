@@ -1,4 +1,6 @@
-@charset 'utf-8';
+@charset 'utf8';
+
+$greyBorder: 1px solid grey;
 
 * {
     margin: 0px;
@@ -8,11 +10,16 @@
 }
 
 body {
-    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 .formContainer {
-    width: 50%;
+    width: auto;
     height: 40vh;
 
     // padding: 2vw;
@@ -32,28 +39,31 @@ body {
                 padding: 1vw;
             }
 
-            input {
-                border: 1px solid black;
-                border-radius: 5px;
-            }
+            p {
+                margin: 1vh 0px;
 
-            textarea {
-                height: 10vh;
-                width: 20vw;
+                input {
+                    border: $greyBorder;
+                    border-radius: 5px;
+                }
 
-                resize: none;
-                
-                border: 1px solid black;
-                border-radius: 5px;
-            }
+                textarea {
+                    height: 10vh;
+                    width: 20vw;
 
-            label {
-                position: absolute;
-            }
+                    resize: none;
 
-            * {
-                margin: 1vh;
-                padding: 0.5vh;
+                    border: $greyBorder;
+                    border-radius: 5px;
+                }
+
+                label {
+                    position: absolute;
+                }
+
+                * {
+                    padding: 0.5vh;
+                }
             }
         }
     }

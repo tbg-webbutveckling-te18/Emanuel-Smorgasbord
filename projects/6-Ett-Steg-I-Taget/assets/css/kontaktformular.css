@@ -5,11 +5,15 @@
 }
 
 body {
-    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .formContainer {
-    width: 50%;
+    width: auto;
     height: 40vh;
 }
 
@@ -28,25 +32,28 @@ body {
     padding: 1vw;
 }
 
-.formContainer .testForm fieldset input {
-    border: 1px solid black;
+.formContainer .testForm fieldset p {
+    margin: 1vh 0px;
+}
+
+.formContainer .testForm fieldset p input {
+    border: 1px solid grey;
     border-radius: 5px;
 }
 
-.formContainer .testForm fieldset textarea {
+.formContainer .testForm fieldset p textarea {
     height: 10vh;
     width: 20vw;
     resize: none;
-    border: 1px solid black;
+    border: 1px solid grey;
     border-radius: 5px;
 }
 
-.formContainer .testForm fieldset label {
+.formContainer .testForm fieldset p label {
     position: absolute;
 }
 
-.formContainer .testForm fieldset * {
-    margin: 1vh;
+.formContainer .testForm fieldset p * {
     padding: 0.5vh;
 }
 
