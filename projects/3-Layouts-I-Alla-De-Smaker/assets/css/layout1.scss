@@ -1,13 +1,113 @@
 @charset 'utf-8';
 
-* {
-    margin: 10px;
+body {
+    display: flex;
+    justify-content: center;
+
+    font-family: arial, sans-serif;
+
+    margin: 0px;
     padding: 0px;
+
+    * {
+        // border: 1px solid grey;
+    }
 }
 
-body {
-    display: block;
+.gridContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 6fr 1fr 24fr 1fr;
+    grid-gap: 1.5vh;
+
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "blog aside"
+    "footer footer";
 
     width: 60vw;
     height: 100vh;
+
+    .gridItem:nth-child(1) {
+        grid-area: header;
+    }
+
+    .gridItem:nth-child(2) {
+        grid-area: nav;
+    }
+
+    .gridItem:nth-child(3) {
+        grid-area: blog;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1.5vh;
+
+        // border: none;
+
+        .blogItem {
+            // border: 1px solid grey;
+        }
+    }
+
+    .gridItem:nth-child(4) {
+        grid-area: aside;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2.2fr 3fr 1.2fr 1fr;
+        grid-gap: 1.5vh;
+
+        grid-template-areas:
+        "one one"
+        "two two"
+        "three three"
+        "four five"
+        "six six";
+
+        .asideItem:nth-child(1) {
+            grid-area: one;
+        }
+
+        .asideItem:nth-child(2) {
+            grid-area: two;
+        }
+
+        .asideItem:nth-child(3) {
+            grid-area: three;
+        }
+
+        .asideItem:nth-child(4) {
+            grid-area: four;
+        }
+
+        .asideItem:nth-child(5) {
+            grid-area: five;
+        }
+
+        .asideItem:nth-child(6) {
+            grid-area: six;
+        }
+
+        .asideItem {
+            border: 1px solid grey;
+        }
+    }
+
+    .gridItem:nth-child(5) {
+        grid-area: footer;
+    }
+
+    .gridItem {
+        // border: 1px solid grey;
+    }
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: grey;
 }
