@@ -10,8 +10,9 @@ body {
     padding: 0px;
 
     * {
-        border: 1px solid grey;
+        // border: 1px solid grey;
         // margin: 1vh;
+        border-radius: 5px;
     }
 }
 
@@ -19,9 +20,15 @@ body {
     margin: 2vh;
 }
 
+.bgc {
+    background-color: #bbb;
+}
+
 #wrapper {
     width: 60vw;
     height: 100vh;
+
+    // border: none;
 
     header {
         display: flex;
@@ -29,6 +36,8 @@ body {
 
         width: auto;
         height: 7vh;
+
+        border: none;
 
         section {
             display: flex;
@@ -52,6 +61,40 @@ body {
 
         width: auto;
         height: 5vh;
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vh;
+
+        height: 69vh;
+
+        border: none;
+
+        .gridItem {
+            grid-gap: 2vh;
+            border: none;
+
+            .gridSubItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .gridItem:nth-child(1) {
+            display: grid;
+            grid-template-rows: 2.8fr 3fr 5fr;
+        }
+        .gridItem:nth-child(2) {
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+        }
+        .gridItem:nth-child(3) {
+            display: grid;
+            grid-template-rows: 2.5fr 5fr 3fr;
+        }
     }
 
     footer {
