@@ -25,18 +25,22 @@ body {
 header {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     img {
     }
 
     nav {
-        display: flex;
-        justify-content: space-around;
+        width: 30vw;
 
-        ul li {
-            display: block;
+        ul {
+        display: flex;
+        justify-content: space-between;
+
+            li {
+                display: block;
+            }
         }
     }
 }
@@ -49,24 +53,38 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2vh;
+
+    padding: 0px 20vw;
 
     .gridItem {
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: flex-start;
+
+        * {
+            margin: 1vh 0px;
+
+            * {
+                margin: 1vh 0px;
+            }
+        }
     }
 }
 
 footer {
     display: flex;
-    // justify-content: space-around;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 20vw;
 
     ul {
-        // display: flex;
+        display: flex;
+        width: 60vw;
         // flex-flow: row;
-        // justify-content: space-around;
+        justify-content: space-between;
         // align-items: center;
 
         li {

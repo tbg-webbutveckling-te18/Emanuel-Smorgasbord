@@ -20,13 +20,17 @@ body ul {
 header {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 header nav {
+    width: 30vw;
+}
+
+header nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 header nav ul li {
@@ -37,6 +41,8 @@ header nav ul li {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2vh;
+    padding: 0px 20vw;
 }
 
 .gridContainer .gridItem {
@@ -46,6 +52,23 @@ header nav ul li {
     align-items: flex-start;
 }
 
+.gridContainer .gridItem * {
+    margin: 1vh 0px;
+}
+
+.gridContainer .gridItem * * {
+    margin: 1vh 0px;
+}
+
 footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20vw;
+}
+
+footer ul {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
 }
