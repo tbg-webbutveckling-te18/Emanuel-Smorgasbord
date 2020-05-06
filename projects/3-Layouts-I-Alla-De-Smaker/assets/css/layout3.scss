@@ -10,6 +10,8 @@ body {
     margin: 0px;
     padding: 0px;
 
+    font-family: arial;
+
     * {
         border: solid 1px black;
         margin: 0px;
@@ -29,6 +31,8 @@ header {
     align-items: center;
 
     img {
+        width: 64px;
+        border-radius: 100%;
     }
 
     nav {
@@ -40,13 +44,38 @@ header {
 
             li {
                 display: block;
+
+                a {
+                    color: white;
+                    background-color: #262a30;
+
+                    text-decoration: none;
+
+                    padding: 0.2vw;
+
+                    &:hover {
+                        background-color: #535961;
+                    }
+                }
             }
         }
     }
 }
 
 .slideshow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60vw;
+    margin: 0px auto;
+
     // border-top: solid 0.2vh grey;
+    // border-bottom: solid 0.2vh grey;
+
+    i {
+        transform: scale(2);
+    }
 }
 
 .gridContainer {

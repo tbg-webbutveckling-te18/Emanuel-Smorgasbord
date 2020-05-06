@@ -5,6 +5,7 @@ body {
     width: auto;
     margin: 0px;
     padding: 0px;
+    font-family: arial;
 }
 
 body * {
@@ -24,6 +25,11 @@ header {
     align-items: center;
 }
 
+header img {
+    width: 64px;
+    border-radius: 100%;
+}
+
 header nav {
     width: 30vw;
 }
@@ -35,6 +41,29 @@ header nav ul {
 
 header nav ul li {
     display: block;
+}
+
+header nav ul li a {
+    color: white;
+    background-color: #262a30;
+    text-decoration: none;
+    padding: 0.2vw;
+}
+
+header nav ul li a:hover {
+    background-color: #535961;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    margin: 0px auto;
+}
+
+.slideshow i {
+    transform: scale(2);
 }
 
 .gridContainer {
