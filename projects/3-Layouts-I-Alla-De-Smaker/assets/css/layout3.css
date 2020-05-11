@@ -1,15 +1,13 @@
 body {
-    display: grid;
-    grid-template-rows: 2fr 3fr 6fr 2fr;
-    height: 100vh;
-    width: auto;
+    width: 100%;
+    height: auto;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
     font-family: arial;
 }
 
 body * {
-    border: solid 1px black;
     margin: 0px;
     padding: 0px;
 }
@@ -23,6 +21,7 @@ header {
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
+    height: 20vh;
 }
 
 header img {
@@ -47,7 +46,8 @@ header nav ul li a {
     color: white;
     background-color: #262a30;
     text-decoration: none;
-    padding: 0.2vw;
+    border-radius: 4px;
+    padding: 0.4vw;
 }
 
 header nav ul li a:hover {
@@ -59,11 +59,15 @@ header nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     width: 60vw;
+    height: 35vh;
     margin: 0px auto;
+    padding: 0px 20vw;
+    background-color: #262a30;
 }
 
 .slideshow i {
     transform: scale(2);
+    color: white;
 }
 
 .gridContainer {
@@ -71,7 +75,8 @@ header nav ul li a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2vh;
-    padding: 0px 20vw;
+    height: 60vh;
+    padding: 4vh 20vw;
 }
 
 .gridContainer .gridItem {
@@ -93,11 +98,42 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40vh;
     padding: 0px 20vw;
+    background-color: #262a30;
+    color: white;
 }
 
 footer ul {
     display: flex;
     width: 60vw;
     justify-content: space-between;
+}
+
+footer ul li {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+footer ul li * {
+    color: inherit;
+    text-decoration: none;
+    margin: 1vh 0px;
+}
+
+footer ul li p {
+    color: #535961;
+}
+
+footer ul li:nth-child(4) section {
+    display: flex;
+    justify-content: space-between;
+    width: 8vw;
+}
+
+footer ul li:nth-child(4) section i {
+    display: block;
+    transform: scale(2);
+    margin: auto 8px;
 }
