@@ -10,6 +10,7 @@ body {
     overflow-x: hidden;
 
     font-family: arial;
+    letter-spacing: 0.05vw;
 
     * {
         // border: solid 1px black;
@@ -53,7 +54,7 @@ header {
                     text-decoration: none;
                     border-radius: 4px;
 
-                    padding:  0.4vw;
+                    padding: 0.5vh 1vw;
 
                     &:hover {
                         background-color: #535961;
@@ -107,6 +108,12 @@ header {
 
             * {
                 margin: 1vh 0px;
+            }
+        }
+
+        figure {
+            img {
+                width: 5vw;
             }
         }
     }
