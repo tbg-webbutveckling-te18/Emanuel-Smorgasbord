@@ -23,6 +23,7 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 20vh;
+    margin: 8vh 0px;
 }
 
 header img {
@@ -64,11 +65,13 @@ header nav ul li a:hover {
     margin: 0px auto;
     padding: 0px 20vw;
     background-color: #262a30;
+    overflow: hidden;
 }
 
 .slideshow i {
     transform: scale(2);
     color: white;
+    cursor: pointer;
 }
 
 .gridContainer {
@@ -76,8 +79,9 @@ header nav ul li a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2vh;
-    height: 60vh;
-    padding: 4vh 20vw;
+    height: auto;
+    margin: 16vh 0px;
+    padding: 0px 20vw;
 }
 
 .gridContainer .gridItem {
@@ -93,6 +97,10 @@ header nav ul li a:hover {
 
 .gridContainer .gridItem * * {
     margin: 1vh 0px;
+}
+
+.gridContainer .gridItem figure figcaption {
+    font-weight: bold;
 }
 
 .gridContainer .gridItem figure img {

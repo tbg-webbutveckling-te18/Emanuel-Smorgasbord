@@ -32,6 +32,8 @@ header {
 
     height: 20vh;
 
+    margin: 8vh 0px;
+
     img {
         width: 64px;
         border-radius: 100%;
@@ -78,12 +80,16 @@ header {
 
     background-color: #262a30;
 
+    overflow: hidden;
+
     // border-top: solid 0.2vh grey;
     // border-bottom: solid 0.2vh grey;
 
     i {
         transform: scale(2);
         color: white;
+
+        cursor: pointer;
     }
 }
 
@@ -93,9 +99,10 @@ header {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2vh;
 
-    height: 60vh;
+    height: auto;
 
-    padding: 4vh 20vw;
+    margin: 16vh 0px;
+    padding: 0px 20vw;
 
     .gridItem {
         display: flex;
@@ -112,6 +119,9 @@ header {
         }
 
         figure {
+            figcaption {
+                font-weight: bold;
+            }
             img {
                 width: 5vw;
             }
