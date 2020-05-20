@@ -1,16 +1,98 @@
-* {
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: arial;
+    letter-spacing: 0.05vw;
+    width: 100vw;
+    height: auto;
     margin: 0px;
     padding: 0px;
-    border: 1px solid black;
+}
+
+* a {
+    text-decoration: none;
+    color: black;
+}
+
+.topInfo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80vw;
+    height: 3vh;
+    margin: 5vh 0px;
+}
+
+.topInfo section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    height: auto;
+}
+
+.topInfo section * {
+    padding: 0.2vw;
+}
+
+.topInfo section input {
+    letter-spacing: 0.05vw;
+}
+
+.topInfo section input::placeholder {
+    color: black;
 }
 
 .gridContainer {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 5fr 1fr 5fr 5fr 5fr;
+    grid-gap: 1vw;
     grid-template-areas: "logo name call" "nav nav nav" "featured main aside1" "featured main aside2" "featured main aside3";
+    width: 80vw;
+    height: 80vh;
+}
+
+.gridContainer .gridItem {
+    border: 1px solid black;
 }
 
 .gridContainer .gridItem:nth-child(1) {
     grid-area: logo;
+}
+
+.gridContainer .gridItem:nth-child(2) {
+    grid-area: name;
+}
+
+.gridContainer .gridItem:nth-child(3) {
+    grid-area: call;
+}
+
+.gridContainer .gridItem:nth-child(4) {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gridContainer .gridItem:nth-child(5) {
+    grid-area: featured;
+}
+
+.gridContainer .gridItem:nth-child(6) {
+    grid-area: main;
+}
+
+.gridContainer .gridItem:nth-child(7) {
+    grid-area: aside1;
+}
+
+.gridContainer .gridItem:nth-child(8) {
+    grid-area: aside2;
+}
+
+.gridContainer .gridItem:nth-child(9) {
+    grid-area: aside3;
 }
