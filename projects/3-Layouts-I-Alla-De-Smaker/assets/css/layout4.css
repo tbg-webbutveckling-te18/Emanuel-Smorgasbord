@@ -60,10 +60,26 @@ body {
 
 .gridContainer .gridItem:nth-child(1) {
     grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContainer .gridItem:nth-child(1) img {
+    border-radius: 100%;
+    width: 12vh;
 }
 
 .gridContainer .gridItem:nth-child(2) {
     grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}
+
+.gridContainer .gridItem:nth-child(2) h1 {
+    font-size: 4vh;
 }
 
 .gridContainer .gridItem:nth-child(3) {
@@ -79,6 +95,24 @@ body {
 
 .gridContainer .gridItem:nth-child(5) {
     grid-area: featured;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
+    grid-gap: 1vh;
+    overflow: scroll;
+}
+
+.gridContainer .gridItem:nth-child(5) .gridAside figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin: 0px 1vw;
+    cursor: pointer;
+}
+
+.gridContainer .gridItem:nth-child(5) .gridAside figure img {
+    width: 8vh;
 }
 
 .gridContainer .gridItem:nth-child(6) {
