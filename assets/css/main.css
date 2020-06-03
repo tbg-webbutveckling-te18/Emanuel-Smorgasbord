@@ -2,7 +2,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
-    background-color: #fab1a0;
+    animation: colorchange 20s linear infinite;
+    -webkit-animation: colorchange 20s linear infinite;
 }
 
 header {
@@ -133,4 +134,64 @@ header h2 {
 
 .gridContainer .gridItemOdd .projects p a:hover {
     color: #888;
+}
+
+@keyframes colorchange {
+    0% {
+        background: #ff68c5;
+    }
+    12.5% {
+        background: #ff0012;
+    }
+    25% {
+        background: #ff9e01;
+    }
+    37.5% {
+        background: #ffe61d;
+    }
+    50% {
+        background: #188630;
+    }
+    62.5% {
+        background: #01eacc;
+    }
+    75% {
+        background: #450097;
+    }
+    87.5% {
+        background: #b100d4;
+    }
+    100% {
+        background: #ff68c5;
+    }
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+    0% {
+        background: #ff68c5;
+    }
+    12.5% {
+        background: #ff0012;
+    }
+    25% {
+        background: #ff9e01;
+    }
+    37.5% {
+        background: #ffe61d;
+    }
+    50% {
+        background: #188630;
+    }
+    62.5% {
+        background: #01eacc;
+    }
+    75% {
+        background: #450097;
+    }
+    87.5% {
+        background: #b100d4;
+    }
+    100% {
+        background: #ff68c5;
+    }
 }
