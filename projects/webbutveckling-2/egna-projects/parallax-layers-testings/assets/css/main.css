@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* Source: https://keithclark.co.uk/articles/pure-css-parallax-websites/ */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: arial;
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.frame {
+    position: relative;
+    height: 100vh;
+
+    overflow: hidden;
+
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.bgText {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: arial;
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
+
+    transform: translateZ(-2px) scale(2);
+    z-index: 4;
+}
+
+.bgImage {
+    position: absolute;
+    /* top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; */
+    transform: translateZ(-1px) scale(2);
+    z-index: 3;
+
+    width: 100vw;
+}
