@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #dfe6e9;
+}
+
+header {
+    width: 100vw;
+    height: 40vh;
+    box-shadow: 0px 4px 4px #888;
+}
+
+header h1 {
+    font-size: 4vw;
+    line-height: 20vh;
+}
+
+button {
+    width: 16vw;
+    height: 8vh;
+
+    border-radius: 8px;
+    outline: none;
+
+    font-size: 1.4vw;
+    font-weight: bold;
+}
