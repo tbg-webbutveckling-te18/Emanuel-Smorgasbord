@@ -57,3 +57,51 @@ if (d.getHours() < 10) {
 } else {
     console.log('Good ebening!')
 }
+
+var grade = 'A';
+switch(grade) {
+    case 'A':
+        console.log('You got an ' + grade + ', Great Job!');
+        break;
+    case 'B':
+        console.log('You got a ' + grade + ', Great Job!');
+        break;
+    case 'C':
+        console.log('You got a ' + grade + ', Great Job!');
+        break;
+    case 'D':
+        console.log('You got a ' + grade + ', Great Job!');
+        break;
+    case 'E':
+        console.log('You got an ' + grade + ', Great Job!');
+        break;
+    case 'F':
+        console.log('You got an ' + grade + ', Great Job!');
+        break;
+    default:
+        console.log('Unknown grade.')
+}
+
+switch(d.getDay()) {
+    case 0:
+        console.log('It is Sunday!')
+        break;
+    case 1:
+        console.log('It is Monday!')
+        break;
+    case 2:
+        console.log('It is Tuesday!')
+        break;
+    case 3:
+        console.log('It is Wednesday!')
+        break;
+    case 4:
+        console.log('It is Thursday!')
+        break;
+    case 5:
+        console.log('It is Friday!')
+        break;
+    case 6:
+        console.log('It is Saturday!')
+        break;
+}
