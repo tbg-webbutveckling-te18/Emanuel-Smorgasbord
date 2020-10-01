@@ -1,0 +1,162 @@
+/* ------------------- GLOBAL PROPERTIES ------------------- */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+*::selection {
+  background-color: crimson;
+}
+
+body {
+  width: 100vw;
+  font-family: "Rajdhani", sans-serif;
+  transition: color 0.4s ease-in-out, background-color 0.2s ease-in-out;
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style-type: none;
+}
+
+/* ------------------- MOBILE PROPERTIES ------------------- */
+@media (max-width: 900px) {
+  header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "button title switch" "hr hr hr";
+    margin-top: 1em;
+  }
+  header::after {
+    content: "";
+    grid-area: hr;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), red, rgba(0, 0, 0, 0));
+    margin-top: 1em;
+  }
+  header .slideBtn {
+    grid-area: button;
+    position: relative;
+    display: block;
+    width: 2.2em;
+    height: auto;
+    margin: auto;
+  }
+  header .slideBtn span {
+    display: block;
+    width: inherit;
+    height: 2px;
+    margin: 8px 0;
+    transition: background-color 0.2s ease-in-out;
+  }
+  header .title {
+    grid-area: title;
+    position: relative;
+    letter-spacing: 0.2em;
+    margin: auto;
+  }
+  header .title h1 {
+    font-size: 32px;
+    transition: color 0.2s ease-in-out;
+  }
+  header .title h2 {
+    width: max-content;
+    background-color: crimson;
+    font-size: 12px;
+    padding: 0 10px 0 14px;
+    transition: color 0.2s ease-in-out;
+  }
+  header .navigation {
+    grid-area: hr;
+    position: absolute;
+    display: block;
+    height: 100vh;
+    width: 80vw;
+    right: 0;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  header .navigation ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+  }
+  header .navigation ul li {
+    width: 100%;
+    margin: 2em 0px;
+  }
+  header .navigation ul li a {
+    display: block;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 1em 0px;
+    border: 2px solid crimson;
+  }
+  header #darkModeSwitch {
+    grid-area: switch;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    margin: auto;
+    overflow: hidden;
+  }
+  header #darkModeSwitch #darkModeSVG {
+    cursor: pointer;
+    position: relative;
+    width: 4em;
+    height: 4em;
+    margin: auto;
+    right: 1em;
+    fill: crimson;
+    overflow: visible;
+    transition: transform 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+/* ------------------- SPECIAL PROPERTIES ------------------- */
+#active {
+  color: red;
+  font-weight: 700;
+}
+#active::after {
+  width: 100%;
+}
+
+.slideNav {
+  transform: translateX();
+}
+
+/* ------------------- DARKMODE PROPERTIES ------------------- */
+.moveSwitch {
+  transform: translateY(-2em);
+}
+
+.brightBGC {
+  background-color: white;
+}
+
+.darkBGC {
+  background-color: #2d3436;
+}
+
+.brightC {
+  color: white;
+}
+
+.darkC {
+  color: #2d3436;
+}
+
+.brightNav {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.darkNav {
+  background-color: rgba(0, 0, 0, 0.6);
+}

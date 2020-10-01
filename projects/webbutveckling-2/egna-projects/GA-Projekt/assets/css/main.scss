@@ -1,0 +1,380 @@
+@charset "utf-8";
+$grey: #2d3436;
+
+/* ------------------- GLOBAL PROPERTIES ------------------- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    &::selection {
+        background-color: crimson;
+    }
+}
+
+body {
+    width: 100vw;
+    font-family: 'Rajdhani', sans-serif;
+    
+    transition: color .4s ease-in-out, background-color .2s ease-in-out;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+
+}
+
+/* ------------------- MOBILE PROPERTIES ------------------- */
+
+@media (max-width: 900px) {
+    header {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "button title switch"
+        "hr hr hr";
+
+        margin-top: 1em;
+
+        &::after {
+            content: '';
+            grid-area: hr;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
+            margin-top: 1em;
+        }
+
+        .slideBtn {
+            grid-area: button;
+            position: relative;
+            display: block;
+
+            width: 2.2em;
+            height: auto;
+
+            margin: auto;
+
+            span {
+                display: block;
+                width: inherit;
+                height: 2px;
+                margin: 8px 0;
+
+                transition: background-color .2s ease-in-out;
+            }
+        }
+
+        .title {
+            grid-area: title;
+            position: relative;
+
+            letter-spacing: .2em;
+            margin: auto;
+
+            h1 {
+                font-size: 32px;
+                
+                transition: color .2s ease-in-out;
+            }
+
+            h2 {
+                width: max-content;
+                background-color: crimson;
+                font-size: 12px;
+                padding: 0 10px 0 14px;
+
+                transition: color .2s ease-in-out;
+            }
+        }
+
+        .navigation {
+            grid-area: hr;
+            position: absolute;
+            display: block;
+
+            height: 100vh;
+            width: 80vw;
+            right: 0;
+
+            transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+            ul {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                width: inherit;
+                height: inherit;
+
+                li {
+                    width: 100%;
+                    margin: 2em 0px;
+                }
+
+                li a {
+                    display: block;
+                    width: 100%;
+                    font-size: 1.5em;
+                    padding: 1em 0px;
+
+                    border: 2px solid crimson;
+                }
+            }
+        }
+
+        #darkModeSwitch {
+            grid-area: switch;
+            position: relative;
+
+            width: 2em;
+            height: 2em;
+            margin: auto;
+
+            overflow: hidden;
+
+            #darkModeSVG {
+                cursor: pointer;
+                position: relative;
+
+                width: 4em;
+                height: 4em;
+
+                margin: auto;
+                right: 1em;
+
+                fill: crimson;
+                overflow: visible;
+                transition: transform .2s ease-in-out;
+
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+        // #darkModeSwitch {
+        //     grid-area: switch;
+        //     position: relative;
+
+        //     width: 2em;
+        //     height: 2em;
+        //     margin: auto;
+
+        //     overflow: hidden;
+
+        //     #darkModeSVG {
+        //         cursor: pointer;
+        //         position: relative;
+
+        //         width: 4em;
+        //         height: 4em;
+
+        //         margin: auto;
+        //         right: 1em;
+
+        //         fill: crimson;
+        //         overflow: visible;
+        //         transition: transform .2s ease-in-out;
+
+        //         -webkit-tap-highlight-color: transparent;
+        //     }
+        // }
+    }
+}
+
+// @media screen and (min-width: 813px) {
+//     header {
+//         display: grid;
+//         grid-template-areas:
+//         "button header nav switch"
+//         "hr hr hr hr";
+//         grid-template-columns: 1fr 5fr 5fr 1fr;
+
+//         width: 90%;
+//         height: 18vh;
+//         margin: 0px 5%;
+
+//         * {
+//             /* Source: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+//             -webkit-touch-callout: none; /* iOS Safari */
+//             -webkit-user-select: none; /* Safari */
+//             -khtml-user-select: none; /* Konqueror HTML */
+//             -moz-user-select: none; /* Old versions of Firefox */
+//             -ms-user-select: none; /* Internet Explorer/Edge */
+//             user-select: none; /* Non-prefixed version, currently*/
+//         }
+
+//         &::after {
+//             content: '';
+//             grid-area: hr;
+//             display: block;
+//             height: 1px;
+//             width: 100%;
+//             // margin-top: 1vh;
+//             // background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+//             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
+//         }
+
+//         .slideBtn {
+//             display: none;
+//         }
+
+//         .title {
+//             grid-area: header;
+//             cursor: default;
+
+//             display: flex;
+//             flex-flow: column;
+//             justify-content: center;
+
+//             width: 100%;
+//             height: 100%;
+//             letter-spacing: .8vw;
+            
+//             h1 {
+//                 width: max-content;
+//                 font-size: 4vw;
+//                 font-weight: 300;
+
+//                 transition: color .2s ease-in-out;
+//             }
+
+//             h2 {
+//                 width: max-content;
+
+//                 font-size: 1.2vw;
+//                 background-color: red;
+//                 padding-left: 0.8vw;
+//                 font-weight: 600;
+
+//                 transition: color .2s ease-in-out;
+//             }
+//         }
+
+//         .navigation {
+//             grid-area: nav;
+//             display: flex;
+//             justify-content: space-around;
+//             align-items: center;
+
+//             height: 100%;
+//             width: 100%;
+
+//             ul {
+//                 display: flex;
+//                 justify-content: space-around;
+//                 list-style-type: none;
+//                 width: 100%;
+
+//                 li {
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+                
+//                     .mainNav {
+//                         display: block;
+//                         font-size: 1.6vw;
+//                         text-decoration: none;
+
+//                         transition: color .2s ease-in-out;
+
+//                         &:hover {
+//                             color: red;
+//                         }
+
+//                         &::after {
+//                             content: '';
+//                             display: block;
+//                             height: 1px;
+//                             width: 0%;
+//                             // background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+//                             background-image: linear-gradient(to right, rgba(255, 0, 0, .2), rgba(255, 0, 0, 1), rgba(255, 0, 0, .2));
+//                             margin: auto;
+                            
+//                             transition: width .2s ease-in-out;
+//                         }
+                        
+//                         &:hover::after {
+//                             width: 100%;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         #darkModeSwitch {
+//             grid-area: switch;
+
+//             width: 2vw;
+//             height: 2vw;
+//             margin: auto;
+
+//             overflow: hidden;
+
+//             #darkModeSVG {
+//                 cursor: pointer;
+//                 position: relative;
+//                 right: 1vw;
+
+//                 width: 4vw;
+//                 height: 4vw;
+
+//                 fill: crimson;
+//                 overflow: visible;
+//                 transition: transform .2s ease-in-out;
+//             }
+//         }
+//     }
+// }
+
+
+/* ------------------- SPECIAL PROPERTIES ------------------- */
+
+#active {
+    color: red;
+    font-weight: 700;
+
+    &::after {
+        width: 100%;
+    }
+}
+
+.slideNav {
+    transform: translateX();
+}
+
+/* ------------------- DARKMODE PROPERTIES ------------------- */
+
+.moveSwitch {
+    transform: translateY(-2em);
+}
+
+.brightBGC {
+    background-color: white;
+}
+
+.darkBGC {
+    background-color: $grey;
+}
+
+.brightC {
+    color: white;
+}
+
+.darkC {
+    color: $grey;
+}
+
+.brightNav {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.darkNav {
+    background-color: rgba(0, 0, 0, 0.6);
+}
