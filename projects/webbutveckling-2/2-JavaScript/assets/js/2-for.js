@@ -33,3 +33,38 @@ for (var i = 0; i < 5; i++) {
     }
     document.writeln('<br>');
 }
+
+// Bonus 1
+for (var i = 0; i <= 10; i++) {
+    for (var j = 0; j <= 10; j++) {
+        var multiplier = i * j;
+        document.writeln(i + '*' + j + '=' + multiplier + '<br>');
+    }
+}
+
+// Bonus 2
+var favGames = ['CS:GO', 'Minecraft', 'League of Legends', 'PUBG', 'GTA 5'];
+
+function numberIndex(i) {
+    var suffix = '';
+    if (i == 1) {
+        var suffix = 'st';
+        return suffix;
+    } else if (i == 2) {
+        var suffix = 'nd';
+        return suffix;
+    } else if (i == 3) {
+        var suffix = 'rd';
+        return suffix;
+    } else {
+        var suffix = 'th';
+        return suffix;
+    }
+}
+
+for (var i = 0; i < favGames.length; i++) {
+    var spot = i + 1;
+    document.writeln(
+        'My ' + spot + numberIndex(spot) + ' is ' + favGames[i] + '<br>'
+    );
+}
