@@ -9,9 +9,10 @@
 }
 
 body {
+  height: auto;
   width: 100vw;
   font-family: "Rajdhani", sans-serif;
-  transition: color 0.4s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
 }
 body a {
   text-decoration: none;
@@ -22,91 +23,65 @@ body ul {
 
 /* ------------------- MOBILE PROPERTIES ------------------- */
 @media (max-width: 900px) {
-  header {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "button title switch" "hr hr hr";
-    margin-top: 1em;
+  .topBar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 4em;
+    margin: 0px 5vw;
   }
-  header::after {
-    content: "";
-    grid-area: hr;
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), red, rgba(0, 0, 0, 0));
-    margin-top: 1em;
-  }
-  header .slideBtn {
-    grid-area: button;
+  .topBar #slideBtn {
     position: relative;
     display: block;
-    width: 2.2em;
+    width: 2.25em;
     height: auto;
-    margin: auto;
+    z-index: 2;
   }
-  header .slideBtn span {
+  .topBar #slideBtn span {
     display: block;
     width: inherit;
-    height: 2px;
-    margin: 8px 0;
-    transition: background-color 0.2s ease-in-out;
+    height: 0.25em;
+    margin: 0.5em 0;
+    transition: background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), transform 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   }
-  header .title {
-    grid-area: title;
-    position: relative;
-    letter-spacing: 0.2em;
-    margin: auto;
-  }
-  header .title h1 {
-    font-size: 32px;
-    transition: color 0.2s ease-in-out;
-  }
-  header .title h2 {
-    width: max-content;
-    background-color: crimson;
-    font-size: 12px;
-    padding: 0 10px 0 14px;
-    transition: color 0.2s ease-in-out;
-  }
-  header .navigation {
-    grid-area: hr;
+  .topBar .navigation {
     position: absolute;
-    display: block;
-    height: 100vh;
-    width: 80vw;
-    right: 0;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-  header .navigation ul {
+    top: 0;
+    left: 95vw;
     display: flex;
-    flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: inherit;
-    height: inherit;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    transition: transform 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   }
-  header .navigation ul li {
-    width: 100%;
-    margin: 2em 0px;
+  .topBar .navigation ul {
+    position: relative;
+    top: -4em;
+    width: 70vw;
   }
-  header .navigation ul li a {
+  .topBar .navigation ul li .mainNav {
+    font-size: 2em;
+    transition: color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
+  }
+  .topBar .navigation ul span {
     display: block;
-    width: 100%;
-    font-size: 1.5em;
-    padding: 1em 0px;
-    border: 2px solid crimson;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), red, rgba(255, 0, 0, 0.2));
+    margin: 1em 0px;
   }
-  header #darkModeSwitch {
-    grid-area: switch;
+  .topBar #darkModeSwitch {
     position: relative;
     width: 2em;
     height: 2em;
-    margin: auto;
     overflow: hidden;
+    z-index: 2;
   }
-  header #darkModeSwitch #darkModeSVG {
+  .topBar #darkModeSwitch #darkModeSVG {
     cursor: pointer;
     position: relative;
     width: 4em;
@@ -115,8 +90,36 @@ body ul {
     right: 1em;
     fill: crimson;
     overflow: visible;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .header {
+    position: relative;
+    top: -4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .header .title {
+    width: auto;
+    height: auto;
+  }
+  .header .title h1 {
+    font-size: 3em;
+    font-weight: 300;
+    transition: color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
+  }
+  .header .title h2 {
+    background-color: crimson;
+    font-size: 1.25em;
+    font-weight: 600;
+    width: max-content;
+    padding: 0px 0.5em;
+    transition: color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   }
 }
 /* ------------------- SPECIAL PROPERTIES ------------------- */
@@ -129,7 +132,19 @@ body ul {
 }
 
 .slideNav {
-  transform: translateX();
+  transform: translateX(-100vw);
+}
+
+.burgerTop {
+  transform: translateY(0.75em) rotate(-135deg);
+}
+
+.burgerMid {
+  transform: rotate(-45deg);
+}
+
+.burgerBot {
+  transform: translateY(-0.75em) rotate(135deg);
 }
 
 /* ------------------- DARKMODE PROPERTIES ------------------- */

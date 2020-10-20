@@ -1,5 +1,6 @@
 @charset "utf-8";
 $grey: #2d3436;
+$easing: cubic-bezier(.75,.15,.25,.85);
 
 /* ------------------- GLOBAL PROPERTIES ------------------- */
 
@@ -14,10 +15,11 @@ $grey: #2d3436;
 }
 
 body {
+    height: auto;
     width: 100vw;
     font-family: 'Rajdhani', sans-serif;
     
-    transition: color .4s ease-in-out, background-color .2s ease-in-out;
+    transition: color .25s $easing, background-color .25s $easing;
 
     a {
         text-decoration: none;
@@ -33,113 +35,87 @@ body {
 /* ------------------- MOBILE PROPERTIES ------------------- */
 
 @media (max-width: 900px) {
-    header {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-        grid-template-areas: 
-        "button title switch"
-        "hr hr hr";
 
-        margin-top: 1em;
 
-        &::after {
-            content: '';
-            grid-area: hr;
-            display: block;
-            height: 1px;
-            width: 100%;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
-            margin-top: 1em;
-        }
+    .topBar {
+        position: fixed;
+        top: 0;
 
-        .slideBtn {
-            grid-area: button;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 90vw;
+        height: 4em;
+        margin: 0px 5vw;
+
+        #slideBtn {
             position: relative;
             display: block;
 
-            width: 2.2em;
+            width: 2.25em;
             height: auto;
 
-            margin: auto;
+            // margin: auto 2em;
+
+            z-index: 2;
 
             span {
                 display: block;
                 width: inherit;
-                height: 2px;
-                margin: 8px 0;
+                height: .25em;
+                margin: .5em 0;
 
-                transition: background-color .2s ease-in-out;
+                transition: background-color .25s $easing, transform .25s $easing;
             }
         }
-
-        .title {
-            grid-area: title;
-            position: relative;
-
-            letter-spacing: .2em;
-            margin: auto;
-
-            h1 {
-                font-size: 32px;
-                
-                transition: color .2s ease-in-out;
-            }
-
-            h2 {
-                width: max-content;
-                background-color: crimson;
-                font-size: 12px;
-                padding: 0 10px 0 14px;
-
-                transition: color .2s ease-in-out;
-            }
-        }
-
+        
         .navigation {
-            grid-area: hr;
             position: absolute;
-            display: block;
+            top: 0;
+            left: 95vw;
+            // left: -5vw;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100vw;
             height: 100vh;
-            width: 80vw;
-            right: 0;
+            z-index: 1;
 
-            transition: background-color .2s ease-in-out, color .2s ease-in-out;
+            transition: transform .25s $easing, background-color .25s $easing;
 
             ul {
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                align-items: center;
-                width: inherit;
-                height: inherit;
+                position: relative;
+                top: -4em;
+                width: 70vw;
 
-                li {
-                    width: 100%;
-                    margin: 2em 0px;
+                li .mainNav {
+                    font-size: 2em;
+
+                    transition: color .25s $easing;
                 }
 
-                li a {
+                span {
                     display: block;
-                    width: 100%;
-                    font-size: 1.5em;
-                    padding: 1em 0px;
-
-                    border: 2px solid crimson;
+                    height: 1px;
+                    background-image: linear-gradient(to right, rgba(255, 0, 0, .2), rgba(255, 0, 0, 1), rgba(255, 0, 0, .2));
+                    margin: 1em 0px;
                 }
             }
         }
-
+        
         #darkModeSwitch {
-            grid-area: switch;
             position: relative;
 
             width: 2em;
             height: 2em;
-            margin: auto;
+            // margin: auto 2em;
 
             overflow: hidden;
+
+            z-index: 2;
 
             #darkModeSVG {
                 cursor: pointer;
@@ -153,41 +129,50 @@ body {
 
                 fill: crimson;
                 overflow: visible;
-                transition: transform .2s ease-in-out;
+                transition: transform .25s $easing;
 
                 -webkit-tap-highlight-color: transparent;
             }
         }
-        // #darkModeSwitch {
-        //     grid-area: switch;
-        //     position: relative;
+    }
 
-        //     width: 2em;
-        //     height: 2em;
-        //     margin: auto;
+    .header {
+        position: relative;
+        top: -4em;
 
-        //     overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        //     #darkModeSVG {
-        //         cursor: pointer;
-        //         position: relative;
+        width: 100vw;
+        height: 100vh;
 
-        //         width: 4em;
-        //         height: 4em;
+        z-index: -1;
 
-        //         margin: auto;
-        //         right: 1em;
+        .title {
+            width: auto;
+            height: auto;
 
-        //         fill: crimson;
-        //         overflow: visible;
-        //         transition: transform .2s ease-in-out;
+            h1 {
+                font-size: 3em;
+                font-weight: 300;
 
-        //         -webkit-tap-highlight-color: transparent;
-        //     }
-        // }
+                transition: color .25s $easing, background-color .25s $easing;
+            }
+
+            h2 {
+                background-color: crimson;
+                font-size: 1.25em;
+                font-weight: 600;
+
+                width: max-content;
+                padding: 0px .5em;
+
+                transition: color .25s $easing, background-color .25s $easing;
+            }
+        }
     }
 }
-
 // @media screen and (min-width: 813px) {
 //     header {
 //         display: grid;
@@ -242,7 +227,7 @@ body {
 //                 font-size: 4vw;
 //                 font-weight: 300;
 
-//                 transition: color .2s ease-in-out;
+//                 transition: color .25s $easing;
 //             }
 
 //             h2 {
@@ -253,7 +238,7 @@ body {
 //                 padding-left: 0.8vw;
 //                 font-weight: 600;
 
-//                 transition: color .2s ease-in-out;
+//                 transition: color .25s $easing;
 //             }
 //         }
 
@@ -282,7 +267,7 @@ body {
 //                         font-size: 1.6vw;
 //                         text-decoration: none;
 
-//                         transition: color .2s ease-in-out;
+//                         transition: color .25s $easing;
 
 //                         &:hover {
 //                             color: red;
@@ -297,7 +282,7 @@ body {
 //                             background-image: linear-gradient(to right, rgba(255, 0, 0, .2), rgba(255, 0, 0, 1), rgba(255, 0, 0, .2));
 //                             margin: auto;
                             
-//                             transition: width .2s ease-in-out;
+//                             transition: width .25s $easing;
 //                         }
                         
 //                         &:hover::after {
@@ -327,7 +312,7 @@ body {
 
 //                 fill: crimson;
 //                 overflow: visible;
-//                 transition: transform .2s ease-in-out;
+//                 transition: transform .25s $easing;
 //             }
 //         }
 //     }
@@ -346,8 +331,21 @@ body {
 }
 
 .slideNav {
-    transform: translateX();
+    transform: translateX(-100vw);
 }
+
+.burgerTop {
+    transform: translateY(.75em) rotate(-135deg);
+}
+
+.burgerMid {
+    transform: rotate(-45deg);
+}
+
+.burgerBot {
+    transform: translateY(-.75em) rotate(135deg);
+}
+
 
 /* ------------------- DARKMODE PROPERTIES ------------------- */
 
