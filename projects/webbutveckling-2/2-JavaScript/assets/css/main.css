@@ -1,0 +1,26 @@
+body {
+  background-color: teal;
+  padding: 1em;
+}
+
+.time {
+  display: flex;
+}
+
+.time > * {
+  margin: 0.25em;
+}
+
+.stopTime {
+  background-color: #223;
+  color: silver;
+  border-radius: 0.25em;
+  outline: none;
+  border: none;
+  padding: 0.25em;
+  transition: transform 0.4s cubic-bezier(0.75, 0.15, 0.25, 0.85);
+}
+
+.stopTime:active {
+  transform: scale(2);
+}
