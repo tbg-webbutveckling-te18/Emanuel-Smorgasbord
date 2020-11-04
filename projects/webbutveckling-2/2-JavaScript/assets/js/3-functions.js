@@ -65,3 +65,37 @@ btnStopTime.addEventListener('click', function () {
     doomsStr.style.fontSize = '4em';
     doomsStr.style.color = 'crimson';
 });
+
+function tellFortune(job, place, partner, children) {
+    document.getElementById(
+        'pawagwaph'
+    ).innerHTML = `You will be a ${job} in ${place}, and married to ${partner} and have ${children} kid.`;
+}
+
+var jobArray = [
+    'Game Developer',
+    'Web Developer',
+    'Homeless',
+    'Professional E-sport Player',
+    'Dictator',
+];
+var placeArray = [
+    'St.Petersburg',
+    'Moscow',
+    'Storuman',
+    'Los Angeles',
+    'Great Falls',
+];
+var partnerArray = ['Kennet', 'Leif', 'Olofmeister', 'Rekkless', 'KSI'];
+var childrenArray = [0, '½', 1, 2, 3];
+
+btnFortune.addEventListener('click', function () {
+    var randomJob = jobArray[Math.floor(Math.random() * jobArray.length)];
+    var randomPlace = placeArray[Math.floor(Math.random() * placeArray.length)];
+    var randomPartner =
+        partnerArray[Math.floor(Math.random() * partnerArray.length)];
+    var randomChildren =
+        childrenArray[Math.floor(Math.random() * childrenArray.length)];
+
+    tellFortune(randomJob, randomPlace, randomPartner, randomChildren);
+});
