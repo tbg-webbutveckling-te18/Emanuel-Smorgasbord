@@ -99,3 +99,22 @@ btnFortune.addEventListener('click', function () {
 
     tellFortune(randomJob, randomPlace, randomPartner, randomChildren);
 });
+
+function calculateDogAge(doggo, human) {
+    var dogAge = doggo * 7;
+    var humanAge = Math.round(human / 7);
+    document.writeln(`<br>Your doggo is ${dogAge} years old in dog years!`);
+    document.writeln(`<br>Your doggo is ${humanAge} years old in human years!`);
+}
+
+calculateDogAge(5, 19);
+
+function calculateSupply(age, amount) {
+    var lifeLeft = 100 - age;
+    var supply = lifeLeft * 365 * amount;
+    document.writeln(
+        `<br>Your time left to live is ${lifeLeft} and your supply stock is ${supply}.`
+    );
+}
+
+calculateSupply(19, 2);
