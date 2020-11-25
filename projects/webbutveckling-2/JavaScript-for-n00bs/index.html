@@ -11,34 +11,72 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="header">
-            <!-- <i class="fab fa-js jsIcon"></i>  -->
+            <i class="fab fa-js jsIcon"></i> 
             <h1 class="title">JavaScript for N🕶BS</h1>
             <!-- <h1 class="title">JavaScript for N<i class="fab fa-js"></i><i class="fab fa-js"></i>BS</h1> -->
             <h2 class="subTitle"><a href="#nav">For those who want to learn the basics of JavaScript</a></h2>
         </header>
-        <nav id="nav">
-            <section class="navFrame">
-                <p><a href="#">If / Else</a></p>
+        <nav id="nav" class="gridFrame">
+            <section class="gridItem">
+                <a class="jsLink" href="#">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">if</span> () {</p>
+                        <p>}</p>
+                        <p><span class="pCodeColour">else</span> {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>If / Else</h3>
+                </a>
             </section>
-            <section class="navFrame">
+            <section class="gridItem">
+                <a class="jsLink" href="#">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">for</span> () {</p>
+                        <p>}</p>
+                        <p><span class="pCodeColour">foreach</span> {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>For Loops</h3>
+                </a>
+            </section>
+            <section class="gridItem">
+                <a class="jsLink" href="#">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">function</span> myFunction() {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>Functions</h3>
+                </a>
+            </section>
+            <section class="gridItem">
+                <a class="jsLink" href="#">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">var</span> myObject = []</p>
+                        <p><span class="pCodeColour">var</span> myObject2 = {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>Objects</h3>
+                </a>
+            </section>
+            <!-- <section class="gridItem">
                 <p><a href="#">For Loops</a></p>
             </section>
-            <section class="navFrame">
+            <section class="gridItem">
                 <p><a href="#">Functions</a></p>
             </section>
-            <section class="navFrame">
+            <section class="gridItem">
                 <p><a href="#">Objects</a></p>
-            </section>
+            </section> -->
         </nav>
         <footer class="footer">
             <section class="footerFrame">
                 <p>St. Carlhed's Street</p>
-                <p>Rektown</p>
+                <p>Sometown</p>
                 <p>913 37</p>
             </section>
             <section class="footerFrame">
@@ -50,5 +88,7 @@
                 <p>Copyright &copy; <span id="year"></span></p>
             </section>
         </footer>
+
+        <script src="assets/js/year.js"></script>
     </body>
 </html>

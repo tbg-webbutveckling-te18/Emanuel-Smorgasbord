@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 $grey: #272829;
+$easing: cubic-bezier(.75,.15,.25,.85);
 
 * {
     margin: 0px;
@@ -30,9 +31,10 @@ body {
 
     .jsIcon {
         position: absolute;
-        top: 7.5rem;
-        left: 4rem;
+        // top: 7.5rem;
+        // left: 22%;
         transform: scale(4);
+        color: #f7df1e;
     }
 
     .title {
@@ -72,9 +74,74 @@ body {
     }
 }
 
-nav {
+
+
+.gridFrame {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+
+    display: grid;
+    place-content: center;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(3, 24rem);
+
+
+    .gridItem {
+        height: 12rem;
+        width: 24rem;
+        border: 1px solid $grey;
+
+        .jsLink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: $grey;
+            color: white;
+
+            box-shadow: 0;
+            transition: box-shadow .2s ease;
+
+
+
+            .effectsFrame {
+                font-size: 1.5rem;
+                filter: blur(4px);
+
+                transition: filter .4s ease;
+
+                p {
+                    font-family: 'Roboto Mono', monospace;
+                }
+            }
+
+            h3 {
+                position: absolute;
+                font-size: 2rem;
+                text-shadow: black 0px 0px 1rem;
+
+                opacity: 100%;
+                filter: blur(0);
+
+                transition: opacity .2s ease, filter .1s ease;
+            }
+        }
+
+        .jsLink:hover {
+            box-shadow: inset 0 0 2rem black;
+            .effectsFrame {
+                filter: blur(0);
+            }
+
+            h3 {
+                opacity: 0;
+                filter: blur(4px);
+            }
+        }
+    }
 }
 
 .footer {
@@ -87,4 +154,42 @@ nav {
 
     background-color: $grey;
     color: grey;
+}
+
+/* ----------------- MEDIA QUERYS ----------------- */
+
+@media (min-width: 88rem) {
+    .jsIcon {
+        left: 22%;
+        top: 7.5rem;
+    }
+}
+@media (max-width: 88rem) {
+    .gridFrame {
+        grid-template-columns: repeat(2, 24rem);
+    }
+
+    .jsIcon {
+        left: 10%;
+        top: 7.5rem;
+    }
+}
+
+@media (max-width: 60rem) {
+    .gridFrame {
+        grid-template-columns: repeat(1, 24rem);
+        margin: 4rem 0;
+    }
+
+    .jsIcon {
+        left: 50%;
+        top: 12.5rem;
+    }
+
+}
+
+/* ----------------- SPECIAL STYLES ----------------- */
+
+.pCodeColour {
+    color: rgb(70, 255, 168);
 }
