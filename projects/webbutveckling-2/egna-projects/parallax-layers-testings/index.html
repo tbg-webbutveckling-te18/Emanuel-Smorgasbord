@@ -10,29 +10,29 @@
         <link rel="stylesheet" href="assets/css/main.css"/>
     </head>
     <body>
-        <!--- Source: https://keithclark.co.uk/articles/pure-css-parallax-websites/ --->
-        <section class="wrapper">
-            <h2 class="content">CONTENT 1</h2>
-
-            <section class="frame">
-                <h2 class="bgText">IMAGE 1</h2>
-                <img class="bgImage" src="assets/images/slideshow.jpg" alt="PC">
-            </section>
-            
-            <h2 class="content">CONTENT 2</h2>
-            
-            <section class="frame">
-                <h2 class="bgText">IMAGE 2</h2>
-                <img class="bgImage" src="assets/images/slideshow2.jpg" alt="PC">
-            </section>
-            
-            <h2 class="content">CONTENT 3</h2>
-            
-            <section class="frame">
-                <h2 class="bgText">IMAGE 3</h2>
-                <img class="bgImage" src="assets/images/slideshow3.jpg" alt="PC">
-            </section>
+        <section class="staticFrame">
+            <h1 class="title">STATIC</h1>
         </section>
+
+        <section class="parallaxFrame">
+            <h1 class="title scroll" data-scroll-speed="0.5" data-height="-50">PARALLAX</h1>
+            <img class="scroll" src="assets/images/slideshow3.jpg" alt=""  data-scroll-speed="0.75" data-height="-75">
+        </section>
+
+        <section class="staticFrame">
+            <h1 class="title">STATIC</h1>
+        </section>
+
+        <section class="parallaxFrame">
+            <h1 class="title scroll" data-scroll-speed="0.5" data-height="-150">PARALLAX</h1>
+            <img class="scroll" src="assets/images/slideshow.jpg" alt=""  data-scroll-speed="0.75" data-height="-225">
+        </section>
+
+        <section class="staticFrame">
+            <h1 class="title">STATIC</h1>
+        </section>
+
+        <script src="assets/js/parallax-scrolling.js"></script>
     </body>
 </html>
 

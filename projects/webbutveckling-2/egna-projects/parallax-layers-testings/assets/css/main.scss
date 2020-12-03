@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial';
+    font-size: 2rem;
+    letter-spacing: 1rem;
+}
+
+.staticFrame, .parallaxFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.parallaxFrame {
+    position: relative;
+    overflow: hidden;
+    border-top: 8px solid black;
+    border-bottom: 8px solid black;
+    color: white;
+}
+
+img {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+}
