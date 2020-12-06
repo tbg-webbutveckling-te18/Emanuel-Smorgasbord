@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -8,79 +10,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 100vw;
-    height: 100vh;
-
-    margin: 0px;
-    padding: 0px;
+    height: 100vh;  
 }
 
-.loopFrame {
-    width: 100vw;
-    height: 80vh;
+.slideshow {
+    // position: relative;
+    width: 60vw;
+    height: 60vh;
+    // overflow: hidden;
 
-    overflow: hidden;
+    .slideContainer {
+        position: relative;
+        width: 100%;
+        height: 100%;
 
-    .loop {
-        display: flex;
-        width: 500vw;
-        height: 80vh;
-        
-        -webkit-animation: 24s ease infinite running loopAnimation;
-        animation: 24s ease infinite running loopAnimation;
-    
-        .imgHolder {
-            width: 100vw;
-            height: 80vh;
-    
-            overflow: hidden;
-    
-            img {
-                position: absolute;
-                width: 100vw;
-                height: auto;
+        list-style-type: none;
+
+        .slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: inherit;
+            height: inherit;
+            
+            transition: transform .4s ease-in-out;
+
+            
+
+            .slideImage {
+                width: inherit;
+                height: inherit;
+
+                object-fit: cover;
+
+                // opacity: 30%;
             }
         }
+
+        .activeSlide {
+            display: list-item;
+        }
     }
-}
-
-@-webkit-keyframes loopAnimation {
-    0% {transform: translateX(0);}
-    6.25% {transform: translateX(0);}
-    12.5%  {transform: translateX(0);}
-    18.75%  {transform: translateX(0);}
-    25%  {transform: translateX(-100vw);}
-    31.25%  {transform: translateX(-100vw);}
-    37.5%  {transform: translateX(-100vw);}
-    43.75%  {transform: translateX(-100vw);}
-    50% {transform: translateX(-200vw);}
-    56.25% {transform: translateX(-200vw);}
-    62.5%  {transform: translateX(-200vw);}
-    68.75%  {transform: translateX(-200vw);}
-    75%  {transform: translateX(-300vw);}
-    81.25%  {transform: translateX(-300vw);}
-    87.5% {transform: translateX(-300vw);}
-    93.75% {transform: translateX(-300vw);}
-    100% {transform: translateX(-400vw);}
-}
-
-@keyframes loopAnimation {
-    0% {transform: translateX(0);}
-    6.25% {transform: translateX(0);}
-    12.5%  {transform: translateX(0);}
-    18.75%  {transform: translateX(0);}
-    25%  {transform: translateX(-100vw);}
-    31.25%  {transform: translateX(-100vw);}
-    37.5%  {transform: translateX(-100vw);}
-    43.75%  {transform: translateX(-100vw);}
-    50% {transform: translateX(-200vw);}
-    56.25% {transform: translateX(-200vw);}
-    62.5%  {transform: translateX(-200vw);}
-    68.75%  {transform: translateX(-200vw);}
-    75%  {transform: translateX(-300vw);}
-    81.25%  {transform: translateX(-300vw);}
-    87.5% {transform: translateX(-300vw);}
-    93.75% {transform: translateX(-300vw);}
-    100% {transform: translateX(-400vw);}
 }

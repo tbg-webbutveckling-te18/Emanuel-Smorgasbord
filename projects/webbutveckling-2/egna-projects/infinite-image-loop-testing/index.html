@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta
             charset="utf-8"
             author="Emanuel Carlhed"
-            description="A test page of an infinite image loop."/>
-        <title>Infinite Image Loop Test</title>
+            description=""/>
+        <title>Slideshow</title>
         <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     </head>
     <body>
-        <section class="loopFrame">
-            <section class="loop">
-                <section class="imgHolder">
-                    <img src="assets/images/slideshow.jpg" alt="1">
-                </section>
-                <section class="imgHolder">
-                    <img src="assets/images/slideshow2.jpg" alt="2">
-                </section>
-                <section class="imgHolder">
-                    <img src="assets/images/slideshow3.jpg" alt="3">
-                </section>
-                <section class="imgHolder">
-                    <img src="assets/images/slideshow4.jpg" alt="4">
-                </section>
-                <section class="imgHolder">
-                    <img src="assets/images/slideshow.jpg" alt="5">
-                </section>
+        <section class="slideshow">
+
+            <button class="prevSlide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <ul class="slideContainer">
+                <li class="slide activeSlide"><img src="assets/images/slideshow3.jpg" alt="" class="slideImage"></li>
+                <li class="slide"><img src="assets/images/slideshow.jpg" alt="" class="slideImage"></li>
+                <li class="slide"><img src="assets/images/slideshow4.jpg" alt="" class="slideImage"></li>
+            </ul>
+
+            <button class="nextSlide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <section class="sliderNav">
+                <button class="sliderNavIndicator"></button>
+                <button class="sliderNavIndicator"></button>
+                <button class="sliderNavIndicator"></button>
             </section>
         </section>
+
+        <script src="assets/js/slideshow.js"></script>
     </body>
 </html>
