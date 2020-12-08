@@ -118,3 +118,11 @@ body {
   background-color: white;
   transform: scale(1.2);
 }
+
+button:focus {
+  outline: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
