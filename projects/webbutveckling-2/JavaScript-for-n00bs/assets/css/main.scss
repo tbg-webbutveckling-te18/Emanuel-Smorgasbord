@@ -103,7 +103,7 @@ body {
             color: white;
 
             box-shadow: 0;
-            transition: box-shadow .2s ease;
+            transition: box-shadow .3s ease;
 
 
 
@@ -111,7 +111,7 @@ body {
                 font-size: 1.5rem;
                 filter: blur(4px);
 
-                transition: filter .4s ease;
+                transition: filter .3s ease;
 
                 p {
                     font-family: 'Roboto Mono', monospace;
@@ -121,12 +121,12 @@ body {
             h3 {
                 position: absolute;
                 font-size: 2rem;
-                text-shadow: black 0px 0px 1rem;
+                text-shadow: 0 0 1rem black/* , 0 0 2rem black */;
 
                 opacity: 100%;
                 filter: blur(0);
 
-                transition: opacity .2s ease, filter .1s ease;
+                transition: opacity .3s ease, filter .15s ease;
             }
         }
 
@@ -153,7 +153,7 @@ body {
     height: 32rem;
 
     background-color: $grey;
-    color: grey;
+    color: rgb(156, 156, 156);
 }
 
 /* ----------------- MEDIA QUERYS ----------------- */
