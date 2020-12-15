@@ -1,11 +1,176 @@
 @charset "utf-8";
 
+$grey: #272829;
+$easing: cubic-bezier(.75,.15,.25,.85);
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+.header .homeIcon {
+    position: absolute;
+    left: 2rem;
+    z-index: 5;
+
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    -webkit-tap-highlight-color: transparent;
+
+    #homeIcon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: white;
+
+        transition: fill .2s ease-in-out;
+
+        &:hover {
+            fill: #f7df1e;
+        }
+    }
+
+}
+
+.navSlider {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    
+    width: 14rem;
+    height: 28rem;
+    transform: translateY(2rem);
+
+    z-index: 4;
+
+    #slideBtn {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        width: 2.5rem;
+        height: 2rem;
+
+        left: 2rem;
+
+        span {
+            display: block;
+            width: inherit;
+            height: .25rem;
+
+            overflow: hidden;
+
+            background-color: $grey;
+            transition: transform .4s $easing;
+        }
+    }
+
+    .navItem {
+        position: relative;
+        width: 12rem;
+        height: 6rem;
+        left: -100%;
+
+        transition: transform .4s $easing;
+
+        .subLink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: $grey;
+            color: white;
+
+            box-shadow: 0;
+            transition: box-shadow .3s ease;
+
+
+
+            .effectsFrame {
+                font-size: .75rem;
+                filter: blur(4px);
+
+                transition: filter .3s ease;
+
+                p {
+                    font-family: 'Roboto Mono', monospace;
+                }
+            }
+
+            h3 {
+                position: absolute;
+                font-size: 1.5rem;
+                text-shadow: 0 0 1rem black;
+
+                opacity: 100%;
+                filter: blur(0);
+
+                transition: opacity .3s ease, filter .15s ease;
+            }
+        }
+
+        .subLink:hover {
+            box-shadow: inset 0 0 2rem black;
+            .effectsFrame {
+                filter: blur(0);
+            }
+
+            h3 {
+                opacity: 0;
+                filter: blur(4px);
+            }
+        }
+    }
+}
+
 .wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    max-width: 80vw;
+    width: 42rem;
     height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    line-height: 2rem;
+    letter-spacing: .06rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    .boldItalic {
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+}
+
+/* ------------------- SPECIAL CLASSES ------------------- */
+
+.slideNav {
+    transform: translateX(16rem);
+}
+
+.burgerTop {
+    transform: translateY(350%) rotate(-135deg);
+}
+
+.burgerMid {
+    transform: rotate(-45deg);
+}
+
+.burgerBot {
+    transform: translateY(-350%) rotate(135deg);
 }

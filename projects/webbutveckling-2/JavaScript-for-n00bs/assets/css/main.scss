@@ -16,7 +16,7 @@ $easing: cubic-bezier(.75,.15,.25,.85);
 
 body {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -46,6 +46,7 @@ body {
         font-size: 2.5rem;
         font-weight: 100;
         letter-spacing: 1rem;
+        text-align: center;
 
         .shades {
             display: flex;
@@ -68,9 +69,10 @@ body {
         height: 5rem;
         font-family: 'Kalam', cursive;
         text-transform: uppercase;
-        font-size: 22px;
+        font-size: 1.4rem;
         font-weight: 300;
         letter-spacing: 0.2rem;
+        text-align: center;
     }
 }
 
@@ -87,11 +89,11 @@ body {
 
 
     .gridItem {
-        height: 12rem;
         width: 24rem;
-        border: 1px solid $grey;
+        height: 12rem;
+        // border: 1px solid $grey;
 
-        .jsLink {
+        .subLink {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -130,7 +132,7 @@ body {
             }
         }
 
-        .jsLink:hover {
+        .subLink:hover {
             box-shadow: inset 0 0 2rem black;
             .effectsFrame {
                 filter: blur(0);

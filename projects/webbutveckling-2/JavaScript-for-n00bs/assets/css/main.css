@@ -10,7 +10,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -35,6 +35,7 @@ body {
   font-size: 2.5rem;
   font-weight: 100;
   letter-spacing: 1rem;
+  text-align: center;
 }
 .header .title .shades {
   display: flex;
@@ -53,9 +54,10 @@ body {
   height: 5rem;
   font-family: "Kalam", cursive;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
+  text-align: center;
 }
 
 .gridFrame {
@@ -67,11 +69,10 @@ body {
   grid-template-columns: repeat(3, 24rem);
 }
 .gridFrame .gridItem {
-  height: 12rem;
   width: 24rem;
-  border: 1px solid #272829;
+  height: 12rem;
 }
-.gridFrame .gridItem .jsLink {
+.gridFrame .gridItem .subLink {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,15 +83,15 @@ body {
   box-shadow: 0;
   transition: box-shadow 0.3s ease;
 }
-.gridFrame .gridItem .jsLink .effectsFrame {
+.gridFrame .gridItem .subLink .effectsFrame {
   font-size: 1.5rem;
   filter: blur(4px);
   transition: filter 0.3s ease;
 }
-.gridFrame .gridItem .jsLink .effectsFrame p {
+.gridFrame .gridItem .subLink .effectsFrame p {
   font-family: "Roboto Mono", monospace;
 }
-.gridFrame .gridItem .jsLink h3 {
+.gridFrame .gridItem .subLink h3 {
   position: absolute;
   font-size: 2rem;
   text-shadow: 0 0 1rem black;
@@ -98,13 +99,13 @@ body {
   filter: blur(0);
   transition: opacity 0.3s ease, filter 0.15s ease;
 }
-.gridFrame .gridItem .jsLink:hover {
+.gridFrame .gridItem .subLink:hover {
   box-shadow: inset 0 0 2rem black;
 }
-.gridFrame .gridItem .jsLink:hover .effectsFrame {
+.gridFrame .gridItem .subLink:hover .effectsFrame {
   filter: blur(0);
 }
-.gridFrame .gridItem .jsLink:hover h3 {
+.gridFrame .gridItem .subLink:hover h3 {
   opacity: 0;
   filter: blur(4px);
 }
