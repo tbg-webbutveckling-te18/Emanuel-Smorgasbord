@@ -8,8 +8,87 @@
             description=""/>
         <title>Objects</title>
         <link rel="stylesheet" href="../assets/css/main.css"/>
+        <link rel="stylesheet" href="../assets/css/subpages.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header class="header">
+            <i class="fab fa-js jsIcon"></i> 
+            <h1 class="title">JavaScript for N🕶BS</h1>
+            <h2 class="subTitle">
+                <a href="../index.html" class="homeIcon">
+                    <svg id="homeIcon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.01 54.27">
+                        <path
+                            d="M63.61,25l-1.1,1.52a2,2,0,0,1-2.87.45l-4-2.87L33.21,7.79a2.06,2.06,0,0,0-2.41,0L8.32,24.12,4.36,27a2,2,0,0,1-2.87-.45L.38,25a2,2,0,0,1,.46-2.86l7.48-5.44,13.49-9.8L29,1.66,30,1,30.8.39a2,2,0,0,1,2.4,0l.85.61.91.66,7.23,5.26,13.49,9.8,7.48,5.44A2.05,2.05,0,0,1,63.61,25Z"/>
+                        <path
+                            d="M30.8,13.72,9.17,29.43a2,2,0,0,0-.85,1.66V52.22a2.05,2.05,0,0,0,2,2.05H24a2.05,2.05,0,0,0,2-2.05V41.52a2.05,2.05,0,0,1,2.05-2.05h7.74a2.05,2.05,0,0,1,2.05,2.05v10.7a2.05,2.05,0,0,0,2,2.05H53.63a2.05,2.05,0,0,0,2-2.05V31.09a2,2,0,0,0-.85-1.66L33.21,13.72A2,2,0,0,0,30.8,13.72Z"/>
+                    </svg>
+                </a>
+                Objects
+            </h2>
+        </header>
+        <nav id="nav" class="navSlider">
+            <section id="slideBtn">
+                <span class="topBurger"></span>
+                <span class="midBurger"></span>
+                <span class="botBurger"></span>
+            </section>
+            <section class="navItem">
+                <a class="subLink" href="if-else.html">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">if</span> () {</p>
+                        <p>}</p>
+                        <p><span class="pCodeColour">else</span> {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>If / Else</h3>
+                </a>
+            </section>
+            <section class="navItem">
+                <a class="subLink" href="for-loops.html">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">for</span> () {</p>
+                        <p>}</p>
+                        <p><span class="pCodeColour">foreach</span> {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>For Loops</h3>
+                </a>
+            </section>
+            <section class="navItem">
+                <a class="subLink" href="functions.html">
+                    <section class="effectsFrame">
+                        <p><span class="pCodeColour">function</span> myFunction() {</p>
+                        <p>}</p>
+                    </section>
+                    <h3>Functions</h3>
+                </a>
+            </section>
+        </nav>
+        <main class="wrapper">
 
+        </main>
+        <footer class="footer">
+            <section class="footerFrame">
+                <p>St. Carlhed's Street</p>
+                <p>Sometown</p>
+                <p>913 37</p>
+            </section>
+            <section class="footerFrame">
+                <p>+46 1337 1337</p>
+                <p>Sweden (maybe)</p>
+                <p>carlhed@fakemail.com</p>
+            </section>
+            <section class="footerFrame">
+                <p>Copyright &copy; <span id="year"></span></p>
+            </section>
+        </footer>
+
+        <script src="../assets/js/year.js"></script>
+        <script src="../assets/js/slideNav.js"></script>
     </body>
 </html>

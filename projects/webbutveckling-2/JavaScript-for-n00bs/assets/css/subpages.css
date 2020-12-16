@@ -117,6 +117,9 @@
 .wrapper .underline {
   text-decoration: underline;
 }
+.wrapper p {
+  margin: 2rem 0;
+}
 
 /* ------------------- SPECIAL CLASSES ------------------- */
 .slideNav {
