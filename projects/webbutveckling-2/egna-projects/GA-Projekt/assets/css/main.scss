@@ -1,5 +1,5 @@
 @charset "utf-8";
-$grey: #2d3436;
+$grey: #363838;
 $easing: cubic-bezier(.75,.15,.25,.85);
 
 /* ------------------- GLOBAL PROPERTIES ------------------- */
@@ -51,21 +51,20 @@ body {
 
         #slideBtn {
             position: relative;
-            display: block;
-
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+    
             width: 2.25em;
-            height: auto;
-
-            // margin: auto 2em;
-
+            height: 2.25em;
+    
             z-index: 2;
-
+    
             span {
                 display: block;
                 width: inherit;
                 height: .25em;
-                margin: .5em 0;
-
+    
                 transition: background-color .25s $easing, transform .25s $easing;
             }
         }
@@ -171,6 +170,10 @@ body {
                 transition: color .25s $easing, background-color .25s $easing;
             }
         }
+    }
+
+    main {
+        
     }
 }
 // @media screen and (min-width: 813px) {

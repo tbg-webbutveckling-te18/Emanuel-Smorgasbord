@@ -35,16 +35,17 @@ body ul {
   }
   .topBar #slideBtn {
     position: relative;
-    display: block;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
     width: 2.25em;
-    height: auto;
+    height: 2.25em;
     z-index: 2;
   }
   .topBar #slideBtn span {
     display: block;
     width: inherit;
     height: 0.25em;
-    margin: 0.5em 0;
     transition: background-color 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85), transform 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
   }
   .topBar .navigation {
@@ -157,7 +158,7 @@ body ul {
 }
 
 .darkBGC {
-  background-color: #2d3436;
+  background-color: #363838;
 }
 
 .brightC {
@@ -165,7 +166,7 @@ body ul {
 }
 
 .darkC {
-  color: #2d3436;
+  color: #363838;
 }
 
 .brightNav {
