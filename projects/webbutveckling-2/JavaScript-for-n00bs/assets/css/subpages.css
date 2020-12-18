@@ -102,7 +102,7 @@
   justify-content: center;
   max-width: 80vw;
   width: 42rem;
-  height: 100vh;
+  min-height: 100vh;
   left: 50%;
   transform: translateX(-50%);
   line-height: 2rem;
@@ -117,8 +117,14 @@
 .wrapper .underline {
   text-decoration: underline;
 }
-.wrapper p {
+.wrapper .container {
   margin: 2rem 0;
+}
+.wrapper .frame {
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "Roboto Mono", monospace;
 }
 
 /* ------------------- SPECIAL CLASSES ------------------- */
