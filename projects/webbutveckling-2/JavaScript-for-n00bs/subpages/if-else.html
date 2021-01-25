@@ -9,7 +9,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <header class="header">
@@ -66,23 +67,53 @@
         </nav>
         <main class="wrapper">
             <p class="container">
-                The <span class="boldItalic">If / Else</span> statement has two important factors, the <span class="underline">statements</span> and the <span class="underline">conditions</span>.
-                Here you will learn the syntax and and how to use <span class="boldItalic">If / Else</span> in JavaScript.
+                The <span class="bold italic">If / Else</span> statement has two important factors, the <span class="underline">statements</span> and the <span class="underline">conditions</span>.
+                Here you will learn the syntax and and how to use <span class="bold italic">If / Else</span> in JavaScript.
             </p>
             <p class="container">
-                To start off, we can explain the different conditions of the statements.
-                <span class="boldItalic">If</span> and <span class="boldItalic">If Else</span> is the first statement you will use.
+                To start off, we can go through the different comparison operators.
             </p>
-            <section class="container frame preView">
-                <p class="line"><span class="ln"></span>a</p>
-                <p class="line"><span class="ln"></span>b</p>
-                <p class="line"><span class="ln"></span>c</p>
-                <p class="line"><span class="ln"></span>d</p>
-                <p class="line"><span class="ln"></span>e</p>
-            </section>
-            <section class="container frame codeView">
-                empty
-            </section>
+            <ol class="container frame">
+                <li class="line">== <span class="comment">// Equal to</span></li>
+                <li class="line">=== <span class="comment">// Equal value and equal type</span></li>
+                <li class="line">!= <span class="comment">// Not equal to</span></li>
+                <li class="line">!== <span class="comment">// Not equal value or not equal type</span></li>
+                <li class="line">< <span class="comment">// Less than</span></li>
+                <li class="line">> <span class="comment">// Greater than</span></li>
+                <li class="line"><= <span class="comment">// Less than or equal to</span></li>
+                <li class="line">>= <span class="comment">// Greater than or equal to</span></li>
+            </ol>
+            <p class="container">
+                <span class="bold italic">If</span> and <span class="bold italic">If Else</span> is the only statements that uses comparison operators.
+            </p>
+            <ol class="container frame">
+                <li class="line comment">// Example</li>
+                <li class="line"><span class="red">x</span> = <span class="orange">1</span>;</li>
+                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
+                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'true'</span>);</li>
+                <li class="line">}</li>
+            </ol>
+            <p class="container">
+                This example will write <span class="bold italic">true</span> into the console. <br>
+                But what will happen if we use different types? Lets try.
+            </p>
+            <ol class="container frame">
+                <li class="line comment">// Example</li>
+                <li class="line"><span class="red">x</span> = <span class="green">'1'</span>; <span class="comment">// Which is a string and not an integer</span></li>
+                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
+                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 1'</span>);</li>
+                <li class="line">}</li>
+                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="orange">1</span>) {</li>
+                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 2'</span>);</li>
+                <li class="line">}</li>
+                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="green">'1'</span>) {</li>
+                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 3'</span>);</li>
+                <li class="line">}</li>
+            </ol>
+            <p class="container">
+                It will write both <span class="bold italic">Option 1</span> and <span class="bold italic">Option 3</span> inside the console.
+                <span class="bold italic">Option 2</span> would only be true in case <span class="bold italic">x</span> were an integer.
+            </p>
         </main>
         <footer class="footer">
             <section class="footerFrame">
@@ -103,6 +134,6 @@
         <script src="../assets/js/year.js"></script>
         <script src="../assets/js/slideNav.js"></script>
         <script src="../assets/js/if-esle.js"></script>
-        <script src="../assets/js/lineNumber.js"></script>
+        <script src="../assets/js/js.js"></script>
     </body>
 </html>

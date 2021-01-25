@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 $grey: #272829;
+$yellow: #f7df1e;
 $easing: cubic-bezier(.75,.15,.25,.85);
 
 * {
@@ -28,7 +29,7 @@ $easing: cubic-bezier(.75,.15,.25,.85);
         transition: fill .2s ease-in-out;
 
         &:hover {
-            fill: #f7df1e;
+            fill: $yellow;
         }
     }
 
@@ -147,25 +148,61 @@ $easing: cubic-bezier(.75,.15,.25,.85);
     font-size: 1.2rem;
     font-weight: 300;
 
-    .boldItalic {
-        font-weight: 500;
-        font-style: italic;
-    }
-
-    .underline {
-        text-decoration: underline;
-    }
+    margin: 4rem 0;
     
     .container {
         margin: 2rem 0;
     }
 
     .frame {
-        border: 1px solid black;
-        border-radius: 1rem;
-        padding: 2rem;
-        font-family: 'Roboto Mono', monospace;
+        background-color: $grey;
+        color: white;
+        border-left: .5rem solid yellow;
+        padding: 1rem 1.5rem;
+        // font-family: 'Roboto Mono', monospace;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 300;
+        list-style-type: none;
     }
+}
+
+/* ------------------- CODE FRAME / TEXT CLASSES ------------------- */
+
+.comment {
+    font-style: italic;
+    color: grey;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.red {
+    color: #ff1111;
+}
+
+.orange {
+    color: #ff6600;
+}
+
+.yellow {
+    color: #ffbb00;;
+}
+
+.green {
+    color: #22ff88;
+}
+
+.blue {
+    color: #00aaff;
 }
 
 /* ------------------- SPECIAL CLASSES ------------------- */
