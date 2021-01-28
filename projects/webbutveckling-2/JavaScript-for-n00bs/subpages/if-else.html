@@ -67,48 +67,39 @@
         </nav>
         <main class="wrapper">
             <p class="container">
-                The <span class="bold italic">If / Else</span> statement has two important factors, the <span class="underline">statements</span> and the <span class="underline">conditions</span>.
-                Here you will learn the syntax and and how to use <span class="bold italic">If / Else</span> in JavaScript.
+                The <span class="bold italic">if / else</span> statement has two important factors, the <span class="underline">statements</span> and the <span class="underline">conditions</span>.
+                Here you will learn the syntax and and how to use <span class="bold italic">if / else</span> in JavaScript.
             </p>
             <p class="container">
-                To start off, we can go through the different comparison operators.
+                <span class="bold italic">if</span> and <span class="bold italic">if else</span> is the only statements that uses comparison operators.
+                When using <span class="bold italic">else</span> you just continue with curly brackets right after.
             </p>
             <ol class="container frame">
-                <li class="line">== <span class="comment">// Equal to</span></li>
-                <li class="line">=== <span class="comment">// Equal value and equal type</span></li>
-                <li class="line">!= <span class="comment">// Not equal to</span></li>
-                <li class="line">!== <span class="comment">// Not equal value or not equal type</span></li>
-                <li class="line">< <span class="comment">// Less than</span></li>
-                <li class="line">> <span class="comment">// Greater than</span></li>
-                <li class="line"><= <span class="comment">// Less than or equal to</span></li>
-                <li class="line">>= <span class="comment">// Greater than or equal to</span></li>
-            </ol>
-            <p class="container">
-                <span class="bold italic">If</span> and <span class="bold italic">If Else</span> is the only statements that uses comparison operators.
-            </p>
-            <ol class="container frame">
-                <li class="line comment">// Example</li>
-                <li class="line"><span class="red">x</span> = <span class="orange">1</span>;</li>
-                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
-                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'true'</span>);</li>
-                <li class="line">}</li>
+                <li class="comment">// Example</li>
+                <li><span class="red">x</span> = <span class="orange">1</span>;</li>
+                <li><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'true'</span>);</li>
+                <li>}</li>
+                <li><span class="yellow">else</span> {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'false'</span>);</li>
+                <li>}</li>
             </ol>
             <p class="container">
                 This example will write <span class="bold italic">true</span> into the console. <br>
                 But what will happen if we use different types? Lets try.
             </p>
             <ol class="container frame">
-                <li class="line comment">// Example</li>
-                <li class="line"><span class="red">x</span> = <span class="green">'1'</span>; <span class="comment">// Which is a string and not an integer</span></li>
-                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
-                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 1'</span>);</li>
-                <li class="line">}</li>
-                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="orange">1</span>) {</li>
-                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 2'</span>);</li>
-                <li class="line">}</li>
-                <li class="line"><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="green">'1'</span>) {</li>
-                <li class="line tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 3'</span>);</li>
-                <li class="line">}</li>
+                <li class="comment">// Example</li>
+                <li><span class="red">x</span> = <span class="green">'1'</span>; <span class="comment">// Which is a string and not an integer</span></li>
+                <li><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">==</span> <span class="orange">1</span>) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 1'</span>);</li>
+                <li>}</li>
+                <li><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="orange">1</span>) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 2'</span>);</li>
+                <li>}</li>
+                <li><span class="yellow">if</span> (<span class="red">x</span> <span class="yellow">===</span> <span class="green">'1'</span>) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="green">'Option 3'</span>);</li>
+                <li>}</li>
             </ol>
             <p class="container">
                 It will write both <span class="bold italic">Option 1</span> and <span class="bold italic">Option 3</span> inside the console.

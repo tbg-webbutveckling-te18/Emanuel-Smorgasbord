@@ -95,41 +95,7 @@
   filter: blur(4px);
 }
 
-.wrapper {
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  max-width: 80vw;
-  width: 42rem;
-  min-height: 100vh;
-  left: 50%;
-  transform: translateX(-50%);
-  line-height: 2rem;
-  letter-spacing: 0.06rem;
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin: 4rem 0;
-}
-.wrapper .container {
-  margin: 2rem 0;
-}
-.wrapper .frame {
-  background-color: #272829;
-  color: white;
-  border-left: 0.5rem solid yellow;
-  padding: 1rem 1.5rem;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 300;
-  list-style-type: none;
-}
-
 /* ------------------- CODE FRAME / TEXT CLASSES ------------------- */
-.comment {
-  font-style: italic;
-  color: grey;
-}
-
 .bold {
   font-weight: 500;
 }

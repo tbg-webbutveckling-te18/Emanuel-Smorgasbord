@@ -8,6 +8,8 @@ $easing: cubic-bezier(.75,.15,.25,.85);
     padding: 0px;
     box-sizing: border-box;
 
+    scroll-behavior: smooth;
+
     a {
         text-decoration: none;
         color: inherit;
@@ -73,19 +75,58 @@ body {
         font-weight: 300;
         letter-spacing: 0.2rem;
         text-align: center;
+
+        &:hover a {
+            font-weight: 500;
+        }
     }
 }
 
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 
+    max-width: 80vw;
+    width: 42rem;
+    // min-height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    line-height: 2rem;
+    letter-spacing: .06rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    margin: 4rem 0;
+    
+    .container {
+        margin: 2rem 0;
+    }
+
+    .frame {
+        background-color: $grey;
+        color: white;
+        border-left: .5rem solid yellow;
+        padding: 1rem 1.5rem;
+        // font-family: 'Roboto Mono', monospace;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 300;
+        list-style-type: none;
+    }
+}
 
 .gridFrame {
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     display: grid;
     place-content: center;
     grid-gap: 4rem;
     grid-template-columns: repeat(3, 24rem);
+
+    margin-bottom: 6rem;
 
 
     .gridItem {
@@ -153,6 +194,7 @@ body {
 
     width: 100%;
     height: 32rem;
+    margin-top: 4rem;
 
     background-color: $grey;
     color: rgb(156, 156, 156);
@@ -192,7 +234,24 @@ body {
 
 }
 
-/* ----------------- SPECIAL STYLES ----------------- */
+/* ------------------- CODE FRAME / TEXT CLASSES ------------------- */
+
+.bold {
+    font-weight: 500;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.comment {
+    font-style: italic;
+    color: grey;
+}
 
 .pCodeColour {
     color: rgb(70, 255, 168);

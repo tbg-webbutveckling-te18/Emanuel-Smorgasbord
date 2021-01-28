@@ -1,3 +1,5 @@
+/* ---------- INDENTATION ---------- */
+
 const target = document.querySelectorAll('.tabs');
 
 var i = 0,
