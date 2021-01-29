@@ -2,7 +2,7 @@ var person = ['Nisse-Lasse', '69', 'BigUman'];
 
 person.shift();
 
-document.writeln(person[2]);
+// document.writeln(person[2]);
 
 var personFriends = ['Olle', 'Beng-Ha', 'Jan-E', 'Sven-E'];
 
@@ -16,11 +16,23 @@ var user = {
     shoutout: function () {
         alert('Shoutout to my mom!');
     },
+    levelUp: function () {
+        this.age++;
+        return this.age;
+    },
 };
 
-document.writeln(
-    `<br></br>My name is ${user.name} and I am ${user.age} years old. I live in ${user.city}<br>I have no friends.`
-);
+var levelUpBtn = document.querySelector('.aging');
+levelUpBtn.addEventListener('click', function () {
+    firstOutput.innerHTML += `<br></br>My name is ${
+        user.name
+    } and I am ${user.levelUp()} years old. I live in ${
+        user.city
+    }<br>I have no friends.`;
+});
+
+var firstOutput = document.getElementById('userInfo');
+firstOutput.innerHTML += `<br></br>My name is ${user.name} and I am ${user.age} years old. I live in ${user.city}<br>I have no friends.`;
 
 // user.shoutout();
 
@@ -33,9 +45,9 @@ user.friends.forEach(function (friend) {
     console.log(friend);
 });
 
-console.log(user.age);
-user.age++;
-console.log(user.age);
+// console.log(user.age);
+// user.age++;
+// console.log(user.age);
 
 var post = [
     {
@@ -50,6 +62,11 @@ var post = [
         author: 'Kamala',
         comment: 'Calm down. Both are equally nice.',
     },
+    {
+        author: 'Landin',
+        comment:
+            "You can't spell advertisements without semen between the tits.",
+    },
 ];
 
 // HTML Reference
@@ -57,4 +74,11 @@ var postOutput = document.querySelector('.post');
 
 post.forEach(function (post) {
     postOutput.innerHTML += `Author: ${post.author} <br> Commented: ${post.comment} <br><br>`;
+});
+
+var input = document.querySelector('.updateCity');
+input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        alert(`You clicked ${e.key}`);
+    }
 });
