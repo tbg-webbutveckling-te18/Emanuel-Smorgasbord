@@ -62,11 +62,6 @@ var post = [
         author: 'Kamala',
         comment: 'Calm down. Both are equally nice.',
     },
-    {
-        author: 'Landin',
-        comment:
-            "You can't spell advertisements without semen between the tits.",
-    },
 ];
 
 // HTML Reference
@@ -77,8 +72,79 @@ post.forEach(function (post) {
 });
 
 var input = document.querySelector('.updateCity');
+var city = document.querySelector('.city');
 input.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
-        alert(`You clicked ${e.key}`);
+        city.innerHTML = input.value;
+        document.body.style.backgroundColor = '#007CF7';
+        document.body.style.transform += 'rotate(10deg)';
+        document.body.style.transform += 'scale(.9)';
     }
 });
+
+input.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        document.body.style.transform = 'rotate(0deg)';
+        document.body.style.transform = 'scale(1)'; 
+    }
+});
+
+var toggle = document.querySelector('.btnToggle');
+toggle.addEventListener('click', () => {
+    // Bad Way
+    // city.style.fontWeight = 'bold';
+    // city.style.fontSize = '32px';
+    // city.style.color = '#639';
+    // city.style.textShadow = '2px 2px 0px black';
+
+    // Good Way
+    city.classList.toggle('changeText');
+});
+
+/*
+***************************************
+Create your own code - movieDB
+***************************************
+*/
+// Create an array of movie objects
+// Each movie should have a title, rating and hasWatched properties
+// Iterate through the array with a forEach and print out something that looks like:
+/* 
+   - You have seen "Frozen" - 4.5 stars
+   - You have not seen "Django" - 5 stars
+   - You have seen "Vaiana" - 5 stars
+   - You have not seen "Shawshank Redemption" - 5 stars
+*/
+
+var movieLib = [
+    {
+        title: 'Cars',
+        rating: '4.5 stars',
+        hasWatched: true
+    },
+    {
+        title: 'Cars',
+        rating: '',
+        hasWatched: 
+    },
+    {
+        title: 'Cars',
+        rating: '',
+        hasWatched: 
+    },
+    {
+        title: 'Cars',
+        rating: '',
+        hasWatched: 
+    },
+    {
+        title: 'Cars',
+        rating: '',
+        hasWatched: 
+    },
+    {
+        title: 'Cars',
+        rating: '',
+        hasWatched: 
+    },
+]
