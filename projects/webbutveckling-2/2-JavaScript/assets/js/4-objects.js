@@ -85,7 +85,7 @@ input.addEventListener('keydown', function (e) {
 input.addEventListener('keyup', (e) => {
     if (e.key === 'Enter') {
         document.body.style.transform = 'rotate(0deg)';
-        document.body.style.transform = 'scale(1)'; 
+        document.body.style.transform = 'scale(1)';
     }
 });
 
@@ -119,32 +119,61 @@ Create your own code - movieDB
 var movieLib = [
     {
         title: 'Cars',
-        rating: '4.5 stars',
-        hasWatched: true
+        rating: '7.1/10',
+        hasWatched: true,
     },
     {
-        title: 'Cars',
-        rating: '',
-        hasWatched: 
+        title: 'Top Gun',
+        rating: '6.9/10',
+        hasWatched: true,
     },
     {
-        title: 'Cars',
-        rating: '',
-        hasWatched: 
+        title: 'Die Hard',
+        rating: '8.2/10',
+        hasWatched: false,
     },
     {
-        title: 'Cars',
-        rating: '',
-        hasWatched: 
+        title: 'Monsters INC.',
+        rating: '8.1/10',
+        hasWatched: true,
     },
     {
-        title: 'Cars',
-        rating: '',
-        hasWatched: 
+        title: 'It - Chapter 2',
+        rating: '6.5/10',
+        hasWatched: false,
     },
     {
-        title: 'Cars',
-        rating: '',
-        hasWatched: 
+        title: 'Alien',
+        rating: '8.4/10',
+        hasWatched: false,
     },
-]
+];
+
+movieLib.forEach((m) => {
+    var hasWatched = '';
+    if (m.hasWatched === true) {
+        var hasWatched = 'You have seen';
+    } else {
+        var hasWatched = 'You have not seen';
+    }
+    document.querySelector(
+        '.movieLib'
+    ).innerHTML += `${hasWatched} "${m.title}" - IMDB Rating ${m.rating} <br>`;
+});
+
+// Repetition objects
+
+var opc = document.querySelector('#outputCalc');
+var countObj = {
+    someText: 'This is some text',
+    multiply: (x, y) => {
+        return x * y;
+    },
+    nextDay: () => {
+        var d = new Date().getHours();
+        return `<br> There is ${24 - d} hours left of this day`;
+    },
+};
+
+opc.innerHTML = countObj.multiply(10, 5);
+opc.innerHTML += countObj.nextDay();
