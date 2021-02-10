@@ -177,3 +177,85 @@ var countObj = {
 
 opc.innerHTML = countObj.multiply(10, 5);
 opc.innerHTML += countObj.nextDay();
+
+//Our own animal sound library
+var outputSound = document.querySelector('.animalSound');
+var btnAnimal = document.querySelectorAll('.btnAnimal');
+
+var animalSound = {
+    dog: function () {
+        outputSound.innerHTML = 'Voff Voff!';
+    },
+    cat: function () {
+        outputSound.innerHTML = 'Meeeoow!';
+    },
+    wolf: function () {
+        outputSound.innerHTML = 'Aooooooow!';
+    },
+    cow: function () {
+        outputSound.innerHTML = 'Moooooo!';
+    },
+};
+
+for (var i = 0; i < btnAnimal.length; i++) {
+    btnAnimal[i].addEventListener('click', function () {
+        switch (this.innerHTML) {
+            case 'Dog': {
+                animalSound.dog();
+                break;
+            }
+            case 'Cat': {
+                animalSound.cat();
+                break;
+            }
+            case 'Wolf': {
+                animalSound.wolf();
+                break;
+            }
+            case 'Cow': {
+                animalSound.cow();
+                break;
+            }
+        }
+    });
+    btnAnimal[i].addEventListener('mouseover', function () {
+        this.style.backgroundColor = 'coral';
+    });
+    btnAnimal[i].addEventListener('mouseleave', function () {
+        this.style.backgroundColor = '';
+    });
+}
+
+var addFriend = document.querySelector('.friend');
+var unFriend = document.querySelector('.unFriend');
+
+var users = {
+    friends: ['Arnold', 'Schwarznegger', 'Chuck'],
+    addFriend: function (friend) {
+        this.friends.push(friend);
+    },
+    unFriend: function () {
+        this.friends.pop();
+    },
+};
+
+var displayFriends = () => {
+    document.querySelector('.friends').innerHTML = users.friends;
+};
+displayFriends();
+
+addFriend.addEventListener('click', () => {
+    users.addFriend(prompt('Add friend: '));
+    displayFriends();
+});
+
+unFriend.addEventListener('click', () => {
+    users.unFriend();
+    displayFriends();
+});
+
+var btnDoomed = document.querySelector('.doomed');
+
+youAreDoomed = () => (document.body.innerHTML = 'HAHahahha, OWNED!!');
+
+btnDoomed.addEventListener('click', youAreDoomed);

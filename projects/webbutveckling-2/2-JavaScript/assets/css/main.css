@@ -36,6 +36,7 @@ body {
   border: 10px double black;
   box-shadow: inset 2px 2px 10px black, 2px 2px 10px black;
   padding: 20px;
+  align-items: flex-start;
 }
 
 .updateCity {
@@ -56,4 +57,10 @@ body {
   color: rebeccapurple;
   text-shadow: 2px 2px 0px black;
   letter-spacing: 4px;
+}
+
+/* ----------------- Utility Classes -----------------*/
+.addFlex {
+  display: flex;
+  flex-flow: row wrap;
 }
