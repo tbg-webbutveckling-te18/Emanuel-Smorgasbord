@@ -71,6 +71,30 @@ body {
     letter-spacing: 4px;
 }
 
+.todo {
+    list-style: none;
+    padding: 0;
+    width: 30%;
+
+    li {
+        font-size: 20px;
+        height: 25px;
+        background-color: #18686b;
+        text-align: center;
+        border-bottom: 1px solid #166062;
+    }
+}
+
+li.todoHover {
+    background-color: #166062;
+    color: #fff;
+}
+
+li.todoCompleated {
+    background-color: #16622d;
+    text-decoration: line-through;
+}
+
 /* ----------------- Utility Classes -----------------*/
 
 .addFlex {

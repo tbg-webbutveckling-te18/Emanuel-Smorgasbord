@@ -259,3 +259,19 @@ var btnDoomed = document.querySelector('.doomed');
 youAreDoomed = () => (document.body.innerHTML = 'HAHahahha, OWNED!!');
 
 btnDoomed.addEventListener('click', youAreDoomed);
+
+var todo = document.querySelectorAll('.todo li');
+
+for (i = 0; i < todo.length; i++) {
+    todo[i].addEventListener('mouseover', function () {
+        this.classList.add('todoHover');
+    });
+
+    todo[i].addEventListener('mouseleave', function () {
+        this.classList.remove('todoHover');
+    });
+
+    todo[i].addEventListener('click', function () {
+        this.classList.toggle('todoCompleated');
+    });
+}
