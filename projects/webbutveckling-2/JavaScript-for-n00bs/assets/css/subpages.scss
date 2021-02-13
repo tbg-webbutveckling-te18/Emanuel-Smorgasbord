@@ -131,6 +131,36 @@ $easing: cubic-bezier(.75,.15,.25,.85);
     }
 }
 
+.wrapper {
+    .testButtons {
+        display: flex;
+        justify-content: space-between;
+        
+        list-style: none;
+        
+        .changeX {
+            cursor: pointer;
+
+            font-size: 1rem;
+            font-family: 'Roboto Mono', monospace;
+
+            padding: .5rem 3rem;
+
+            background-color: $yellow;
+            color: $grey;
+
+            // transition: box-shadow .2s ease;
+
+            &:hover {
+                box-shadow: inset 0 0 .4rem black;
+            }
+            &:active {
+                box-shadow: inset 0 0 .8rem black;
+            }
+        }
+    }
+}
+
 
 /* ------------------- CODE FRAME / TEXT CLASSES ------------------- */
 
@@ -148,7 +178,7 @@ $easing: cubic-bezier(.75,.15,.25,.85);
 }
 
 .red {
-    color: #ff1111;
+    color: #ec3b3b;
 }
 
 .orange {

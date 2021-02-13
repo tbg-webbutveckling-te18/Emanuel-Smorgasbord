@@ -95,6 +95,26 @@
   filter: blur(4px);
 }
 
+.wrapper .testButtons {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.wrapper .testButtons .changeX {
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  padding: 0.5rem 3rem;
+  background-color: #f7df1e;
+  color: #272829;
+}
+.wrapper .testButtons .changeX:hover {
+  box-shadow: inset 0 0 0.4rem black;
+}
+.wrapper .testButtons .changeX:active {
+  box-shadow: inset 0 0 0.8rem black;
+}
+
 /* ------------------- CODE FRAME / TEXT CLASSES ------------------- */
 .bold {
   font-weight: 500;
@@ -109,7 +129,7 @@
 }
 
 .red {
-  color: #ff1111;
+  color: #ec3b3b;
 }
 
 .orange {
