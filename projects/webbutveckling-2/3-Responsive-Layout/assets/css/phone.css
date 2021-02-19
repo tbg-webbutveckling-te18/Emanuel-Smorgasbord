@@ -1,0 +1,21 @@
+html {
+  overflow-x: hidden;
+}
+
+.container header {
+  position: relative;
+  justify-content: center;
+}
+.container header .burger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+}
+.container header .mobileMenu {
+  position: absolute;
+  right: 0;
+}
+.container header .mobileMenu ul {
+  flex-direction: column;
+}

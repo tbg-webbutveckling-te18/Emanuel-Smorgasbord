@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    header {
+        position: relative;
+        justify-content: center;
+
+        .burger {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            display: block;
+        }
+
+        .mobileMenu {
+            position: absolute;
+            right: 0;
+            // transform: translateX(100%);
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+}

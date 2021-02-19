@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.container {
+    header {
+        flex-direction: column-reverse;
+
+        h1 {
+            flex: 0;
+        }
+
+        nav {
+            flex: 0;
+            width: 100vw;
+            justify-content: center;
+        }
+    }
+
+    main {
+        flex-direction: column;
+
+        .mainLeft {
+            order: 2;
+        }
+
+        .mainCenter {
+            order: 1;
+        }
+
+        .mainRight {
+            order: 3;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.container header {
+  flex-direction: column-reverse;
+}
+.container header h1 {
+  flex: 0;
+}
+.container header nav {
+  flex: 0;
+  width: 100vw;
+  justify-content: center;
+}
+.container main {
+  flex-direction: column;
+}
+.container main .mainLeft {
+  order: 2;
+}
+.container main .mainCenter {
+  order: 1;
+}
+.container main .mainRight {
+  order: 3;
+}
