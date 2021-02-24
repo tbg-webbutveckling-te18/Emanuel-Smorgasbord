@@ -27,7 +27,7 @@
 .container header h1 .spanLogo {
   color: #007af3;
 }
-.container header .burger {
+.container header .burger, .container header .mobileIconClose {
   display: none;
 }
 .container header nav {

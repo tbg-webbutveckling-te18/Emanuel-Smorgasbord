@@ -5,17 +5,46 @@ html {
 .container header {
   position: relative;
   justify-content: center;
+  height: 8rem;
 }
 .container header .burger {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2rem;
   display: block;
 }
 .container header .mobileMenu {
   position: absolute;
-  right: 0;
+  height: 100%;
+  transform: translateX(100%);
+  background-color: #dfdfdf;
+  transition: transform 0.4s ease;
+}
+.container header .mobileMenu .mobileIconClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 2rem;
 }
 .container header .mobileMenu ul {
+  position: absolute;
+  top: 0;
   flex-direction: column;
+  align-items: center;
+}
+.container header .mobileMenu ul li {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.container header .mobileMenu ul .navSpacer {
+  display: block;
+  background-color: #007af350;
+  width: 80%;
+  height: 1px;
+}
+.container header .mobileMenuToggle {
+  transform: translateX(0);
 }
