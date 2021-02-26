@@ -11,10 +11,11 @@
 }
 .container header {
   width: 100%;
-  height: 250px;
+  height: 16rem;
   background-color: #bbb9b9;
   align-items: center;
   justify-content: space-around;
+  transition: transform 0.4s ease-in-out;
 }
 .container header h1 {
   font-size: 42px;
@@ -44,7 +45,7 @@
 }
 .container main {
   width: 100%;
-  min-height: 1000px;
+  min-height: 500vh;
 }
 .container main .mainLeft {
   background-color: #cfcccc;
@@ -70,4 +71,24 @@
 
 .active {
   font-weight: bold;
+}
+
+.container .shrinkHeader {
+  position: fixed;
+  top: -6rem;
+  height: 6rem;
+}
+.container .shrinkHeader h1 {
+  font-size: 1.5rem;
+}
+.container .shrinkHeader nav {
+  flex: 3;
+  justify-content: center;
+}
+.container .shrinkHeader nav ul {
+  font-size: 1rem;
+  justify-content: center;
+}
+.container .shrinkHeader nav ul li {
+  margin: 0 3rem;
 }
