@@ -8,3 +8,237 @@
   background-color: crimson;
   color: white;
 }
+
+body {
+  display: block;
+  height: auto;
+  width: 100%;
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+}
+
+.header .topBar {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000dd;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 6rem;
+  padding: 0 12rem;
+}
+.header .topBar .slideBtn {
+  display: none;
+}
+.header .topBar #darkModeSwitch {
+  fill: crimson;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+}
+.header .topBar #darkModeSwitch #darkModeSVG {
+  display: flex;
+  position: relative;
+  right: 1.25rem;
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.25s cubic-bezier(0.75, 0.15, 0.25, 0.85);
+  -webkit-tap-highlight-color: transparent;
+}
+.header .topBar .navigation {
+  background-color: transparent;
+}
+.header .topBar .navigation ul {
+  display: flex;
+  list-style: none;
+}
+.header .topBar .navigation ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 8rem;
+}
+.header .topBar::after {
+  content: "";
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  display: block;
+  background-image: linear-gradient(to bottom, #000000aa, #00000000);
+  height: 1rem;
+  width: 100%;
+}
+
+/* ------------------- SPECIAL PROPERTIES ------------------- */
+#active {
+  color: red;
+  font-weight: 700;
+}
+#active::after {
+  width: 100%;
+}
+
+.slideNav {
+  transform: translateX(-100vw);
+}
+
+.burgerTop {
+  transform: translateY(0.75em) rotate(-135deg);
+}
+
+.burgerMid {
+  transform: rotate(-45deg);
+}
+
+.burgerBot {
+  transform: translateY(-0.75em) rotate(135deg);
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ------------------- DARKMODE PROPERTIES ------------------- */
+.moveSwitch {
+  transform: translateY(-50%);
+}
+
+.brightBGC {
+  background-color: white;
+}
+
+.darkBGC {
+  background-color: #414347;
+}
+
+.brightC {
+  color: white;
+}
+
+.darkC {
+  color: #414347;
+}
+
+.brightNav {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.darkNav {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------- SLIDESHOW PROPERTIES ------------------- */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+.slideshow .slideContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  z-index: 1;
+}
+.slideshow .slideContainer .slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  /* &:nth-child(1) .slideImage{
+      transform: translateX(-20%);
+      // height: 100vh;
+      object-fit: contain;
+      overflow: visible;
+  } */
+}
+.slideshow .slideContainer .slide .slideImage {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.slideshow .slideContainer .activeSlide {
+  opacity: 100%;
+}
+.slideshow .prevSlide, .slideshow .nextSlide {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 10%;
+  z-index: 2;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  transform: scale(1.2);
+  text-shadow: 0 0 4px black;
+  transition: transform 0.2s ease-in-out;
+}
+.slideshow .prevSlide:hover, .slideshow .nextSlide:hover {
+  transform: scale(1.4);
+}
+.slideshow .prevSlide::after, .slideshow .nextSlide::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.slideshow .prevSlide {
+  left: 0;
+}
+.slideshow .prevSlide::after {
+  left: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.slideshow .prevSlide:hover::after {
+  opacity: 100%;
+}
+.slideshow .nextSlide {
+  right: 0;
+}
+.slideshow .nextSlide::after {
+  right: 0;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.slideshow .nextSlide:hover::after {
+  opacity: 100%;
+}
+.slideshow .sliderNav {
+  position: absolute;
+  bottom: 5%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.slideshow .sliderNav .sliderNavIndicators {
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 0.8rem;
+  text-shadow: 0 0 4px black;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+.slideshow .sliderNav .activeIndicator {
+  background-color: white;
+  transform: scale(1.2);
+}

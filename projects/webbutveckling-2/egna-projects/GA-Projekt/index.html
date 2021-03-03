@@ -8,6 +8,8 @@
             description="En webbplats jag testar designs på"/>
         <title>GA - Design</title>
         <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (max-width: 900px)">
+        <link rel="stylesheet" href="assets/css/phone.css" media="screen and (max-width: 550px)">
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -15,10 +17,14 @@
     <body class="toggleBGC brightBGC">
         <!-- header>h1^nav>ul>li*4>a -->
 
-        <section class="topBar toggleBGC brightBGC">
+
+
+        <header class="header">
+
+            <section class="topBar toggleBGC brightBGC">
                 
                 <!-- Only visible on mobile devices -->
-                <section id="slideBtn">
+                <section class="slideBtn">
                     <span class="toggleBGC darkBGC toggleBurgerTop"></span>
                     <span class="toggleBGC darkBGC toggleBurgerMid"></span>
                     <span class="toggleBGC darkBGC toggleBurgerBot"></span>
@@ -48,7 +54,7 @@
 
                 <nav class="navigation toggleBGC brightBGC">
                     <ul>
-                        <li><a id="active" class="mainNav" href="index.html">Hem</a></li>
+                        <li><a id="active" class="mainNav" href="#">Hem</a></li>
                         <span></span>
                         <li><a class="mainNav toggleC darkC" href="#">Bygget</a></li>
                         <span></span>
@@ -56,9 +62,7 @@
                     </ul>
                 </nav>
     
-        </section>
-
-        <header class="header">
+            </section>
         
             <img class="bgImage scroll" src="assets/images/pcBuildDone.png" alt="PC" data-scroll-speed="0.75">
             <section class="title scroll" data-scroll-speed="0.6">
