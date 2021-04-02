@@ -2,10 +2,7 @@
 <html lang="sv">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta
-            charset="utf-8"
-            author="Emanuel Carlhed"
-            description="En webbplats jag testar designs på"/>
+        <meta charset="utf-8"/>
         <title>GA - Design</title>
         <link rel="stylesheet" href="assets/css/main.css"/>
         <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (max-width: 900px)">
@@ -15,12 +12,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     </head>
     <body class="toggleBGC brightBGC">
-        <!-- header>h1^nav>ul>li*4>a -->
-
-
 
         <header class="header">
+            <img class="bgImage scroll" src="assets/images/pcBuildDone.png" alt="PC" data-scroll-speed="0.75">
+            
+            <section class="title scroll" data-scroll-speed="0.6">
+                <h1>Mitt GA Projekt</h1>
+                <!-- <h2 class="brightC">Emanuel Carlhed</h2> -->
+                <img src="assets/svg/name.svg" alt="">
+            </section>
+        </header>
 
+        <nav class="nav">
             <section class="topBar toggleBGC brightBGC">
                 
                 <!-- Only visible on mobile devices -->
@@ -29,10 +32,9 @@
                     <span class="toggleBGC darkBGC toggleBurgerMid"></span>
                     <span class="toggleBGC darkBGC toggleBurgerBot"></span>
                 </section>
-                <!-- ------------------------------ -->
+                <!------------------------------------>
 
                 <section id="darkModeSwitch">
-                    <?xml version="1.0" encoding="utf-8"?>
                     <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <svg id="darkModeSVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
                         <g id="sunSVG">
@@ -52,45 +54,41 @@
                     </svg>
                 </section>
 
-                <nav class="navigation toggleBGC brightBGC">
+                <section class="navLinks toggleBGC brightBGC">
                     <ul>
                         <li><a id="active" class="mainNav" href="#">Hem</a></li>
-                        <span></span>
+                        <li><span></span></li>
                         <li><a class="mainNav toggleC darkC" href="#">Bygget</a></li>
-                        <span></span>
+                        <li><span></span></li>
                         <li><a class="mainNav toggleC darkC" href="#">Komponenter</a></li>
                     </ul>
-                </nav>
+                </section>
     
             </section>
-        
-            <img class="bgImage scroll" src="assets/images/pcBuildDone.png" alt="PC" data-scroll-speed="0.75">
-            <section class="title scroll" data-scroll-speed="0.6">
-                <h1>Mitt GA Projekt</h1>
-                <!-- <h2 class="brightC">Emanuel Carlhed</h2> -->
-                <img src="assets/svg/name.svg" alt="">
-            </section>
-
-        </header>
+        </nav>
 
         <main>
-            <section class="page" id="nr1">
-                <section class="content">
-                    <h1 data-scroll-speed="-0.05" data-height="6">Välkommen</h1>
-                    <p data-scroll-speed="-0.05" data-height="6">till dokumentationen av mitt datorbygge i form av en hemsida som är en del utav mitt gymnasiearbete.</p>
-                    <p data-scroll-speed="-0.05" data-height="6">Här kommer jag förklara processen av bygget till bilder och även gå igenom komponenterna som används och varför just dessa komponenter valdes till bygget.</p>
+            <section class="page page1">
+                <img src="assets/images/pcResult.png" alt=""  class="scroll" data-scroll-speed="0.2" data-height="-20">
+                <section class="content scroll" data-scroll-speed="0.2" data-height="-20">
+                    <h1>Välkommen</h1>
+                    <p>till dokumentationen av mitt datorbygge i form av en hemsida.</p>
+                    <p>Här kommer du hitta</p>
+                    <ul>
+                        <li>Byggets process</li>
+                        <li>Valda komponenter till bygget</li>
+                    </ul>
                 </section>
-                <img src="assets/images/pcResult.png" alt="">
             </section>
 
-            <section class="page">
-                <section class="slideshow">
+            <section class="page page2">
+                <section class="slideshow scroll" data-scroll-speed="0.2" data-height="-40">
 
                     <button class="prevSlide">
                         <i class="fas fa-chevron-left"></i>
                     </button>
         
-                    <ul class="slideContainer">
+                    <ul class="slideContainer scroll" data-scroll-speed="0.2" data-height="-40">
                         <li class="slide activeSlide"><img src="assets/images/pcBuildDone.png" alt="" class="slideImage"></li>
                         <li class="slide"><img src="assets/images/pcCPUInstalled.png" alt="" class="slideImage"></li>
                         <li class="slide"><img src="assets/images/pcM2Installed.png" alt="" class="slideImage"></li>
@@ -112,18 +110,13 @@
                 </section>
             </section>
 
-            <section class="page">
+            <section class="page page3">
                 <section class="content">
-                    <h1>Section 3</h1>
+                    <h1>Gå till bygget</h1>
                     <p>Paragraph 3</p>
                 </section>
-                <section class="textShadow scroll" data-scroll-speed="-0.2" data-height="60">
-                    <h1>Section 3</h1>
-                    <p>Paragraph 3</p>
-                </section>
-
             </section>
-            <section class="page"></section>
+            <section class="page page4"></section>
         </main>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

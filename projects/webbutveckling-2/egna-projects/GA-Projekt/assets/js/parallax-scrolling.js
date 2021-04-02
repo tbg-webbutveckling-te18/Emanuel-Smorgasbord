@@ -25,7 +25,7 @@ const positionElements = () => {
         target[i].style.transform = `translateY(${pos + yPosition}px)`;
     }
 
-    for (i = 0; i < bsp.length; i++) {
+    /*     for (i = 0; i < bsp.length; i++) {
         var pos = window.pageYOffset * bsp[i].dataset.scrollSpeed;
         var yPosition = 0;
         if (bsp[i].hasAttribute('data-height')) {
@@ -35,7 +35,7 @@ const positionElements = () => {
         bsp[i].style.boxShadow = `-8px ${
             pos + yPosition
         }px 4px rgba(0, 0, 0, 0.404)`;
-    }
+    } */
 };
 
 window.addEventListener('scroll', positionElements);
