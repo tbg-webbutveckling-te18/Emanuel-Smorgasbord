@@ -148,6 +148,10 @@
   color: #00aaff;
 }
 
+.aqua {
+  color: aquamarine;
+}
+
 /* ------------------- SPECIAL CLASSES ------------------- */
 .slideNav {
   transform: translateX(16rem);

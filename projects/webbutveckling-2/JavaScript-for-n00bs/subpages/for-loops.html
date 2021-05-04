@@ -9,7 +9,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <header class="header">
@@ -65,7 +66,38 @@
             </section>
         </nav>
         <main class="wrapper">
-
+            <p class="container">
+                The <span class="bold italic">For Loops</span> is something that can be used if you for example want to loop through items in an array. There are two types of loops that are usable. The most common one, a standard <span class="bold italic">for</span> loop, and the less common <span class="bold italic">forEach</span>.
+            </p>
+            <p class="container">
+                Let's start with the regular <span class="bold italic">for</span> loop.
+            </p>
+            <ol class="container frame">
+                <li class="comment">// Example</li>
+                <li><span class="red">cars</span> = [<span class="green">'Volvo'</span>, <span class="green">'Audi'</span>, <span class="green">'Koeningsegg'</span>];</li>
+                <br>
+                <li><span class="yellow">for</span> (<span class="red">i</span> = <span class="orange">0</span>; <span class="red">i</span> < <span class="orange">cars</span>.<span class="red">length</span>; <span class="red">i</span>++) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="red">cars</span>[<span class="red">i</span>]);</li>
+                <li>}</li>
+            </ol>
+            <p class="container">
+                This example above will write the car brands from the array into the browsers console on separate lines, starting with <span class="italic">Volvo</span>.
+            </p>
+            <p class="container">
+                However, the <span class="bold italic">forEach</span> loop is a little more complex. It needs to call on a function that runs for each item in the array.
+            </p>
+            <ol class="container frame">
+                <li class="comment">// Example</li>
+                <li><span class="red">cars</span> = [<span class="green">'Volvo'</span>, <span class="green">'Audi'</span>, <span class="green">'Koeningsegg'</span>];</li>
+                <li><span class="orange">cars</span>.<span class="blue">forEach</span>(<span class="red">carFunction</span>);</li>
+                <br>
+                <li><span class="aqua italic">function</span> <span class="blue">carFunction</span>(<span class="red">car</span>) {</li>
+                <li class="tabs" data-tabs="1"><span class="orange">console</span>.<span class="blue">log</span>(<span class="red">car</span>);</li>
+                <li>}</li>
+            </ol>
+            <p class="container">
+                This <span class="bold italic">forEach</span> loop will work exactly the same as the first example.
+            </p>
         </main>
         <footer class="footer">
             <section class="footerFrame">
@@ -85,5 +117,7 @@
 
         <script src="../assets/js/year.js"></script>
         <script src="../assets/js/slideNav.js"></script>
+        <script src="../assets/js/for-loops.js"></script>
+        <script src="../assets/js/js.js"></script>
     </body>
 </html>
