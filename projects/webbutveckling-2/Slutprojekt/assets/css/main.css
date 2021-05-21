@@ -193,8 +193,74 @@ nav::after {
 ******************    MAIN    ******************
 ************************************************/
 main .page {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
+}
+main .page1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3d41;
+}
+main .page1 .asideLeft {
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  background-color: #16f;
+  width: 12rem;
+  height: 26rem;
+}
+main .page1 .asideLeft .dots {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1.2rem;
+  list-style: none;
+}
+main .page1 .asideLeft .dots li {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 100%;
+  background-color: white;
+}
+main .page1 .features {
+  position: relative;
+  color: white;
+  list-style: none;
+  width: auto;
+  height: auto;
+}
+main .page1 .features li {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+main .page1 .features li::before {
+  content: "";
+  position: relative;
+  left: -2rem;
+  background-image: url(../images/check.svg);
+  background-size: cover;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+main .page1 .asideRight {
+  position: absolute;
+  bottom: -6rem;
+  right: 0;
+  width: 26rem;
+  height: 26rem;
+  background-image: url("../images/phone.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
 }
 
 /***********************************************
