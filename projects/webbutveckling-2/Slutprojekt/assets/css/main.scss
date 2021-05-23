@@ -1,5 +1,9 @@
 @charset "utf-8";
-$themeColour: #16f;
+// $primaryColour: #16f;
+// $secondaryColour: #0E4EC4;
+
+$primaryColour: rgb(255, 17, 29);
+$secondaryColour: #c40e17;
 
 /***********************************************
 *****************    GLOBAL    *****************
@@ -20,6 +24,10 @@ body {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     width: 100%;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 /***********************************************
@@ -69,8 +77,8 @@ nav {
         flex: 1;
 
         .goPremium {
-            color: $themeColour;
-            border: 2px solid $themeColour;
+            color: $primaryColour;
+            border: 2px solid $primaryColour;
             border-radius: 2rem;
 
             width: max-content;
@@ -129,7 +137,7 @@ nav {
 
             .cta {
                 color: white;
-                background-color: $themeColour;
+                background-color: $primaryColour;
 
                 font-size: 1rem;
                 font-weight: bold;
@@ -274,7 +282,7 @@ main {
             top: -6rem;
             left: 0;
 
-            background-color: $themeColour;
+            background-color: $primaryColour;
 
             width: 12rem;
             height: 26rem;
@@ -350,6 +358,64 @@ main {
             filter: grayscale(1);
         }
     }
+
+    .page2 {
+        display: flex;
+        align-items: center;
+
+        background-color: $primaryColour;
+        color: white;
+
+        .userCards {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 4rem;
+
+            padding: 0 16rem;
+            transition: .4s ease;
+
+            // overflow-x: auto;
+
+            .card {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: $secondaryColour;
+
+                width: 16rem;
+                height: 24rem;
+                border-radius: 2rem;
+
+                .avatar {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    width: 5rem;
+                    height: 5rem;
+                    border: .4rem solid $primaryColour;
+                    border-radius: 100%;
+                }
+
+                .quote {
+                    width: 12rem;
+                }
+
+                .author {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
 
 /***********************************************
@@ -357,7 +423,7 @@ main {
 ************************************************/
 
 .themeColour {
-    color: $themeColour;
+    color: $primaryColour;
 }
 
 .underlines {
@@ -366,7 +432,7 @@ main {
         content: '';
         display: block;
 
-        background-color: $themeColour;
+        background-color: $primaryColour;
 
         width: 0%;
         height: 2px;

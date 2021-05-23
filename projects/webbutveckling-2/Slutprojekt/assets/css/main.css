@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /***********************************************
 ******************    NAV    *******************
 ************************************************/
@@ -54,8 +58,8 @@ nav .storeNav {
   flex: 1;
 }
 nav .storeNav .goPremium {
-  color: #16f;
-  border: 2px solid #16f;
+  color: #ff111d;
+  border: 2px solid #ff111d;
   border-radius: 2rem;
   width: max-content;
   padding: 0.5rem 1rem;
@@ -104,7 +108,7 @@ nav::after {
 }
 .heroSection .header .ctaBox .cta {
   color: white;
-  background-color: #16f;
+  background-color: #ff111d;
   font-size: 1rem;
   font-weight: bold;
   padding: 1rem 1.5rem;
@@ -207,7 +211,7 @@ main .page1 .asideLeft {
   position: absolute;
   top: -6rem;
   left: 0;
-  background-color: #16f;
+  background-color: #ff111d;
   width: 12rem;
   height: 26rem;
 }
@@ -262,18 +266,62 @@ main .page1 .asideRight {
   background-size: cover;
   filter: grayscale(1);
 }
+main .page2 {
+  display: flex;
+  align-items: center;
+  background-color: #ff111d;
+  color: white;
+}
+main .page2 .userCards {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 4rem;
+  padding: 0 16rem;
+  transition: 0.4s ease;
+}
+main .page2 .userCards .card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c40e17;
+  width: 16rem;
+  height: 24rem;
+  border-radius: 2rem;
+}
+main .page2 .userCards .card .avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border: 0.4rem solid #ff111d;
+  border-radius: 100%;
+}
+main .page2 .userCards .card .quote {
+  width: 12rem;
+}
+main .page2 .userCards .card .author {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
 
 /***********************************************
 ****************    SPECIALS    ****************
 ************************************************/
 .themeColour {
-  color: #16f;
+  color: #ff111d;
 }
 
 .underlines::after {
   content: "";
   display: block;
-  background-color: #16f;
+  background-color: #ff111d;
   width: 0%;
   height: 2px;
   transition: width 0.2s ease;
