@@ -11,20 +11,58 @@ for (e = 0; e < 25; e++) {
 
 const userCards = document.querySelector('.userCards');
 var move = 0;
+
+const leftArrow = document.querySelector('.moveLeft');
+const rightArrow = document.querySelector('.moveRight');
+
+function calcMaxMove() {
+    let calc = -userCards.clientWidth + window.innerWidth;
+    return calc;
+}
+
+function showArrows() {
+    if (move < -320) {
+        leftArrow.style.display = 'block';
+    } else {
+        leftArrow.style.display = 'none';
+    }
+
+    if (move > calcMaxMove() + 320) {
+        rightArrow.style.display = 'block';
+    } else {
+        rightArrow.style.display = 'none';
+    }
+}
+
+leftArrow.addEventListener('click', () => {
+    move += 512;
+    userCards.style.transform = `translateX(${move}px)`;
+});
+rightArrow.addEventListener('click', () => {
+    move += -512;
+    userCards.style.transform = `translateX(${move}px)`;
+});
+
 userCards.addEventListener('wheel', (event) => {
-    if ((move === 0 && event.deltaY < 0) || (move < -200 && event.deltaY > 0)) {
-        console.log('break');
+    console.log(move);
+    if (
+        (move === 0 && event.deltaY < 0) ||
+        (move < calcMaxMove() && event.deltaY > 0)
+    ) {
         return;
     } else if (event.deltaY > 0) {
         event.preventDefault();
-        move += -32;
-        userCards.style.transform = `translateX(${move}rem)`;
+        move += -64;
+        userCards.style.transform = `translateX(${move}px)`;
+        showArrows();
+        return move;
     } else if (event.deltaY < 0) {
         event.preventDefault();
-        move += 32;
-        userCards.style.transform = `translateX(${move}rem)`;
+        move += 64;
+        userCards.style.transform = `translateX(${move}px)`;
+        showArrows();
+        return move;
     }
-    console.log(move);
 });
 
 // Källa: https://developer.mozilla.org/en-US/docs/Web/API/Element/wheel_event

@@ -360,11 +360,54 @@ main {
     }
 
     .page2 {
+        position: relative;
         display: flex;
         align-items: center;
 
         background-color: $primaryColour;
         color: white;
+
+        .moveLeft, .moveRight {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 4;
+
+            // display: block;
+            background: transparent;
+            border: none;
+            color: white;
+            text-shadow: 0 0 10px black;
+
+            width: 16rem;
+            height: 50%;
+
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+
+            cursor: pointer;
+
+            &::after {
+                font-size: 2rem;
+            }
+        }
+
+        .moveLeft {
+            display: none;
+            left: 0;
+
+            &::after {
+                content: '\f053';
+            }
+        }
+
+        .moveRight {
+            right: 0;
+
+            &::after {
+                content: '\f054';
+            }
+        }
 
         .userCards {
             display: grid;

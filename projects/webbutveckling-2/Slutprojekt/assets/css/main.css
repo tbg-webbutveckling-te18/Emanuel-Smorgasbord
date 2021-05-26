@@ -267,10 +267,42 @@ main .page1 .asideRight {
   filter: grayscale(1);
 }
 main .page2 {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: #ff111d;
   color: white;
+}
+main .page2 .moveLeft, main .page2 .moveRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: transparent;
+  border: none;
+  color: white;
+  text-shadow: 0 0 10px black;
+  width: 16rem;
+  height: 50%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  cursor: pointer;
+}
+main .page2 .moveLeft::after, main .page2 .moveRight::after {
+  font-size: 2rem;
+}
+main .page2 .moveLeft {
+  display: none;
+  left: 0;
+}
+main .page2 .moveLeft::after {
+  content: "";
+}
+main .page2 .moveRight {
+  right: 0;
+}
+main .page2 .moveRight::after {
+  content: "";
 }
 main .page2 .userCards {
   display: grid;
