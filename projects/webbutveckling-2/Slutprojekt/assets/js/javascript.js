@@ -37,10 +37,12 @@ function showArrows() {
 leftArrow.addEventListener('click', () => {
     move += 512;
     userCards.style.transform = `translateX(${move}px)`;
+    showArrows();
 });
 rightArrow.addEventListener('click', () => {
     move += -512;
     userCards.style.transform = `translateX(${move}px)`;
+    showArrows();
 });
 
 userCards.addEventListener('wheel', (event) => {
