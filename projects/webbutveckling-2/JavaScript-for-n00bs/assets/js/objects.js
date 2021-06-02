@@ -1,10 +1,13 @@
 var car = {
     make: 'Volvo',
-    model: 244,
-    year: 1981,
+    model: 240,
+    year: '1975 - 1993',
     fullCar: function () {
-        return this.year + ' ' + this.make + ' ' + this.model;
+        return this.year + ', ' + this.make + ' ' + this.model;
     },
 };
 
-var element = document.getElementById('element');
+function changeText() {
+    var element = document.getElementById('element');
+    element.innerHTML = car.fullCar() + ' might be the best cars ever made.';
+}

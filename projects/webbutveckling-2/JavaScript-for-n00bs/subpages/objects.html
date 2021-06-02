@@ -73,8 +73,8 @@
                 <li class="comment">// Example</li>
                 <li><span class="aqua italic">var</span> <span class="red">car</span> = {</li>
                 <li class="tabs" data-tabs="1">make: <span class="green">'Volvo'</span>,</li>
-                <li class="tabs" data-tabs="1">model: <span class="orange">244</span>,</li>
-                <li class="tabs" data-tabs="1">year: <span class="orange">1981</span>,</li>
+                <li class="tabs" data-tabs="1">model: <span class="orange">240</span>,</li>
+                <li class="tabs" data-tabs="1">year: <span class="green">'1975 - 1993'</span>,</li>
                 <li class="tabs" data-tabs="1"><span class="blue">fullCar:</span> <span class="aqua italic">function</span> () {</li>
                 <li class="tabs" data-tabs="2"><span class="yellow">return</span> <span class="orange">this</span>.<span class="red">year</span> + <span class="green">' '</span> + <span class="orange">this</span>.<span class="red">make</span> + <span class="green">' '</span> + <span class="orange">this</span>.<span class="red">model</span>;</li>
                 <li>}</li>
@@ -84,8 +84,11 @@
             </p>
             <p class="container">For education purposes we can test the use of it with an <span class="italic">innerHTML</span>.</p>
             <ol class="container frame">
-                <li><span class="aqua">var</span> <span class="red">document</span>. <span class="blue">getElementById</span>(<span class="green">'element'</span>)</li>
+                <li><span class="aqua italic">var</span> <span class="red">element</span> = <span class="orange italic">document</span>.<span class="blue">getElementById</span>(<span class="green">'element'</span>);</li>
+                <li><span class="orange italic">element</span>.<span class="red">innerHTML</span> = <span class="orange italic">car</span>.<span class="blue">fullCar</span>() + <span class="green">' might be the best cars ever made.</span></li>
             </ol>
+            <p class="container" id="element">Pressing the button below will run the code above which will change this text.</p>
+            <section class="testButtons"><button class="changeX" onclick="changeText()">Change Text</button></section>
         </main>
         <footer class="footer">
             <section class="footerFrame">
