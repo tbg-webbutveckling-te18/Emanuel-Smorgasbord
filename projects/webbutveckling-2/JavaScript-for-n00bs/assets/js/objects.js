@@ -1,5 +1,10 @@
 var car = {
-    model: 'Volvo',
+    make: 'Volvo',
+    model: 244,
     year: 1981,
-    regNr: 'KSJ799',
+    fullCar: function () {
+        return this.year + ' ' + this.make + ' ' + this.model;
+    },
 };
+
+var element = document.getElementById('element');

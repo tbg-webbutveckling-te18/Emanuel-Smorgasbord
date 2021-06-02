@@ -67,19 +67,25 @@
         </nav>
         <main class="wrapper">
             <p class="container">
-                <span class="bold">Objects</span> are essentially variables that you can assign a lot of diffrent properties.
+                <span class="bold">Objects</span> are essentially variables that you can assign a lot of diffrent properties into.
             </p>
             <ol class="container frame">
                 <li class="comment">// Example</li>
-                <li><span class="aqua italic">function</span> <span class="blue">mathFunction</span>(<span class="red">x</span>, <span class="red">y</span>) {</li>
-                <li class="tabs" data-tabs="1"><span class="yellow">return</span> <span class="red">x</span> + <span class="red">y</span>;</li>
+                <li><span class="aqua italic">var</span> <span class="red">car</span> = {</li>
+                <li class="tabs" data-tabs="1">make: <span class="green">'Volvo'</span>,</li>
+                <li class="tabs" data-tabs="1">model: <span class="orange">244</span>,</li>
+                <li class="tabs" data-tabs="1">year: <span class="orange">1981</span>,</li>
+                <li class="tabs" data-tabs="1"><span class="blue">fullCar:</span> <span class="aqua italic">function</span> () {</li>
+                <li class="tabs" data-tabs="2"><span class="yellow">return</span> <span class="orange">this</span>.<span class="red">year</span> + <span class="green">' '</span> + <span class="orange">this</span>.<span class="red">make</span> + <span class="green">' '</span> + <span class="orange">this</span>.<span class="red">model</span>;</li>
                 <li>}</li>
-                <br>
-                <li><span class="orange">console</span>.<span class="blue">log</span>(<span class="blue">mathFunction</span>(<span class="orange">1</span>, <span class="orange">2</span>));</li>
             </ol>
             <p class="container">
-                In the example above, the function <span class="bold italic">mathFunction()</span> is being called with the numbers 1 and 2 inside a console log. Inside the function, the x and y is then replaced with the integers which gets calculated and sent back to the console log.
+                This object named <span class="italic">car</span> has some properties that can be used in different ways.
             </p>
+            <p class="container">For education purposes we can test the use of it with an <span class="italic">innerHTML</span>.</p>
+            <ol class="container frame">
+                <li><span class="aqua">var</span> <span class="red">document</span>. <span class="blue">getElementById</span>(<span class="green">'element'</span>)</li>
+            </ol>
         </main>
         <footer class="footer">
             <section class="footerFrame">
